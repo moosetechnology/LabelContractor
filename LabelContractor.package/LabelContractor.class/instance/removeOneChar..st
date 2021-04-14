@@ -1,4 +1,4 @@
-removing
+frequent-letter
 removeOneChar: aString
 
 	| comp note currentNote value |
@@ -11,5 +11,6 @@ removeOneChar: aString
 			note := currentNote.
 			value := comp ].
 		comp := comp + 1 ].
-	value ifNil: [ ^ '' ] ifNotNil: [ 
-		^ aString copyWithoutIndex: value ]
+	^ value
+		  ifNil: [ aString ]
+		  ifNotNil: [ aString copyWithoutIndex: value ]
