@@ -1,15 +1,20 @@
 tests
 testRemoveExtension
+
 	| labelBefore labelAfter |
 	
 	labelBefore := ''.
-	labelAfter  := labelContractor removeExtension: labelBefore.
-	self assert: labelAfter equals: labelBefore  .
-	
+	labelAfter := labelContractor removeExtension: labelBefore.
+	self assert: labelAfter equals: labelBefore.
+
 	labelBefore := 'LabelWithExtension.txt'.
-	labelAfter  := labelContractor removeExtension: labelBefore.
-	self assert: labelAfter equals: 'LabelWithExtension' .
-	
+	labelAfter := labelContractor removeExtension: labelBefore.
+	self assert: labelAfter equals: 'LabelWithExtension'.
+
 	labelBefore := 'LabelWithoutExtension'.
-	labelAfter  := labelContractor removeExtension: labelBefore.
-	self assert: labelAfter equals: 'LabelWithoutExtension' .
+	labelAfter := labelContractor removeExtension: labelBefore.
+	self assert: labelAfter equals: 'LabelWithoutExtension'.
+	
+   labelBefore := 'example/path/LabelWithExtension.txt'.
+	labelAfter := labelContractor removeExtension: labelBefore.
+	self assert: labelAfter equals: 'example/path/LabelWithExtension'
