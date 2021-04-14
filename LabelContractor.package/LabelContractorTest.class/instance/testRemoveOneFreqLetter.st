@@ -1,11 +1,11 @@
 tests
-testRemoveOneChar
+testRemoveOneFreqLetter
 
 	| labelBefore labelAfter |
 	labelBefore := ''.
-	labelAfter := labelContractor removeOneChar: labelBefore.
+	labelAfter := labelContractor removeOneFreqLetter: labelBefore.
 	self assert: labelAfter equals: labelBefore.
 
 	labelBefore := 'SWAnExampleOfTheClass.txt'.
-	labelAfter := labelContractor removeOneChar: labelBefore.
+	labelAfter := labelContractor removeOneFreqLetter: labelBefore.
 	self assert: labelAfter equals: 'SWAnExamplOfTheClass.txt'
