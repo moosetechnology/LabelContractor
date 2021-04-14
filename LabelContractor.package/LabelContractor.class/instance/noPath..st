@@ -1,4 +1,4 @@
-methods
+no-path
 noPath: aString
 
 	| dividedString |
