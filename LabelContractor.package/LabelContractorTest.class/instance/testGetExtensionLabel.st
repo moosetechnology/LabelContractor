@@ -1,11 +1,22 @@
 tests
 testGetExtensionLabel
 
-	| labelWithExtension labelWithoutExtension extension |
+	| emptyLabel labelWithExtension labelWithoutExtension extension |
+	
+	emptyLabel := ''.
+	extension := LabelContractor getExtensionLabel: emptyLabel .
+	self assert: extension equals: ''.
+	
 	labelWithExtension := 'SWThisIsAnExample.txt'.
-	extension := labelContractor getExtensionLabel: labelWithExtension.
-	self assert: extension equals: '.txt'.
-
+	extension := LabelContractor getExtensionLabel: labelWithExtension.
+	self assert: extension equals: 'txt'.
+	
+	labelWithExtension := 'SWThisIsAnExample.txt.image'.
+	extension := LabelContractor getExtensionLabel: labelWithExtension.
+	self assert: extension equals: 'image'.
+	
 	labelWithoutExtension := 'SWThisIsAnExample'.
-	extension := labelContractor getExtensionLabel: labelWithoutExtension.
-	self assert: extension equals: ''
+	extension := LabelContractor getExtensionLabel: labelWithoutExtension.
+	self assert: extension equals: ''.
+	
+	

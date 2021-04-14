@@ -1,8 +1,11 @@
 methods
 getExtensionLabel: aString
 
-	| indexExt |
-	indexExt := aString indexOf: $..
-	indexExt == 0
-		ifTrue: [  ^ '' ]
-		ifFalse: [ ^ aString copyFrom: indexExt to: aString size ].
+	| noExtension extPoint splitedStr |
+	noExtension := ''.
+	extPoint := $..
+	(aString anySatisfy: [ :each | each = extPoint ])
+		ifTrue: [ 
+			splitedStr := extPoint split: aString.
+			^ splitedStr last ]
+		ifFalse: [ ^ noExtension ]
