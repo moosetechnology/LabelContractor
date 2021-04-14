@@ -1,22 +1,29 @@
 tests
 testEllipsissize
 
-	| labelBefore labelAfter labelSize ext |
+	" this test concerns the use of the ellipsisSize method parameterized by size the ellipsis
+	"
+
+	| labelBefore labelAfter sizeEllpsTooBig ext |
 	labelBefore := 'SWLabelWithAnExtension.txt'.
-	labelAfter := LabelContractor ellipsis: labelBefore size: 8.
-	self assert: labelAfter equals: 'SWLa...sion.txt'.
+	labelAfter := LabelContractor ellipsis: labelBefore size: 10.
+	self assert: labelAfter equals: 'SWLab...nsion.txt'.
 
 	labelBefore := 'SWLabelWithoutExtension'.
-	labelAfter := LabelContractor ellipsis: labelBefore size: 8.
-	self assert: labelAfter equals: 'SWLa...sion'.
+	labelAfter := LabelContractor ellipsis: labelBefore size: 10.
+	self assert: labelAfter equals: 'SWLab...nsion'.
 
 	labelBefore := 'SWLabelSmall'.
-	labelSize := labelBefore size.
-	labelAfter := LabelContractor ellipsis: labelBefore size: labelSize.
+	sizeEllpsTooBig := labelBefore size.
+	labelAfter := LabelContractor
+		              ellipsis: labelBefore
+		              size: sizeEllpsTooBig.
 	self assert: labelAfter equals: 'SWLabelSmall'.
 
 	labelBefore := 'SWLabelSmall.txt'.
 	ext := LabelContractor getExtensionLabel: labelBefore.
-	labelSize := (labelBefore copyReplaceAll: ext with: '') size.
-	labelAfter := LabelContractor ellipsis: labelBefore size: labelSize.
+	sizeEllpsTooBig := (labelBefore copyReplaceAll: ext with: '') size.
+	labelAfter := LabelContractor
+		              ellipsis: labelBefore
+		              size: sizeEllpsTooBig.
 	self assert: labelAfter equals: 'SWLabelSmall.txt'
