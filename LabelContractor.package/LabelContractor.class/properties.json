@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "idtalebReda 4/14/2021 09:16",
+	"super" : "Object",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Ml"
+	],
+	"instvars" : [
+		"LetterFrequency",
+		"sizeTo"
+	],
+	"name" : "LabelContractor",
+	"type" : "normal"
+}
