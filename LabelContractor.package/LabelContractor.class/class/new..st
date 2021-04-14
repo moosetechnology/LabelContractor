@@ -1,3 +1,3 @@
 instance creation
 new: anInteger
-	^ self new sizeTo: anInteger 
+	^ self new upTo: anInteger 
