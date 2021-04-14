@@ -7,5 +7,5 @@ getExtensionLabel: aString
 	^ (aString anySatisfy: [ :each | each = extPoint ])
 		  ifTrue: [ 
 			  splitedStr := extPoint split: aString.
-			  splitedStr last ]
+			  extPoint asString , splitedStr last ]
 		  ifFalse: [ noExtension ]
