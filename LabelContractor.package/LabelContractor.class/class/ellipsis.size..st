@@ -1,3 +1,6 @@
 methods
 ellipsis: aString size: size
-	^self new sizeTo: size; ellipsis: aString  
+
+	^ self new
+		  ellipsisSize: size;
+		  ellipsis: aString
