@@ -4,12 +4,10 @@
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [
-		"Ml"
-	],
+	"classvars" : [ ],
 	"instvars" : [
-		"LetterFrequency",
-		"sizeTo"
+		"upTo",
+		"ellipsisSize"
 	],
 	"name" : "LabelContractor",
 	"type" : "normal"
