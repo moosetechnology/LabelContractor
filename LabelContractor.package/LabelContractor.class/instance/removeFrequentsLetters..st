@@ -1,9 +1,6 @@
 removing
 removeFrequentsLetters: aString
 
-	" remove the most frequent character in a string "
+	" remove the most frequent character on a string "
 
-	| str |
-	str := aString.
-	[ str size > self upTo ] whileTrue: [ str := self removeOneChar: str ].
-	^ str
+	^ self removeFrequentsLetters: aString upTo: self upTo
