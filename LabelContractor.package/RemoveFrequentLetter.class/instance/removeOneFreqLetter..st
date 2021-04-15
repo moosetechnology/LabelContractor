@@ -5,6 +5,6 @@ removeOneFreqLetter: aString
 
 	| indexFirstFreqLetter |
 	indexFirstFreqLetter := self findFirstFrequentLetter: aString.
-	^ (indexFirstFreqLetter == 0)
+	^ (indexFirstFreqLetter < 1)
 		  ifTrue: [ aString ]
 		  ifFalse: [ aString copyWithoutIndex: indexFirstFreqLetter ]

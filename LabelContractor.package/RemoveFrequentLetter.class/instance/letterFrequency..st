@@ -1,4 +1,4 @@
-computing
+accessing
 letterFrequency: aString
 
 	^ self class letterFrequency at: aString ifAbsent: [12]

@@ -1,12 +1,13 @@
 tests
 testFindFirstFrequentLetter
 
-	| string indexFreqLetter |
+	| string indexFirstFreqLetter |
 	
 	string := 'hello'.
-	indexFreqLetter := labelContractor findFirstFrequentLetter: string.
-	self assert: indexFreqLetter equals: (string indexOf: $e).
+	indexFirstFreqLetter := labelContractor findFirstFrequentLetter: string.
+	" 'e' is the first frequent letter in the example 'hello' "
+	self assert: indexFirstFreqLetter equals: (string indexOf: $e).
 	
 	string := ''.
-	indexFreqLetter := labelContractor findFirstFrequentLetter: string.
-	self assert: indexFreqLetter equals: 0.
+	indexFirstFreqLetter := labelContractor findFirstFrequentLetter: string.
+	self assert: indexFirstFreqLetter equals: 0.

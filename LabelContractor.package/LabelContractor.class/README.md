@@ -1,4 +1,4 @@
-I'm a contractor of labels class. I reduce the labels following several strategies.
+I'm a contractor of labels. I reduce the labels following several strategies.
 
 You can remove frequent letters from the label, for that use removeFrequentsLetters.
 This method reduces the label to 3 characters by default, use 'removeFrequentsLetters:upTo:' if you want to change the size
