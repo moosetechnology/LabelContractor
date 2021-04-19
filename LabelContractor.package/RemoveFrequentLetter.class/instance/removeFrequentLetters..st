@@ -12,6 +12,4 @@ removeFrequentLetters: aString
 	ext := self class getExtensionLabel: aString.
 	" we do not consider the extension part in the reduction "
 	aStringWithOutExtension := self class removeExtension: aString.
-	^ (self
-		   remove: aStringWithOutExtension
-		   upTo: self upTo) , ext
+	^ (self remove: aStringWithOutExtension upTo: self upTo) , ext
