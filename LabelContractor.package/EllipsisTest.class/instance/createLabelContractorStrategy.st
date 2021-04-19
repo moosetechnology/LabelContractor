@@ -1,0 +1,4 @@
+creation
+createLabelContractorStrategy
+	
+	^ Ellipsis new 
