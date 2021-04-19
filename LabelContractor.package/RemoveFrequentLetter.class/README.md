@@ -1,10 +1,19 @@
 I'm a remover of frequent letter in a label. I'm used to reduce the long label's name 
 
-You can remove frequent letters from the label, for that use removeFrequentsLetters.
-This method reduces the label to 3 characters by default, use 'removeFrequentsLetters:upTo:' if you want to change the size
->>> (LabelContractor new) removeFrequentsLetters: 'hello'
-'hlo'
+If the string contains an extension, then i will not consider the 'extension part' in the reduction. In addition, the result will contain the extension added at the end.
 
-You can reduce label by removing extension:
->>> (LabelContractor new) removeExtension: 'AnExample.txt'
-'AnExample'
+By default, i reduce the label's name until it has a size of 8 characters.
+>>> (RemoveFrequentLetter new) reduce: 'AnExampleOfAClassName.txt'
+xmpOfClm.txt
+
+Or, you can use the '**removeFrequentLetters: **' method:
+>>> (RemoveFrequentLetter new) removeFrequentLetters: 'AnExampleOfAClassName.txt'
+xmpOfClm.txt
+
+You can change the size of the resulting string:
+>>> (RemoveFrequentLetter upTo: 10) reduce: 'AnExampleOfAClassName.txt'
+xmplOfClNm.txt
+
+In the same way, you can use the '**removeFrequentLetters: **' method:
+>>> (RemoveFrequentLetter upTo: 10) removeFrequentLetters: 'AnExampleOfAClassName.txt'
+xmplOfClNm.txt
