@@ -2,4 +2,4 @@ running
 setUp
 
 	super setUp.
-	labelContractorStrategy := self createLabelContractorStrategy
+	labelContractorStrategy := self classToTest new.
