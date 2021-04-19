@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "AbstractLabelContractorTest",
+	"category" : "LabelContractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaseNameTest",
+	"type" : "normal"
+}
