@@ -1,4 +1,0 @@
-creation
-createLabelContractorStrategy
-	
-	^ PickFirstLetters new

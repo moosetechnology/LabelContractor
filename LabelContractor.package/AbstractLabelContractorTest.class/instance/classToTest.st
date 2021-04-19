@@ -1,4 +1,4 @@
 creation
-createLabelContractorStrategy
+classToTest
 	
 	^ self subclassResponsibility 
