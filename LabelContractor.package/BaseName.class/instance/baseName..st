@@ -1,9 +1,8 @@
 accessing
 baseName: aString
 
-	| strNoPath strNoPathNoExtension |
+	| strNoPathNoExtension |
 	
-	strNoPath := self noPath: aString.
-	strNoPathNoExtension := self removeExtension: strNoPath .
+	strNoPathNoExtension := self class removeExtension: aString .
 	^ strNoPathNoExtension 
 	
