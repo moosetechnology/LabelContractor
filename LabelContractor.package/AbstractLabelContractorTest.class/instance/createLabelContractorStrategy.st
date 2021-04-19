@@ -1,0 +1,4 @@
+creation
+createLabelContractorStrategy
+	
+	^ self subclassResponsibility 
