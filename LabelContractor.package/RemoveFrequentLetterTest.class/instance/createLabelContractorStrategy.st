@@ -1,0 +1,4 @@
+creation
+createLabelContractorStrategy
+	
+	^ RemoveFrequentLetter new 
