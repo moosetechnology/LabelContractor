@@ -1,5 +1,5 @@
 removing
-remove: aString upTo: anInteger
+removeFrequentLetters: aString upTo: anInteger
 
 	" 
 		Remove the frequent letters in the string until having a length string designated by the parameter 'upTo'

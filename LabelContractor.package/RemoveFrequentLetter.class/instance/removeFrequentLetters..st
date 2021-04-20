@@ -8,4 +8,4 @@ removeFrequentLetters: aString
 		If the string contains an extension, then we will not consider the extension part in the reduction. In addition, the result will contain the extension added at the end.
 	"
 	
-	^ (self remove: aString  upTo: self upTo) 
+	^ (self removeFrequentLetters: aString  upTo: self upTo) 
