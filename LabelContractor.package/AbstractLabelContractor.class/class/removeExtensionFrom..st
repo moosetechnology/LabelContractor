@@ -6,6 +6,4 @@ removeExtensionFrom: aString
 	  Otherwise, the string result will not contain the extension
 	"
 
-	| ext |
-	ext := self getExtensionFor: aString.
-	^ aString withoutSuffix: ext
+	^ aString withoutSuffix: ( self getExtensionFor: aString )
