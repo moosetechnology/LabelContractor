@@ -1,0 +1,4 @@
+accessing
+ellipsis
+
+	^ Ellipsis new

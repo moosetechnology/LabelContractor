@@ -1,4 +1,4 @@
 reduce-label
-abstractReduce: aString
+privateReduce: aString
 
 	^ self ellipsis: aString 

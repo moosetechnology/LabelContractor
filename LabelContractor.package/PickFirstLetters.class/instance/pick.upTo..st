@@ -1,4 +1,4 @@
-picking
+private
 pick: aString upTo: anInteger
 
 	"
@@ -7,10 +7,6 @@ pick: aString upTo: anInteger
 		(eg: pick: 'AClassName.txt' upTo: 4 -> returns: 'ACla.txt')
 	"
 
-	| ext strWithoutExt |
-	ext := self class getExtensionLabel: aString.
-	" we don't consider the extension in the reduction "
-	strWithoutExt := self class removeExtension: aString.
-	^ anInteger >= strWithoutExt size
+	^ anInteger >= aString size
 		  ifTrue: [ aString ]
-		  ifFalse: [ (strWithoutExt copyFrom: 1 to: anInteger) , ext ]
+		  ifFalse: [ (aString copyFrom: 1 to: anInteger) ]
