@@ -6,11 +6,7 @@ pick: aString upTo: anInteger
 		- If the string contains an extension, then the string result will contain the first letters followed by the extension.
 		(eg: pick: 'AClassName.txt' upTo: 4 -> returns: 'ACla.txt')
 	"
-
-	| ext strWithoutExt |
-	ext := self class getExtensionLabel: aString.
-	" we don't consider the extension in the reduction "
-	strWithoutExt := self class removeExtension: aString.
-	^ anInteger >= strWithoutExt size
+	
+	^ anInteger >= aString  size
 		  ifTrue: [ aString ]
-		  ifFalse: [ (strWithoutExt copyFrom: 1 to: anInteger) , ext ]
+		  ifFalse: [ (aString copyFrom: 1 to: anInteger) ]

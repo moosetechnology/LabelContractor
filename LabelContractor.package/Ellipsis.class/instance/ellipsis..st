@@ -7,15 +7,13 @@ ellipsis: aString
 		
 	"
 
-	| strWithoutSuff partsSize part1 part2 ext indexPart2 |
-	ext := self class getExtensionLabel: aString.
-	strWithoutSuff := self class removeExtension: aString.
-	strWithoutSuff size <= self ellipsisSize
+	| partsSize part1 part2 indexPart2 |
+	aString size <= self ellipsisSize
 		ifTrue: [ ^ aString ]
 		ifFalse: [ 
 			partsSize := self ellipsisSize // 2.
 			part1 := aString copyFrom: 1 to: partsSize.
 			"the start index of the last part of the split."
-			indexPart2 := strWithoutSuff size - partsSize.
+			indexPart2 := aString size - partsSize.
 			part2 := aString copyFrom: indexPart2 + 1 to: aString size.
 			^ part1 , '...' , part2 ]
