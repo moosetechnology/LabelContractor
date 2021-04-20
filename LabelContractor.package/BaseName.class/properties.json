@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "idtalebReda 4/15/2021 14:58",
-	"super" : "AbstractLabelContractor",
+	"commentStamp" : "idtalebReda 4/20/2021 11:27",
+	"super" : "LabelContractor",
 	"category" : "LabelContractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
