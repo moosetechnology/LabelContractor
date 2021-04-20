@@ -1,4 +1,4 @@
 accessing
 upTo
 
-	^ upTo
+	^ upTo ifNil: [ upTo := self class defaultLength ]
