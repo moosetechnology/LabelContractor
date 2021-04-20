@@ -7,5 +7,5 @@ reduce: aString
 
 	| stringWithOutPath extension |
 	stringWithOutPath := self class noPath: aString.
-	extension := self class getExtensionLabel: aString.
-	^ self privateReduce: (self class removeExtension: stringWithOutPath ) extension: extension
+	extension := self class getExtensionFor: aString.
+	^ self privateReduce: (self class removeExtensionFrom: stringWithOutPath ) extension: extension

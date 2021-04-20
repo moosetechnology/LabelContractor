@@ -1,5 +1,5 @@
 removing
-removeExtension: aString
+removeExtensionFrom: aString
 
 	" Remove the extension from a string.
 	  if the string doesn't include an extension, so we return the same string.
@@ -7,5 +7,5 @@ removeExtension: aString
 	"
 
 	| ext |
-	ext := self getExtensionLabel: aString.
+	ext := self getExtensionFor: aString.
 	^ aString withoutSuffix: ext

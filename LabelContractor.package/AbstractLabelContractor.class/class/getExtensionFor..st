@@ -1,5 +1,5 @@
 methods
-getExtensionLabel: aString
+getExtensionFor: aString
 
 	"	Returns the extension of the label. 
 		If the label doesn't contain any extension, so we return an empty string
