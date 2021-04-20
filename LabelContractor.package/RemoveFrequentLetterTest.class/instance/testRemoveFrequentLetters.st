@@ -1,5 +1,5 @@
 tests
-testRemoveFrequentsLetters
+testRemoveFrequentLetters
 
 	" 
 		By default, the size of the reduced string will be 8.

@@ -1,5 +1,5 @@
 tests
-testRemoveFrequentsLettersChangeSize
+testRemoveFrequentLettersChangeSize
 
 	| contractorSpecifySize labelBefore labelAfter |
 

@@ -8,5 +8,5 @@ removeFrequentLetters: aString upTo: anInteger
 	| str |
 	str := aString.
 	[ str size > anInteger ] whileTrue: [ 
-		str := self removeOneFreqLetter: str ].
+		str := self removeOneFrequentLetter: str ].
 	^ str

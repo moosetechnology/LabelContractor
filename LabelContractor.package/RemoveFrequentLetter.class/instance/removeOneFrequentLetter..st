@@ -1,5 +1,5 @@
 private
-removeOneFreqLetter: aString
+removeOneFrequentLetter: aString
 
 	" return a reduced string after removing one frequent letter "
 
