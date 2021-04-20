@@ -1,10 +1,5 @@
 methods
-getExtensionOf: aString
-
-	"	Returns the extension of the label. 
-		If the label doesn't contain any extension, so we return an empty string
-		If the label contains more than one extension (eg: fileName.txt.st) so we return the last one
-	"
+getExtensionLabel: aString
 
 	| noExtension extPoint splitedStr |
 	noExtension := ''.

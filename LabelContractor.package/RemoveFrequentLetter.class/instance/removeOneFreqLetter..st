@@ -1,4 +1,4 @@
-private
+frequent-letter
 removeOneFreqLetter: aString
 
 	" return a reduced string after removing one frequent letter "

@@ -8,4 +8,8 @@ removeFrequentLetters: aString
 		If the string contains an extension, then we will not consider the extension part in the reduction. In addition, the result will contain the extension added at the end.
 	"
 
-	^ (self removeFrequentLetters: aString upTo: self upTo)
+	| aStringWithOutExtension ext |
+	ext := self class getExtensionLabel: aString.
+	" we do not consider the extension part in the reduction "
+	aStringWithOutExtension := self class removeExtension: aString.
+	^ (self remove: aStringWithOutExtension upTo: self upTo) , ext

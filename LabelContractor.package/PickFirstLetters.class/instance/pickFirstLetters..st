@@ -1,4 +1,4 @@
-private
+picking
 pickFirstLetters: aString
 	
 	"
