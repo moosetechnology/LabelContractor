@@ -1,4 +1,4 @@
-picking
+private
 pick: aString upTo: anInteger
 
 	"

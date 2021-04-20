@@ -1,4 +1,4 @@
-removing
+private
 removeFrequentLetters: aString
 
 	"	

@@ -1,4 +1,4 @@
-frequent-letter
+private
 findFirstFrequentLetter: aString
 
 	" return the index of the first frequent letter on the string 
