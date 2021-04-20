@@ -4,5 +4,5 @@ testPickFirstLettersShortString
 	| labelBefore labelAfter |
 
 	labelBefore := 'Short'.
-	labelAfter := labelContractorStrategy  pickFirstLetters: labelBefore.
+	labelAfter := labelContractorStrategy  reduce: labelBefore.
 	self assert: labelAfter equals: 'Short'

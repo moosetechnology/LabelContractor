@@ -6,9 +6,9 @@ testEllipsisWithSpecifyingSize
 	ellipsisStrategySpecifySize := labelContractorStrategy ellipsisSize: 10.
 
 	labelBefore := 'ALongLabelWithAnExtension.txt'.
-	labelAfter := ellipsisStrategySpecifySize ellipsis: labelBefore.
+	labelAfter := ellipsisStrategySpecifySize reduce: labelBefore.
 	self assert: labelAfter equals: 'ALong...nsion.txt'.
 
 	labelBefore := 'ALongLabelWithOutExtension'.
-	labelAfter := ellipsisStrategySpecifySize ellipsis: labelBefore.
+	labelAfter := ellipsisStrategySpecifySize reduce: labelBefore.
 	self assert: labelAfter equals: 'ALong...nsion'. 

@@ -6,9 +6,9 @@ testRemoveFrequentsLettersChangeSize
 	contractorSpecifySize :=  (labelContractorStrategy upTo: 12).
 
 	labelBefore := 'AnExampleWithExtension.txt'.
-	labelAfter := contractorSpecifySize removeFrequentLetters: labelBefore.
+	labelAfter := contractorSpecifySize reduce: labelBefore.
 	self assert: labelAfter equals: 'xmplWihxnion.txt'.
 
 	labelBefore := 'AnExampleWithOutExtension'.
-	labelAfter := contractorSpecifySize removeFrequentLetters: labelBefore.
+	labelAfter := contractorSpecifySize reduce: labelBefore.
 	self assert: labelAfter equals: 'xmplWihOuxio'.

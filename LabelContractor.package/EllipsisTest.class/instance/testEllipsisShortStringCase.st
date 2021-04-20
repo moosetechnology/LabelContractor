@@ -4,9 +4,9 @@ testEllipsisShortStringCase
 	| labelBefore labelAfter |
 
 	labelBefore := 'Short'.
-	labelAfter := labelContractorStrategy ellipsis: labelBefore.
+	labelAfter := labelContractorStrategy reduce: labelBefore.
 	self assert: labelAfter equals: 'Short'.
 
 	labelBefore := 'Short.txt'.
-	labelAfter := labelContractorStrategy ellipsis: labelBefore.
+	labelAfter := labelContractorStrategy reduce: labelBefore.
 	self assert: labelAfter equals: 'Short.txt'.

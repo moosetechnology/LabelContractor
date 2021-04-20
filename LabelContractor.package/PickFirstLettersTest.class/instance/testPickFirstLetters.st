@@ -7,9 +7,9 @@ testPickFirstLetters
 	
 	| labelBefore labelAfter |
 	labelBefore := ''.
-	labelAfter := labelContractorStrategy  pickFirstLetters: labelBefore.
+	labelAfter := labelContractorStrategy  reduce: labelBefore.
 	self assert: labelAfter equals: ''.
 
 	labelBefore := 'SWAnExampleOfClass.txt'.
-	labelAfter := labelContractorStrategy  pickFirstLetters: labelBefore.
+	labelAfter := labelContractorStrategy  reduce: labelBefore.
 	self assert: labelAfter equals: 'SWAnExam.txt'.
