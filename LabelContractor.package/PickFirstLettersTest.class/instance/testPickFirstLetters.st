@@ -13,8 +13,3 @@ testPickFirstLetters
 	labelBefore := 'SWAnExampleOfClass.txt'.
 	labelAfter := labelContractorStrategy  pickFirstLetters: labelBefore.
 	self assert: labelAfter equals: 'SWAnExam.txt'.
-
-	" case of short label "
-	labelBefore := 'Short'.
-	labelAfter := labelContractorStrategy  pickFirstLetters: labelBefore.
-	self assert: labelAfter equals: 'Short'
