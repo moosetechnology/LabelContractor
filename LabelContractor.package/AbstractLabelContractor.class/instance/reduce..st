@@ -5,6 +5,7 @@ reduce: aString
 	  returns the reduced labels as String 
 	"
 
-	| aaStringWithOutPath |
-	aaStringWithOutPath := self class noPath: aString.
-	^ self abstractReduce: aaStringWithOutPath 
+	| stringWithOutPath extension |
+	stringWithOutPath := self class noPath: aString.
+	extension := self class getExtensionLabel: aString.
+	^ self privateReduce: (self class removeExtension: stringWithOutPath ) extension: extension
