@@ -8,6 +8,6 @@
 	"instvars" : [
 		"upTo"
 	],
-	"name" : "AbstractLabelContractor",
+	"name" : "LabelContractor",
 	"type" : "normal"
 }
