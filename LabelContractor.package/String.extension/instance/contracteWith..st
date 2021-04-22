@@ -1,4 +1,4 @@
 *LabelContractor
 contracteWith: aContractor
 	
-	aContractor reduce: self
+	^ aContractor reduce: self
