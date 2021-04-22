@@ -1,4 +1,4 @@
 *LabelContractor
-contracteWith: aContractor
+contractWith: aContractor
 	
 	^ aContractor reduce: self
