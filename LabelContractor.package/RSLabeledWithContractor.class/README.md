@@ -1,0 +1,1 @@
+I'm a RSLabeeled with contractor, i can contract the label's text

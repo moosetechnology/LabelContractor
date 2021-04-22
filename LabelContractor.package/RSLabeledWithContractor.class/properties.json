@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "idtalebReda 4/21/2021 14:42",
+	"super" : "RSLabeled",
+	"category" : "LabelContractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shapeBuilderTemp"
+	],
+	"name" : "RSLabeledWithContractor",
+	"type" : "normal"
+}
