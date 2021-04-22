@@ -1,3 +1,6 @@
 accessing
 textFor: anObject
-	^ contractor reduce: (textBlock rsValue: anObject) asString
+
+	^ contractor
+		  ifNotNil: [ contractor reduce: (textBlock rsValue: anObject) asString ]
+		  ifNil: [ super textFor: anObject ]
