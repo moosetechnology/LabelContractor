@@ -1,3 +1,3 @@
 accessing
 textFor: anObject
-	^ (textBlock rsValue: anObject) asString
+	^ contractor reduce: (textBlock rsValue: anObject) asString
