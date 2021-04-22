@@ -1,0 +1,1 @@
+I'm a RSMultiLineLabelBuilder with contractor, and i also take care of the contraction of labels

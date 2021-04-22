@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "idtalebReda 4/22/2021 11:51",
+	"super" : "RSMultilineLabelBuilder",
+	"category" : "LabelContractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contractor"
+	],
+	"name" : "RSMultilineLabelBuilderWithContractor",
+	"type" : "normal"
+}
