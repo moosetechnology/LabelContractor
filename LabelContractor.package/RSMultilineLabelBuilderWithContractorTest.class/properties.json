@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "LabelContractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"shapeBuilder"
+	],
+	"name" : "RSMultilineLabelBuilderWithContractorTest",
+	"type" : "normal"
+}
