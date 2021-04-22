@@ -1,0 +1,4 @@
+reduce-label
+createContractor
+
+	^ self
