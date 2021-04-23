@@ -1,4 +1,4 @@
 creation
 classToTest
 	
-	^ RemoveAnySubstring new: 'An'
+	^ RemoveAnySubstring 

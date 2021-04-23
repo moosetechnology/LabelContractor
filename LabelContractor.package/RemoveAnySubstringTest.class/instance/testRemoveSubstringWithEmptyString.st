@@ -3,5 +3,5 @@ testRemoveSubstringWithEmptyString
 
 	| labelAfter |
 
-	labelAfter := labelContractorStrategy removeSubstring: 'sub' from: ''.
+	labelAfter := labelContractorStrategy removeAnySubstring: 'sub' from: ''.
 	self assert: labelAfter equals: ''
