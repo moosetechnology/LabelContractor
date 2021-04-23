@@ -1,0 +1,1 @@
+I am a remover of a substring from a string. I can also remove a prefix, a suffix or a collection of substrings 

@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "idtalebReda 4/23/2021 12:04",
 	"super" : "LabelContractor",
 	"category" : "LabelContractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"substring"
+	],
 	"name" : "RemoveSubstring",
 	"type" : "normal"
 }
