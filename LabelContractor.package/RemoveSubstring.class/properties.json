@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "LabelContractor",
+	"category" : "LabelContractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RemoveSubstring",
+	"type" : "normal"
+}
