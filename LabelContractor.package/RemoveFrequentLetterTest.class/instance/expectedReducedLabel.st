@@ -1,5 +1,5 @@
 expected-result
-expectedReducedLabelWithPath
+expectedReducedLabel
 	
 	| expectedResult |
 	expectedResult := 'xmplOfCl.txt'.

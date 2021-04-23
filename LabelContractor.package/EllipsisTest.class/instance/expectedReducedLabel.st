@@ -1,6 +1,6 @@
 expected-result
-expectedReducedLabelWithOutPath
+expectedReducedLabel
 	
 	| expectedResult |
 	expectedResult := 'AnEx...lass.txt'.
-	^ expectedResult 
+	^ expectedResult

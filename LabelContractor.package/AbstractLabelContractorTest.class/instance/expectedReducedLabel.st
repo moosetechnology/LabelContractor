@@ -1,4 +1,4 @@
 expected-result
-expectedReducedLabelWithPath
+expectedReducedLabel
 	
 	^ self subclassResponsibility 

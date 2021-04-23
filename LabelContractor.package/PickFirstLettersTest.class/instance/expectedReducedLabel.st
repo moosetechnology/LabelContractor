@@ -1,5 +1,5 @@
 expected-result
-expectedReducedLabelWithOutPath
+expectedReducedLabel
 	
 	| expectedResult |
 	expectedResult := 'AnExampl.txt'.
