@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "idtalebReda 4/23/2021 15:01",
+	"super" : "RemoveSubstring",
+	"category" : "LabelContractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RemoveAnySubstring",
+	"type" : "normal"
+}
