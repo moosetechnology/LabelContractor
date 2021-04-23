@@ -3,9 +3,10 @@ testRemoveSubstringFrom
 
 	| labelBefore labelAfter |
 	labelBefore := 'AnExampleOfClass'.
-	labelAfter := labelContractorStrategy removeSubstring: 'An'  from: labelBefore  .
+	
+	labelAfter := labelContractorStrategy removeSubstring: 'An' from: labelBefore.
 	self assert: labelAfter equals: 'ExampleOfClass'.
 	
-	labelAfter := labelContractorStrategy removeSubstring: 'Of'  from: labelBefore  .
-	self assert: labelAfter equals: 'AnExampleClass' 
-	
+	labelAfter := labelContractorStrategy removeSubstring: 'Of' from: labelBefore.
+	self assert: labelAfter equals: 'AnExampleClass'.
+	self testRemoveSubstringWithEmptyString.
