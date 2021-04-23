@@ -1,12 +1,10 @@
 tests
 testReduce
 
-	| expectedReducedLabelWithPath expectedReducedLabelWithOutPath reducedLabel |
+	| reducedLabel |
 	
-	expectedReducedLabelWithPath := self expectedReducedLabelWithPath.
-	reducedLabel := labelContractorStrategy reduce: 'AnExampleOfAClass.txt'.
-	self assert: reducedLabel equals: expectedReducedLabelWithPath .
+	reducedLabel := labelContractorStrategy reduce: exampleString .
+	self assert: reducedLabel equals: self expectedReducedLabel.
 	
-	expectedReducedLabelWithOutPath := self expectedReducedLabelWithOutPath.
-	reducedLabel := labelContractorStrategy reduce: 'A:user/exam/path/AnExampleOfAClass.txt'.
-	self assert: reducedLabel equals: expectedReducedLabelWithOutPath  
+	reducedLabel := labelContractorStrategy reduce: 'A:user/exam/path/',exampleString .
+	self assert: reducedLabel equals: self expectedReducedLabel. 
