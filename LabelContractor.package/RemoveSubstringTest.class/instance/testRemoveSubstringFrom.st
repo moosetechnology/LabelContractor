@@ -1,5 +1,5 @@
 tests
-testRemoveSubstring
+testRemoveSubstringFrom
 
 	| labelBefore labelAfter |
 	labelBefore := 'AnExampleOfClass'.
