@@ -2,5 +2,7 @@ running
 setUp
 
 	super setUp.
-	labelContractorStrategy := self classToTest new.
-	exampleString := 'AnExampleOfAClass.txt' 
+	exampleString := 'AnExampleOfAClass.txt' .
+	exampleSubstring := exampleString truncateTo: 2.
+	aContractor := self classToTest new.
+	
