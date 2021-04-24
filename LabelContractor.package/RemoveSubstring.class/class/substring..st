@@ -1,4 +1,4 @@
 instance creation
-new: aSubstring
+substring: aSubstring
 	
 	^ self new substring: aSubstring 
