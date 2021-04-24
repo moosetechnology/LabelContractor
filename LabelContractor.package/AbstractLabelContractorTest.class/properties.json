@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"labelContractorStrategy",
-		"exampleString"
+		"aContractor",
+		"exampleString",
+		"exampleSubstring"
 	],
 	"name" : "AbstractLabelContractorTest",
 	"type" : "normal"

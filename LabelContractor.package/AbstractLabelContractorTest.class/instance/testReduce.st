@@ -2,9 +2,11 @@ tests
 testReduce
 
 	| reducedLabel |
-	
-	reducedLabel := labelContractorStrategy reduce: exampleString .
+	" if the contractor is an instance of RemoveSubstring so we instanciate it with a substring "
+	(self isInstanceOfRemoveSubstring) ifTrue: [ self instanciateWithSubstring ].
+	 
+	reducedLabel := aContractor reduce: exampleString.
 	self assert: reducedLabel equals: self expectedReducedLabel.
-	
-	reducedLabel := labelContractorStrategy reduce: 'A:user/exam/path/',exampleString .
-	self assert: reducedLabel equals: self expectedReducedLabel. 
+
+	reducedLabel := aContractor reduce: 'A:user/exam/path/' , exampleString.
+	self assert: reducedLabel equals: self expectedReducedLabel
