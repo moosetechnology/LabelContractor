@@ -1,0 +1,4 @@
+accessing
+exampleSubstring
+
+	^ exampleSubstring
