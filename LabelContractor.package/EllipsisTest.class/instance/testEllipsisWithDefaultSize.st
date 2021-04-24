@@ -7,9 +7,9 @@ testEllipsisWithDefaultSize
 
 	| labelBefore labelAfter |
 	labelBefore := 'ALabelWithAnExtension.txt'.
-	labelAfter := labelContractorStrategy reduce: labelBefore.
+	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: 'ALab...sion.txt'.
 
 	labelBefore := 'ALabelWithOutExtension'.
-	labelAfter := labelContractorStrategy reduce: labelBefore.
+	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: 'ALab...sion'.

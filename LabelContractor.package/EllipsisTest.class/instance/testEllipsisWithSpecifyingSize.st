@@ -6,13 +6,13 @@ testEllipsisWithSpecifyingSize
 	labelBefore := 'ALongLabelWithOutExtension'.
 	
 	" odd size value "
-	labelContractorStrategy ellipsisSize: 5.
-	labelAfter := labelContractorStrategy reduce: labelBefore.
+	aContractor ellipsisSize: 5.
+	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: 'AL...ion'. 
 	
 	" even size value "
-	labelContractorStrategy ellipsisSize: 10.
-	labelAfter := labelContractorStrategy reduce: labelBefore.
+	aContractor ellipsisSize: 10.
+	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: 'ALong...nsion'. 
 	
 	

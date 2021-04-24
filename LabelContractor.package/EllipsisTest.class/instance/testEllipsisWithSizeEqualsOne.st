@@ -5,8 +5,8 @@ testEllipsisWithSizeEqualsOne
 	
 	labelBefore := 'ALongLabelWithOutExtension'.
 	
-	labelContractorStrategy ellipsisSize: 1.
-	labelAfter := labelContractorStrategy reduce: labelBefore.
+	aContractor ellipsisSize: 1.
+	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: 'A'. 
 	
 	

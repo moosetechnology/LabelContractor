@@ -7,13 +7,13 @@ testRemoveFrequentLetters
 	
 	| labelBefore labelAfter |
 	labelBefore := ''.
-	labelAfter := labelContractorStrategy reduce: labelBefore.
+	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: labelBefore .
 	
 	labelBefore := 'AnExampleWithExtension.txt'.
-	labelAfter := labelContractorStrategy reduce: labelBefore.
+	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: 'xmpWihxi.txt'.
 	
 	labelBefore := 'AnExampleWithOutExtension'.
-	labelAfter := labelContractorStrategy reduce: labelBefore.
+	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: 'xmpWihxi'.
