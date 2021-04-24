@@ -1,0 +1,1 @@
+I am RemovePrefix, and i remove a prefix from a string 
