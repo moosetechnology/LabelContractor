@@ -1,4 +1,4 @@
 accessing
-substring: anObject
+substring: aString
 
-	substring := anObject
+	substring := aString
