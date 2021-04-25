@@ -1,0 +1,1 @@
+I remove several substrings from a string
