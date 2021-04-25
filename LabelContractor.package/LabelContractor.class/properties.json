@@ -1,12 +1,13 @@
 {
-	"commentStamp" : "idtalebReda 4/22/2021 23:55",
+	"commentStamp" : "idtalebReda 4/25/2021 22:13",
 	"super" : "Object",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"upTo"
+		"upTo",
+		"withPath"
 	],
 	"name" : "LabelContractor",
 	"type" : "normal"
