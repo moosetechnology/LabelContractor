@@ -1,4 +1,0 @@
-reduce-label
-createContractor
-
-	^ self
