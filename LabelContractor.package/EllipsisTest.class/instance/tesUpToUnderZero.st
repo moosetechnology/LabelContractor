@@ -1,15 +1,15 @@
 tests
-testEllipsisWithSizeUnderZero
+tesUpToUnderZero
 
 	| labelBefore labelAfter |
 	
 	labelBefore := 'ALongLabelWithOutExtension'.
 	
-	aContractor ellipsisSize: 0.
+	aContractor upTo: 0.
 	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: labelBefore . 
 	
-	aContractor ellipsisSize: -1.
+	aContractor upTo: -1.
 	labelAfter := aContractor reduce: labelBefore.
 	self assert: labelAfter equals: labelBefore . 
 	

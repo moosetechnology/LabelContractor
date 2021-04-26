@@ -18,13 +18,13 @@ ellipsis: aString
 	"
 	
 	| partsSize part1 part2 indexPart2 |
-	self ellipsisSize < 1 ifTrue: [ ^ aString ]. "return the same string if ellipsisSize is less than 0"
-	self ellipsisSize == 1 ifTrue: [ ^ (aString at: 1) asString]. "if 1 return only the first Letter as string"
-	aString size <= self ellipsisSize
+	self upTo < 1 ifTrue: [ ^ aString ]. "return the same string if upTo is less than 0"
+	self upTo == 1 ifTrue: [ ^ (aString at: 1) asString]. "if 1 return only the first Letter as string"
+	aString size <= self upTo
 		ifTrue: [ ^ aString ] 	"short enough"
 		ifFalse: [ 
-			partsSize := self ellipsisSize // 2.
-			indexPart2 := self ellipsisSize % 2 == 0
+			partsSize := self upTo // 2.
+			indexPart2 := self upTo % 2 == 0
 				              ifTrue: [ aString size - partsSize ]
 				              ifFalse: [ aString size - partsSize - 1 ].
 			part1 := aString copyFrom: 1 to: partsSize.
