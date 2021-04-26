@@ -1,8 +1,7 @@
 hooks
 createLabel: aShape
 
-	| i label color set targetLabel |
-	i := 0.
+	| label color set targetLabel |
 	label := self shapeBuilderTemp shapeFor: (self modelFor: aShape).
 	location stick: label on: aShape.
 	isHighlightable ifFalse: [ ^ label ].
