@@ -3,7 +3,6 @@ testReduce
 
 	| reducedLabel |
 	" if the contractor is an instance of RemoveSubstring so we instanciate it with a substring "
-	(self isInstanceOfRemoveSubstring) ifTrue: [ self instanciateWithSubstring ].
 	 
 	reducedLabel := aContractor reduce: exampleString.
 	self assert: reducedLabel equals: self expectedReducedLabel.
