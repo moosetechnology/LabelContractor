@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "RemoveFrequentLetterTest",
+	"name" : "RemoveFrequentLettersTest",
 	"type" : "normal"
 }
