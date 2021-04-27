@@ -1,5 +1,5 @@
 private
-getPath: aString
+extractPathFrom: aString
 	" 
 	  return the path part of the Label
 	  For example: 1. 'A:example/path/file.ext' -> returns: 'A:example/path/'
