@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "RemoveAnySubstringTest",
+	"super" : "AbstractLabelContractorTest",
 	"category" : "LabelContractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],

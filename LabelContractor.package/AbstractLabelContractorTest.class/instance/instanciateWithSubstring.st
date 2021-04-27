@@ -1,4 +1,4 @@
 tests
 instanciateWithSubstring
 
-	aContractor substring: self exampleSubstring
+	aContractor collectionOfSubstrings: self exampleSubstring

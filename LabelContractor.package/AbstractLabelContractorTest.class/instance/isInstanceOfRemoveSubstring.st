@@ -1,4 +1,4 @@
 tests
 isInstanceOfRemoveSubstring
 
-	^ aContractor class superclass == RemoveSubstring
+	^ aContractor class superclass == RemoveSubstrings

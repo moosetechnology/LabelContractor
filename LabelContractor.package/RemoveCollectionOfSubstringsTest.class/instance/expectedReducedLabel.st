@@ -1,0 +1,2 @@
+expected-result
+expectedReducedLabel
