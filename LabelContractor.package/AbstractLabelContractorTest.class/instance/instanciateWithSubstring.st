@@ -1,4 +1,0 @@
-tests
-instanciateWithSubstring
-
-	aContractor collectionOfSubstrings: self exampleSubstring
