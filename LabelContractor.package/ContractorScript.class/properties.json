@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "idtalebReda 4/26/2021 13:42",
+	"super" : "Object",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"upTo",
+		"withPath"
+	],
+	"name" : "ContractorScript",
+	"type" : "normal"
+}
