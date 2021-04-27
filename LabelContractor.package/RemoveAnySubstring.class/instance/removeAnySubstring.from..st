@@ -1,7 +1,9 @@
 private
 removeAnySubstring: aSubstring from: aString
 	
-	| string |
-	string := aSubstring.
-	aSubstring isCharacter ifTrue: [ string := aSubstring asString ].
-	^ aString copyReplaceAll: string with: '' 
+	"
+		aSubstring can be a Character type or a string type
+	"
+	| substringToString |
+	substringToString := aSubstring asString.
+	^ aString copyReplaceAll: substringToString with: '' 
