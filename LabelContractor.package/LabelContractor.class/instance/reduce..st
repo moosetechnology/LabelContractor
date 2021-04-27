@@ -6,7 +6,7 @@ reduce: aString
 	"
 
 	| noPath extension pathPart reducedString |
-	noPath := self class noPath: aString.
+	noPath := self class removePathFrom: aString.
 	extension := self class getExtensionFor: aString.
 	reducedString := self
 		                 privateReduce: (self class removeExtensionFrom: noPath)
