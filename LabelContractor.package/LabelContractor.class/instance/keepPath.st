@@ -1,4 +1,4 @@
 accessing
 keepPath
 
-	^ self withPath: true
+	 ^ withPath := true

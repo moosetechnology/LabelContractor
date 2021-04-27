@@ -1,16 +1,16 @@
 reduce-label
 reduce: aString
 
-	" reduce a label by removing path at first(by default) then apply a contraction strategy
-	  returns the reduced string 
+	" Reduce a label by removing path(by default) then apply a contraction strategy.
+	  Returns the reduced string .
 	"
-
+	
 	| noPath extension pathPart reducedString |
+	
+	self upTo < 1 ifTrue: [ ^ String empty ]. 
 	noPath := self class removePathFrom: aString.
 	extension := self class extractExtensionFrom: aString.
-	reducedString := self
-		                 privateReduce: (self class removeExtensionFrom: noPath)
-		                 extension: extension.
+	reducedString := self privateReduce: (self class removeExtensionFrom: noPath) extension: extension.
 	^ withPath
 		  ifTrue: [ 
 			  pathPart := self class extractPathFrom: aString.

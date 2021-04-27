@@ -17,10 +17,10 @@ removeExtensionFrom: aString
 	| extractedExtension string |
 	string := aString.
 	extractedExtension := self extractExtensionFrom: string.
-	extractedExtension isEmpty
-		ifTrue: [ ^ aString ]
+	^ extractedExtension isEmpty
+		ifTrue: [ aString ]
 		ifFalse: [ 
 			[ extractedExtension isNotEmpty ] whileTrue: [ 
 				string := string withoutSuffix: extractedExtension.
 				extractedExtension := self extractExtensionFrom: string ].
-			^ string ]
+			string ]
