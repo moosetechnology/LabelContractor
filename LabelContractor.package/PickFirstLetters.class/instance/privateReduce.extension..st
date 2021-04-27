@@ -1,4 +1,4 @@
 reduce-label
-privateReduce: aString extension: anotherString
+privateReduce: aString extension: extensionAsString
 	
-	 ^ (self pickFirstLetters: aString), anotherString
+	 ^ (self pickFirstLetters: aString), extensionAsString
