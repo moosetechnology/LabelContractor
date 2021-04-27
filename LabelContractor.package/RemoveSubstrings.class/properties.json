@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"substring",
-		"caseSensitive"
+		"caseSensitive",
+		"collectionOfSubstrings"
 	],
-	"name" : "RemoveSubstring",
+	"name" : "RemoveSubstrings",
 	"type" : "normal"
 }
