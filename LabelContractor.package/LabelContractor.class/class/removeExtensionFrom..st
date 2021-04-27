@@ -1,4 +1,4 @@
-removing
+private
 removeExtensionFrom: aString
 
 	" Remove the extension from a string.

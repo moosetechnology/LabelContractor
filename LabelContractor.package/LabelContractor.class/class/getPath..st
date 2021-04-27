@@ -1,4 +1,4 @@
-no-path
+private
 getPath: aString
 	" 
 	  return the path part of the Label

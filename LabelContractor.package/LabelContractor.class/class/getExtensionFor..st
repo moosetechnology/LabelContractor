@@ -1,4 +1,4 @@
-methods
+private
 getExtensionFor: aString
 
 	"	Returns the extension of the label. 
