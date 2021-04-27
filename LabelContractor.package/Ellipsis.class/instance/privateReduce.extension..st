@@ -1,4 +1,4 @@
 reduce-label
-privateReduce: aString extension: anotherString
+privateReduce: aString extension: extensionAsString
 	
-	 ^ (self ellipsis: aString), anotherString   
+	 ^ (self ellipsis: aString), extensionAsString  
