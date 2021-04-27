@@ -7,7 +7,7 @@ findFirstFrequentLetter: aString
 
 	| index indexFreqLetter mostFrequentLetter currentLetter |
 	
-	index := 1.
+	index := 2.
 	mostFrequentLetter := 0.
 	indexFreqLetter := 0.
 	
