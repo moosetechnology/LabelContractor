@@ -1,4 +1,4 @@
 accessing
-caseSensitive: anObject
+caseSensitive: bool
 
-	caseSensitive := anObject
+	caseSensitive := bool
