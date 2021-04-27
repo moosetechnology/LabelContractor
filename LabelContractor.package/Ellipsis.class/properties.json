@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"ellipsisSize"
-	],
+	"instvars" : [ ],
 	"name" : "Ellipsis",
 	"type" : "normal"
 }

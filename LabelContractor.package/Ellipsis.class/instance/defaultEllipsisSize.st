@@ -1,4 +1,0 @@
-accessing
-defaultEllipsisSize
-
-	^ 8
