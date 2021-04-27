@@ -8,4 +8,4 @@ removePathFrom: aString
 	               2. 'file.ext' -> returns: 'file.txt'
 	"
 	
-	^ aString copyReplaceAll: (self getPath: aString) with: '' 
+	^ aString copyReplaceAll: (self extractPathFrom: aString) with: '' 
