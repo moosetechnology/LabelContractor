@@ -1,4 +1,4 @@
 accessing
 beCaseSensitive
 
-	^ self caseSensitive: true 
+	^ caseSensitive := true 
