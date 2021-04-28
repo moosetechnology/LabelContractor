@@ -2,7 +2,8 @@ running
 setUp 
 
 	super setUp.
-	exampleString := 'AnExampleOfAClass'.
-	collectionOfSubstrings := #('An' 'of' 'Class').
+	caseSensitiveExample := 'anExampleOfAClAss'.
+	caseUnsensitiveExample := 'AnExampleOfAClAss'.
+	collectionOfSubstrings := #('An' 'Of' 'Class').
 	aContractor collectionOfSubstrings: collectionOfSubstrings 
 	
