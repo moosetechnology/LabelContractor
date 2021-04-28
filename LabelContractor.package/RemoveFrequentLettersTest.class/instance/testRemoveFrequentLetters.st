@@ -12,8 +12,8 @@ testRemoveFrequentLetters
 	
 	labelBefore := 'AnExampleWithExtension.txt'.
 	labelAfter := aContractor reduce: labelBefore.
-	self assert: labelAfter equals: 'xmpWihxi.txt'.
+	self assert: labelAfter equals: 'AxmWihxi.txt'.
 	
 	labelBefore := 'AnExampleWithOutExtension'.
 	labelAfter := aContractor reduce: labelBefore.
-	self assert: labelAfter equals: 'xmpWihxi'.
+	self assert: labelAfter equals: 'AxmWihxi'.

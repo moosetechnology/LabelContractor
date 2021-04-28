@@ -7,8 +7,8 @@ testRemoveFrequentLettersChangeSize
 
 	labelBefore := 'AnExampleWithExtension.txt'.
 	labelAfter := contractorSpecifySize reduce: labelBefore.
-	self assert: labelAfter equals: 'xmplWihxnion.txt'.
+	self assert: labelAfter equals: 'AxmplWihxion.txt'.
 
 	labelBefore := 'AnExampleWithOutExtension'.
 	labelAfter := contractorSpecifySize reduce: labelBefore.
-	self assert: labelAfter equals: 'xmplWihOuxio'.
+	self assert: labelAfter equals: 'AxmplWihOxio'.
