@@ -6,7 +6,6 @@ reduce: aString
 	"
 	
 	| noPath extension pathPart reducedString |
-	
 	self upTo < 1 ifTrue: [ ^ String empty ]. 
 	noPath := self class removePathFrom: aString.
 	extension := self class extractExtensionFrom: aString.
