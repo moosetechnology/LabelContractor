@@ -1,8 +1,7 @@
 tests
-testReduce
+testReduceWithoutKeepingPath
 
 	| reducedLabel |
-	" if the contractor is an instance of RemoveSubstring so we instanciate it with a substring "
 	 
 	reducedLabel := aContractor reduce: exampleString.
 	self assert: reducedLabel equals: self expectedReducedLabel.
