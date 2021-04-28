@@ -1,4 +1,4 @@
 private
-privateRemoveSubstring: aSubstring from: string
+privateRemoveSubstrings: aSubstring from: string
 
 	^ self removePrefix: aSubstring from: string

@@ -1,4 +1,4 @@
 private
-privateRemoveSubstring: aSubstring from: aString
+privateRemoveSubstrings: aSubstring from: aString
 
 	^ self removeAnySubstring: aSubstring from: aString 
