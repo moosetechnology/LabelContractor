@@ -2,5 +2,5 @@ tests
 testRemoveCaseUnsensitive
 
 	self
-		assert: (aContractor reduce: caseUnsensitiveExample)
+		assert: (aContractor reduce: 'AnExampleofAClAss')
 		equals: self expectedReducedLabelCaseUnsensitive

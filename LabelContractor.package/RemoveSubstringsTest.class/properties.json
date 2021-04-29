@@ -6,9 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"collectionOfSubstrings",
-		"caseSensitiveExample",
-		"caseUnsensitiveExample"
+		"collectionOfSubstrings"
 	],
 	"name" : "RemoveSubstringsTest",
 	"type" : "normal"
