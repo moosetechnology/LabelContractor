@@ -1,5 +1,5 @@
-as yet unclassified
-exampleDeux
+examples
+exampleSpec
 
 	<script: 'self new exampleDeux' >
 	SpListPresenter new
