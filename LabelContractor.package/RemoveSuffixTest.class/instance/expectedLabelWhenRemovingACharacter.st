@@ -1,0 +1,4 @@
+tests
+expectedLabelWhenRemovingACharacter
+	
+	^ 'ASomeASome'

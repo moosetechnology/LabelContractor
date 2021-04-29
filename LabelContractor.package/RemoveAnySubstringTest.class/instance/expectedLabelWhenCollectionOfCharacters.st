@@ -1,0 +1,4 @@
+expected-result
+expectedLabelWhenCollectionOfCharacters
+	
+	^ 'SomSom' 
