@@ -1,8 +1,7 @@
-letter_frequency
-letterFrequency
-	
-	| letterFrequency |
-	letterFrequency := Dictionary new.		
+letter-frequency
+createFrequentLettersDictionary
+
+  FrequentLetters :=  Dictionary new.
 	#(	
 		#('e' 14.715)
 		#('s' 7.948)
@@ -107,10 +106,6 @@ letterFrequency
 	#('>' 11)
 	#('.' 11)
 	#('?' 11)
-	#('/' 11)	) do: [:each | letterFrequency at: (each first) put: each second].
-	^letterFrequency	
-	
-	
-	
-			
+	#('/' 11)	) do: [:each | FrequentLetters at: (each first) put: each second].
+	^ FrequentLetters 	
 	

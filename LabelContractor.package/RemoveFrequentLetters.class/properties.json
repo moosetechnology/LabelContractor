@@ -4,7 +4,9 @@
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"FrequentLetters"
+	],
 	"instvars" : [ ],
 	"name" : "RemoveFrequentLetters",
 	"type" : "normal"

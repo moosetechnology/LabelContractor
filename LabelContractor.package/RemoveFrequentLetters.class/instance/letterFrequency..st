@@ -7,4 +7,4 @@ letterFrequency: aString
 		(eg: letterFrequency: 'h' -> returns: 0.737)
 	"
 
-	^ self class letterFrequency at: aString ifAbsent: [ 12 ]
+	^ self class frequentLetters at: aString ifAbsent: [ 12 ]
