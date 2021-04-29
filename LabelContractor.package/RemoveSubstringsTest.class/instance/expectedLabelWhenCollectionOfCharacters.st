@@ -1,0 +1,4 @@
+tests
+expectedLabelWhenCollectionOfCharacters
+	
+	^ self subclassResponsibility 
