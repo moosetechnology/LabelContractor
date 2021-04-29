@@ -1,4 +1,4 @@
 expected-result
 expectedReducedLabelCaseUnsensitive
 
-	^ 'ExampleOfAClass'
+	^ 'ExampleofAClAss'

@@ -3,7 +3,7 @@ setUp
 
 	super setUp.
 	caseSensitiveExample := 'anExampleOfAClAss'.
-	caseUnsensitiveExample := 'AnExampleOfAClAss'.
+	caseUnsensitiveExample := 'AnExampleofAClAss'.
 	collectionOfSubstrings := #('An' 'Of' 'Class').
 	aContractor collectionOfSubstrings: collectionOfSubstrings 
 	

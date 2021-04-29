@@ -2,5 +2,5 @@ tests
 testRemoveCaseSensitive
 
 	self
-		assert: (aContractor reduce: caseSensitiveExample)
+		assert: (aContractor beCaseSensitive;  reduce: caseSensitiveExample)
 		equals: self expectedReducedLabelCaseSensitive
