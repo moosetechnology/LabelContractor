@@ -6,11 +6,10 @@ findFirstFrequentLetter: aString
 	"
 
 	| index indexFreqLetter mostFrequentLetter currentLetter |
-	
-	index := 2.
+	index := self keepFirstLetterAndStartAtSecondOne.
 	mostFrequentLetter := 0.
 	indexFreqLetter := 0.
-	
+
 	[ index <= aString size ] whileTrue: [ 
 		currentLetter := self letterFrequency:
 			                 (aString copyFrom: index to: index).
