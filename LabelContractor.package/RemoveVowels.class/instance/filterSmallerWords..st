@@ -5,4 +5,4 @@ filterSmallerWords: aCollectionOfWords
 			self filterSmallerWords: ( #('Of' 'Some' 'In') asOrderedCollection )
 			-> #('Some') asOrderedCollection 	
 		"
-	   ^ aCollectionOfWords removeAllSuchThat: [ :each | self tokenLessThanTwoLetters: each ].
+	   ^ aCollectionOfWords removeAllSuchThat: [ :each | self tokenLessThanOrEqualToTwoLetters: each ].

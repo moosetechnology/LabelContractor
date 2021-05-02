@@ -12,15 +12,17 @@ annalyseWords: aCollectionOfWords
 				-> #('Sme'. 'Othr') asOrderedCollection 
 		"
 
-	   | filteredCollection newCollection stringWithoutVowels |
+	   | filteredCollection newCollection stringWithoutVowels reducedString |
 	   stringWithoutVowels := String new.
 	   newCollection := OrderedCollection new.
 	   filteredCollection := self filterSmallerWords: aCollectionOfWords.
+	   reducedString := String new.
 	   filteredCollection do: [ :each | 
-		   (each copyFrom: 2 to: each size - 1) do: [ :character | 
-			   character isVowel ifFalse: [ 
-				   stringWithoutVowels := stringWithoutVowels , character asString ] ].
-		   stringWithoutVowels := (each at: 1) asString, stringWithoutVowels, each last asString.
+		   each size > 3  " removing the vowels only from the tokens greater than 3 letters"
+			   ifTrue: [ 
+				   reducedString := self keepFirstAndLastLetter: each.
+				   stringWithoutVowels := self removeVowelsFrom: reducedString with: each ]
+			   ifFalse: [ stringWithoutVowels := each ].
 		   newCollection add: stringWithoutVowels.
 		   stringWithoutVowels := String new ].
 	   ^ newCollection
