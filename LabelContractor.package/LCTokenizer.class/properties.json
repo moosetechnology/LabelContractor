@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "redaidtaleb 5/3/2021 00:45",
+	"super" : "Object",
+	"category" : "LabelContractor-Tokenizer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LCTokenizer",
+	"type" : "normal"
+}

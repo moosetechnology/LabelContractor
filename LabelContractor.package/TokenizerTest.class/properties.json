@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "LabelContractor-TokenizerTests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tokenizer"
+	],
+	"name" : "TokenizerTest",
+	"type" : "normal"
+}
