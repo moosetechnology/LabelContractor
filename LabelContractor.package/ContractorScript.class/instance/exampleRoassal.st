@@ -1,7 +1,7 @@
 examples
 exampleRoassal
 
-	<script: 'self new exampleUn'>
+	<script: 'self new exampleRoassal'>
 	| canvas |
 	canvas := RSCanvas new @ RSCanvasController.
 	canvas addAll: (Collection withAllSubclasses collect: [ :i | 
