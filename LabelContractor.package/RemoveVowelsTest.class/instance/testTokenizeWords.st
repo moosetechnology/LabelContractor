@@ -1,18 +1,18 @@
 tests
-testDivideByWord
+testTokenizeWords
 
 	   self
-		   assert: (aContractor divideByWord: 'DMClassNameBlueprint34')
+		   assert: (aContractor tokenizeWords: 'DMClassNameBlueprint34')
 		   equals: #( 'DM' 'Class' 'Name' 'Blueprint34' ) asOrderedCollection.
 
 	   self
-		   assert: (aContractor divideByWord: '23SomethingOf43Like33')
+		   assert: (aContractor tokenizeWords: '23SomethingOf43Like33')
 		   equals: #( '23' 'Something' 'Of43' 'Like33' ) asOrderedCollection.
 
 	   self
-		   assert: (aContractor divideByWord: '32DF')
+		   assert: (aContractor tokenizeWords: '32DF')
 		   equals: #( '32' 'DF' ) asOrderedCollection.
 
 	   self
-		   assert: (aContractor divideByWord: 'CK123J')
+		   assert: (aContractor tokenizeWords: 'CK123J')
 		   equals: #( 'C' 'K123' 'J' ) asOrderedCollection
