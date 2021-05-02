@@ -9,8 +9,7 @@ findFirstFrequentLetter: aString
 	index := self keepFirstLetterAndStartAtSecondOne.
 	mostFrequentLetter := 0.
 	indexFreqLetter := 0.
-
-	[ index <= aString size ] whileTrue: [ 
+	index to: aString size do: [ 
 		currentLetter := self letterFrequency:
 			                 (aString copyFrom: index to: index).
 		currentLetter > mostFrequentLetter ifTrue: [ 
