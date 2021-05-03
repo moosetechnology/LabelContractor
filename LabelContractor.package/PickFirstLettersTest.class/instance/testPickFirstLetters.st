@@ -5,11 +5,8 @@ testPickFirstLetters
 	
 	"
 	
-	| labelBefore labelAfter |
-	labelBefore := ''.
-	labelAfter := aContractor  reduce: labelBefore.
-	self assert: labelAfter equals: ''.
+	| stringExample |
+	self assert: (aContractor  reduce: '') equals: ''.
 
-	labelBefore := 'SWAnExampleOfClass.txt'.
-	labelAfter := aContractor  reduce: labelBefore.
-	self assert: labelAfter equals: 'SWAnExam(..).txt'.
+	stringExample := 'AnExampleOfClass'.
+	self assert: (aContractor  reduce: stringExample) equals: 'AnExampl..'.
