@@ -1,4 +1,4 @@
 expected-result
 expectedReducedLabel
 	
-	^ 'AnExampl.txt'.
+	^ 'AnExampl(..).txt'.

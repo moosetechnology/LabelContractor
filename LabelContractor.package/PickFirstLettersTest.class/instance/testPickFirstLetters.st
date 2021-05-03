@@ -12,4 +12,4 @@ testPickFirstLetters
 
 	labelBefore := 'SWAnExampleOfClass.txt'.
 	labelAfter := aContractor  reduce: labelBefore.
-	self assert: labelAfter equals: 'SWAnExam.txt'.
+	self assert: labelAfter equals: 'SWAnExam(..).txt'.
