@@ -9,7 +9,7 @@ privateReduce: aString extension: extensionAsString
 	"
 	| toknizeString filteredWords|
 	toknizeString := tokenizer tokenizeWords: aString onlyLetters .
-	filteredWords := self annalyseWords: toknizeString.
+	filteredWords := self removeVowelsOnEachStringFrom: toknizeString.
 	^ '' join: filteredWords, extensionAsString  
 	
 	
