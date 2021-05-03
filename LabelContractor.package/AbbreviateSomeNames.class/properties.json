@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "redaidtaleb 5/3/2021 01:01",
+	"super" : "LabelContractor",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tokenizer",
+		"until"
+	],
+	"name" : "AbbreviateSomeNames",
+	"type" : "normal"
+}
