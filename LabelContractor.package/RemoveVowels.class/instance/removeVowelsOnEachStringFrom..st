@@ -1,5 +1,5 @@
 private-algorithm
-annalyseWords: aCollectionOfWords
+removeVowelsOnEachStringFrom: aCollectionOfWords
 
 	   " 
 			Remove the vowels from each strisg in the collection. 
@@ -15,7 +15,7 @@ annalyseWords: aCollectionOfWords
 	   | filteredCollection newCollection stringWithoutVowels reducedString |
 	   stringWithoutVowels := String new.
 	   newCollection := OrderedCollection new.
-	   filteredCollection := self filterSmallerWords: aCollectionOfWords.
+	   filteredCollection := tokenizer filterSmallerTokens: aCollectionOfWords.
 	   reducedString := String new.
 	   filteredCollection do: [ :each | 
 		   each size > 3  " removing the vowels only from the tokens greater than 3 letters"
