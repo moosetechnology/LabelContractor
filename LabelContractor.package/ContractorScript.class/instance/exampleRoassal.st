@@ -8,7 +8,8 @@ exampleRoassal
 			 RSBox new
 				 model: i;
 				 @ (RSLabeledWithContractor new
-						  text: [ :model | model name ];
-						  contractor: Ellipsis) ]).
+						  text: [ :model | model name ]
+						; contractor: RemoveVowels)
+						 ]).
 	RSGridLayout new on: canvas shapes.
 	canvas open

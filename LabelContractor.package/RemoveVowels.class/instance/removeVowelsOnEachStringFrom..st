@@ -15,7 +15,7 @@ removeVowelsOnEachStringFrom: aCollectionOfWords
 	   | filteredCollection newCollection stringWithoutVowels reducedString |
 	   stringWithoutVowels := String new.
 	   newCollection := OrderedCollection new.
-	   filteredCollection := self filterSmallerTokens: aCollectionOfWords.
+	   filteredCollection := tokenizer filterSmallerTokens: aCollectionOfWords.
 	   reducedString := String new.
 	   filteredCollection do: [ :each | 
 		   each size > 3  " removing the vowels only from the tokens greater than 3 letters"
