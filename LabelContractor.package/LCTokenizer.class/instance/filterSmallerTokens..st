@@ -1,5 +1,5 @@
 private-algorithm
-filterSmallerWords: aCollectionOfWords
+filterSmallerTokens: aCollectionOfWords
 		
 		" 
 			self filterSmallerWords: ( #('Of' 'Some' 'In') asOrderedCollection )
