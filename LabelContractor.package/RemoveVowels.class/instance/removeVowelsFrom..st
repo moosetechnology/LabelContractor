@@ -1,7 +1,7 @@
 private-algorithm
 removeVowelsFrom: string
-		
-		"
+
+	   "
 			Remove vowels from a string.
 			The first letter is always kept whether it is a vowel or a consonant
 			
@@ -9,11 +9,11 @@ removeVowelsFrom: string
 			-> 'smthng'
 			self removeVowelsFrom: 'Other' 
 			-> 'Othr'  
+			self removeVowelsFrom: 'other'
+			-> 'other'
 		"
-	  | stringWithoutFirstLetter stringWithoutVowels |
-		stringWithoutFirstLetter := self keepFirstLetter: string.
-	   stringWithoutVowels := String new.
-	   stringWithoutFirstLetter do: [ :character | 
-		   (character isVowel and: character isLowercase) ifFalse: [ 
-			   stringWithoutVowels := stringWithoutVowels , character asString ] ].
-	   ^ string at: 1, stringWithoutVowels
+
+	   | stringWithoutFirstLetter |
+		(string size = 1 and: (self isVowelAt: 1 in: string)) ifTrue: [ ^ string reject: #isVowel ].
+	   stringWithoutFirstLetter := self keepFirstLetter: string.
+	   ^ (string at: 1) asString, (stringWithoutFirstLetter reject: #isVowel)
