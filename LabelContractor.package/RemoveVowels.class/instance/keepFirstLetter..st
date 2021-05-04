@@ -2,7 +2,8 @@ private-algorithm
 keepFirstLetter: string
 
 	   "
-		 	we keep the first so that the reduction is more understandable.
+		 	We keep the first letter to make the reduction more understandable.
+			Therefore, we return the rest of the string from index 2.
 		 "
 
-	   ^ string copyFrom: 2 to: string
+	   ^ string copyFrom: 2 to: string size
