@@ -3,12 +3,12 @@ privateReduce: aString extension: extensionAsString
 
 	" 
 		privateReduce: 'SomethingOfLikeThis' extension: '' 
-			-> 'SmthngLkeThs'
+			-> 'SmthngLkThs'
 		privateReduce: 'SomethingLike' extension: '.java'
-			-> 'SmthngLke.java'
+			-> 'SmthngLk.jv'
 	"
 	| toknizeString filteredWords|
-	toknizeString := tokenizer tokenizeWords: aString onlyLetters .
+	toknizeString := tokenizer tokenizeWords: aString.
 	filteredWords := self removeVowelsOnEachStringFrom: toknizeString.
 	^ '' join: filteredWords, extensionAsString  
 	
