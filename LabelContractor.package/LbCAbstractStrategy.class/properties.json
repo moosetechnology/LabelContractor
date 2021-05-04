@@ -9,6 +9,6 @@
 		"upTo",
 		"withPath"
 	],
-	"name" : "LabelContractor",
+	"name" : "LbCAbstractStrategy",
 	"type" : "normal"
 }

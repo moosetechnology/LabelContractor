@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "idtalebReda 4/20/2021 12:03",
-	"super" : "LabelContractor",
+	"super" : "LbCAbstractStrategy",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,6 +8,6 @@
 		"FrequentLetters"
 	],
 	"instvars" : [ ],
-	"name" : "RemoveFrequentLetters",
+	"name" : "LbCRemoveFrequentLettersStrategy",
 	"type" : "normal"
 }

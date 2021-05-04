@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "idtalebReda 4/27/2021 18:19",
-	"super" : "LabelContractor",
+	"super" : "LbCAbstractStrategy",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -9,6 +9,6 @@
 		"caseSensitive",
 		"collectionOfSubstrings"
 	],
-	"name" : "RemoveSubstrings",
+	"name" : "LbCRemoveSubstringsStrategy",
 	"type" : "normal"
 }

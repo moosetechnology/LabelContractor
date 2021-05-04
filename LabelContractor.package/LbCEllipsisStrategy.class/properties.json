@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "idtalebReda 4/23/2021 15:01",
-	"super" : "RemoveSubstrings",
+	"commentStamp" : "redaidtaleb 4/30/2021 13:21",
+	"super" : "LbCAbstractStrategy",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "RemoveAnySubstring",
+	"name" : "LbCEllipsisStrategy",
 	"type" : "normal"
 }

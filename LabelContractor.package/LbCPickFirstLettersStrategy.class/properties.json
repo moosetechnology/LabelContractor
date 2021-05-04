@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "redaidtaleb 4/29/2021 19:40",
-	"super" : "LabelContractor",
+	"commentStamp" : "idtalebReda 4/27/2021 18:10",
+	"super" : "LbCAbstractStrategy",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "BaseName",
+	"name" : "LbCPickFirstLettersStrategy",
 	"type" : "normal"
 }

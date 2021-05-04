@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "redaidtaleb 5/2/2021 12:27",
-	"super" : "LabelContractor",
+	"super" : "LbCAbstractStrategy",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,6 +8,6 @@
 	"instvars" : [
 		"tokenizer"
 	],
-	"name" : "RemoveVowels",
+	"name" : "LbCRemoveVowelsStrategy",
 	"type" : "normal"
 }
