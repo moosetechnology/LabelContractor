@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "redaidtaleb 5/3/2021 01:01",
-	"super" : "LabelContractor",
+	"super" : "LbCAbstractStrategy",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -9,6 +9,6 @@
 		"tokenizer",
 		"until"
 	],
-	"name" : "AbbreviateSomeNames",
+	"name" : "LbCAbbreviateSomeNamesStrategy",
 	"type" : "normal"
 }
