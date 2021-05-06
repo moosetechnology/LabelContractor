@@ -1,0 +1,4 @@
+strategies
+pickFirstLettersStrategy
+
+	^ LbCPickFirstLettersStrategy new

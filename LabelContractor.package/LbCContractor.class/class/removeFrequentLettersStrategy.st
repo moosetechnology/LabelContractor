@@ -1,0 +1,4 @@
+removing-strategies
+removeFrequentLettersStrategy
+
+	^ LbCRemoveFrequentLettersStrategy new

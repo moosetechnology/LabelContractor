@@ -1,0 +1,4 @@
+strategies
+baseNameStrategy
+
+	^ LbCBaseNameStrategy new

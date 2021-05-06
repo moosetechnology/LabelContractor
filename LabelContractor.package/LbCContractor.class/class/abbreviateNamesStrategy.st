@@ -1,0 +1,4 @@
+strategies
+abbreviateNamesStrategy
+
+	^ LbCAbbreviateNamesStrategy new

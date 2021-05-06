@@ -1,0 +1,4 @@
+strategies
+ellipsisStrategy
+	
+	^ LbCEllipsisStrategy new

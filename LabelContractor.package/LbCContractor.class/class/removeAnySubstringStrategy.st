@@ -1,0 +1,4 @@
+removing-strategies
+removeAnySubstringStrategy
+
+	^ LbCRemoveAnySubstringStrategy new
