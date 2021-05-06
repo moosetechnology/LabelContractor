@@ -1,7 +1,7 @@
 tests
 testExtractExtensionFrom
 	
-	self assert: (LabelContractor extractExtensionFrom: '' ) equals: String empty.
-	self assert: (LabelContractor extractExtensionFrom: 'withoutExtension' ) equals: String empty.
-	self assert: (LabelContractor extractExtensionFrom: 'something.txt') equals: '.txt'.
-	self assert: (LabelContractor extractExtensionFrom: 'something.txt.exe') equals: '.exe'
+	self assert: (LbCAbstractStrategy extractExtensionFrom: '' ) equals: String empty.
+	self assert: (LbCAbstractStrategy extractExtensionFrom: 'withoutExtension' ) equals: String empty.
+	self assert: (LbCAbstractStrategy extractExtensionFrom: 'something.txt') equals: '.txt'.
+	self assert: (LbCAbstractStrategy extractExtensionFrom: 'something.txt.exe') equals: '.exe'

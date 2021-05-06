@@ -1,6 +1,6 @@
 tests
 testRemovePathFrom
 	
-	self assert: (LabelContractor removePathFrom: '' ) equals: String empty.
-	self assert: (LabelContractor removePathFrom: 'withoutPath' ) equals: 'withoutPath'.
-	self assert: (LabelContractor removePathFrom: 'A:path/example/something') equals: 'something'.
+	self assert: (LbCAbstractStrategy removePathFrom: '' ) equals: String empty.
+	self assert: (LbCAbstractStrategy removePathFrom: 'withoutPath' ) equals: 'withoutPath'.
+	self assert: (LbCAbstractStrategy removePathFrom: 'A:path/example/something') equals: 'something'.

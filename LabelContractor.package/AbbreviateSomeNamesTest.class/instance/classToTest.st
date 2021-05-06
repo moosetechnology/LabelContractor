@@ -1,4 +1,4 @@
 creation
 classToTest
 	
-	^ AbbreviateSomeNames  
+	^ LbCAbbreviateSomeNamesStrategy  

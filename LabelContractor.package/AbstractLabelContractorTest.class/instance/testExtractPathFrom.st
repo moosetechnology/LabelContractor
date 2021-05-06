@@ -1,6 +1,6 @@
 tests
 testExtractPathFrom
 	
-	self assert: (LabelContractor extractPathFrom: '' ) equals: String empty.
-	self assert: (LabelContractor extractPathFrom: 'withoutPath' ) equals: String empty.
-	self assert: (LabelContractor extractPathFrom: 'A:path/example/something') equals: 'A:path/example/'.
+	self assert: (LbCAbstractStrategy extractPathFrom: '' ) equals: String empty.
+	self assert: (LbCAbstractStrategy extractPathFrom: 'withoutPath' ) equals: String empty.
+	self assert: (LbCAbstractStrategy extractPathFrom: 'A:path/example/something') equals: 'A:path/example/'.
