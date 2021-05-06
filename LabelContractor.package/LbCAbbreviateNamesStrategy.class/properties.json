@@ -9,6 +9,6 @@
 		"tokenizer",
 		"until"
 	],
-	"name" : "LbCAbbreviateSomeNamesStrategy",
+	"name" : "LbCAbbreviateNamesStrategy",
 	"type" : "normal"
 }
