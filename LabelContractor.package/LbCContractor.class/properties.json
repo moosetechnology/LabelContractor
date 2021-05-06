@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "redaidtaleb 5/6/2021 09:49",
+	"super" : "Object",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"strategy"
+	],
+	"name" : "LbCContractor",
+	"type" : "normal"
+}
