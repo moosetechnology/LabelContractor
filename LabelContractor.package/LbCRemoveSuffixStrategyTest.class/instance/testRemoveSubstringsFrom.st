@@ -2,17 +2,19 @@ tests
 testRemoveSubstringsFrom
 
 	self
-		assert: ((self classToTest with: '.txt') removeSubstringsFrom: exampleString) 
+		assert: ((self classToTest new with: '.txt') removeSubstringsFrom: exampleString) 
 		equals: 'AnExampleOfAClass'.
 	
 	self
-		assert: ((self classToTest with: '&?;') removeSubstringsFrom: exampleString)
+		assert: ((self classToTest new with: '&?;') removeSubstringsFrom: exampleString)
 		equals: exampleString.
 
 	self
-		assert: ((self classToTest withAll: { '.txt'. 'Class' }) removeSubstringsFrom: exampleString)
+		assert: (self classToTest new withAll: { '.txt'. 'Class' };
+		               removeSubstringsFrom: exampleString)
 		equals: 'AnExampleOfAClass'.
 
 	self
-		assert: ((self classToTest withAll: { 'An'. 'Class.txt'. 'txt' }) removeSubstringsFrom: exampleString)
+		assert: (self classToTest new withAll: { 'An'. 'Class.txt'. 'txt' };
+		               removeSubstringsFrom: exampleString)
 		equals: 'AnExampleOfA'

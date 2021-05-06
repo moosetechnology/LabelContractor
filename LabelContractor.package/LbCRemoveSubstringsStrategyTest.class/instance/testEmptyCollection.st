@@ -3,8 +3,8 @@ testEmptyCollection
 
 	| labelAfter |
 
-	labelAfter := (self classToTest with: '') reduce: exampleString.
+	labelAfter := (self classToTest new with: '') reduce: exampleString.
 	self assert: labelAfter equals: exampleString.
 	
-	labelAfter := (self classToTest withAll: {}) reduce: exampleString.
+	labelAfter := (self classToTest new withAll: {}) reduce: exampleString.
 	self assert: labelAfter equals: exampleString
