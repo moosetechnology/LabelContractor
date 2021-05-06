@@ -1,4 +1,0 @@
-expected-result
-expectedLabelWhenRemovingACharacter
-	
-	^ 'SomeSome'
