@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "AbstractLabelContractorTest",
+	"super" : "LbCAbstractStrategyTest",
 	"category" : "LabelContractor-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "BaseNameTest",
+	"instvars" : [
+		"collectionOfSubstrings"
+	],
+	"name" : "LbCRemoveSubstringsStrategyTest",
 	"type" : "normal"
 }

@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "RemoveSubstringsTest",
+	"super" : "LbCAbstractStrategyTest",
 	"category" : "LabelContractor-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "RemoveAnySubstringTest",
+	"name" : "LbCRemoveFrequentLettersStrategyTest",
 	"type" : "normal"
 }
