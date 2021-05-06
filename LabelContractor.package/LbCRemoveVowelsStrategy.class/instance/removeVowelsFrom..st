@@ -14,6 +14,6 @@ removeVowelsFrom: string
 		"
 
 	   | stringWithoutFirstLetter |
-		(string size = 1 and: (self isVowelAt: 1 in: string)) ifTrue: [ ^ string reject: #isVowel ].
-	   stringWithoutFirstLetter := self keepFirstLetter: string.
+		(string size = 1 and: ((string at: 1) isVowel)) ifTrue: [ ^ string reject: #isVowel ].
+	   stringWithoutFirstLetter := self keepFirstLetter: (self class removeYVowelFrom: string).
 	   ^ (string at: 1) asString, (stringWithoutFirstLetter reject: #isVowel)
