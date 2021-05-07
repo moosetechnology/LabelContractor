@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "redaidtaleb 5/7/2021 11:36",
+	"super" : "BaselineOf",
+	"category" : "LabelContractor-Baseline",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfLabelContractor",
+	"type" : "normal"
+}
