@@ -1,26 +1,22 @@
 I am a contractor and i can contract strings using several strategies
 
-**Example 1:**
-LbCContractor ellipsisStrategy
-	upTo: 4;
-	keepPath;
-	reduce: 'A:path/Something'.	
->>> 'A:path/So..ng'
+*Example 1:*
+```Smalltalk
+| removeAnySubstringStrategy |
+removeAnySubstringStrategy := LbCRemoveAnySubstringStrategy new with: 'example'.
+LbCContractor new
+	strategy: removeAnySubstringStrategy;
+   reduce: 'A:path/exampleName'.
+>>> 'Name'
+```
 
-**Example 2:**
-LbCContractor ellipsisStrategy
-	upTo: 4;
-	reduce: 'A:path/Something'.
->>> 'So..ng'
-
-**Example 3:**
-LbCContractor 	removePrefixStrategy 
-	with: 'Something';
-	reduce: 'somethingLikethis'.
->>> 'Likethis'
-
-LbCContractor 	removePrefixStrategy 
-	with: 'something';
-	beCaseSensitive;
-	reduce: 'somethingLikethis'.
->>> 'Likethis'
+*Example 2:*
+```Smalltalk
+removeAnySubstringStrategy := LbCRemoveAnySubstringStrategy new 
+														with: 'example';
+														keepPath.
+LbCContractor new
+	strategy: removeAnySubstringStrategy;
+   reduce: 'A:path/exampleName'.
+>>> 'A:path/Name'														
+```
