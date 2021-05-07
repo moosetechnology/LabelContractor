@@ -1,4 +1,4 @@
 accessing
 until: aPositifInteger
 	
-	^ until := aPositifInteger 
+	until := aPositifInteger 
