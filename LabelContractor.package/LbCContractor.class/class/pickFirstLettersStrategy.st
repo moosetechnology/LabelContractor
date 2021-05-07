@@ -1,4 +1,6 @@
 strategies
 pickFirstLettersStrategy
 
-	^ LbCPickFirstLettersStrategy new
+	^ self new
+		     strategy: LbCPickFirstLettersStrategy new;
+		     yourself

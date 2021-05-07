@@ -1,4 +1,6 @@
 removing-strategies
 removePrefixStrategy
 
-	^ LbCRemovePrefixStrategy new
+	^ self new
+		     strategy: LbCRemovePrefixStrategy new;
+		     yourself

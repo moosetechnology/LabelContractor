@@ -1,4 +1,7 @@
 strategies
 ellipsisStrategy
-	
-	^ LbCEllipsisStrategy new
+
+	   ^ self new
+		     strategy: LbCEllipsisStrategy new;
+		     yourself
+	   

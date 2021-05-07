@@ -1,4 +1,6 @@
 removing-strategies
 removeAnySubstringStrategy
 
-	^ LbCRemoveAnySubstringStrategy new
+	   ^ self new
+		     strategy: LbCRemoveAnySubstringStrategy new;
+		     yourself

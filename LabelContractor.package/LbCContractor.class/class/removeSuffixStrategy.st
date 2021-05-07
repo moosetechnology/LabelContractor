@@ -1,4 +1,6 @@
 removing-strategies
 removeSuffixStrategy
 
-	^ LbCRemoveSuffixStrategy new
+	^ self new
+		     strategy: LbCRemoveSuffixStrategy new;
+		     yourself

@@ -1,4 +1,6 @@
 strategies
 baseNameStrategy
 
-	^ LbCBaseNameStrategy new
+	^ self new
+		     strategy: LbCBaseNameStrategy new;
+		     yourself

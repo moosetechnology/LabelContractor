@@ -1,4 +1,6 @@
 strategies
 abbreviateNamesStrategy
 
-	^ LbCAbbreviateNamesStrategy new
+	^ self new
+		     strategy: LbCAbbreviateNamesStrategy new;
+		     yourself

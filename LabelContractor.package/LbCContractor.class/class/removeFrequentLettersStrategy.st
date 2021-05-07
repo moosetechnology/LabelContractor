@@ -1,4 +1,6 @@
 removing-strategies
 removeFrequentLettersStrategy
 
-	^ LbCRemoveFrequentLettersStrategy new
+	^ self new
+		     strategy: LbCRemoveFrequentLettersStrategy new;
+		     yourself

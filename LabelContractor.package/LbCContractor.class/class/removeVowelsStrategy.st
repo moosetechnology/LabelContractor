@@ -1,4 +1,6 @@
 removing-strategies
 removeVowelsStrategy
 
-	^ LbCRemoveVowelsStrategy new
+	^ self new
+		     strategy: LbCRemoveVowelsStrategy new;
+		     yourself
