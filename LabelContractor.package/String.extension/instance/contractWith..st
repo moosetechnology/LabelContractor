@@ -1,15 +1,16 @@
 *LabelContractor
-contractWith: aContractor
+contractWith: aLbCContractor
 
 	" 
 		reduce a string using a contractor 
 		
 		Examples:
-		>> 'A:/Path/examplClass' contractWith: (RemovePrefix with: 'exampl') 
-		'Class'
-		>> 'A:/Path/examplClass' contractWith: (RemovePrefix new with: 'exampl'; withPath: true) 
-		'A:/Path/Class'
-
+			| lbContractor |
+			lbContractor := LbCContractor new 
+											strategy: (LbCRemovePrefixStrategy new with: 'exemple').
+			
+			'exampleClass' contractWith: lbContractor 
+			-> 'Class'
 	"
 
-	^ aContractor reduce: self
+	^ aLbCContractor reduce: self
