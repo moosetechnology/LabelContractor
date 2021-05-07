@@ -1,38 +1,49 @@
-I am RemovePrefix, and i remove a prefix or a collection of prefixes from a string 
+I am RemovePrefix, and i remove a prefix or a collection of prefixes from a string .
 By default, the case sensitive is not respected(you can activate it by invoking #beCaseSensitive method).
  
 Examples:
 
-1 - With a prefix:
-- Without case sensitive:
-```smalltalk
-(LbCRemovePrefixStrategy with: 'Example')
-         withPath: true ;
-         reduce: 'A:/path/ExampleOfClassName'
-returns 'A:/path/OfClassName'
+1 - With a substring by using #with:
+```Smalltalk
+| removePrefixStrategy |
+removePrefixStrategy := LbCRemovePrefixStrategy new 
+											with: 'hashed'.
+LbCContractor new
+		   strategy: removePrefixStrategy;
+		   reduce: 'HashedCollection'.		
 ```
-- With case sensitive:
-```smalltalk
-(LbCRemovePrefixStrategy with: 'example')
-	       beCaseSensitive;
-         reduce: 'ExampleOfClassName'
-returns 'ExampleOfClassName'
-``` 
+returns 'Collection'
 
-2- With a collection of prefixes:
+2 - With a collection of substrings by using #withAll: 
 ```smalltalk
-(LbCRemovePrefixStrategy withAll: {'Example'. 'class'})
-	       beCaseSensitive;
-         reduce: 'ExampleOfClassName'
-returns 'OfClassName'
+removePrefixStrategy := LbCRemovePrefixStrategy new 
+											withAll: {'hashed'. 'Collection'} .
+LbCContractor new
+		   strategy: removePrefixStrategy;
+		   reduce: 'HashedCollection'.	
 ``` 
+returns 'Collection'
 
-- if a prefix is included in another substring in the collection, so we remove the longest prefix 
+3- With case-sensitive option by using #beCaseSensitive:
 ```smalltalk
-(LbCRemovePrefixStrategy withAll: {'example'. 'exampleof'})
-         reduce: 'ExampleOfClassName'
+removePrefixStrategy := LbCRemovePrefixStrategy new 
+											with: 'Hashed';
+											beCaseSensitive .
+LbCContractor new
+		   strategy: removePrefixStrategy;
+		   reduce: 'HashedCollection'.
+``` 
+returns 'Collection'
+
+4- if a prefix is included in another substring in the collection, so we remove the longest prefix 
+```smalltalk
+removePrefixStrategy := LbCRemovePrefixStrategy new 
+											 withAll: {'example'. 'exampleof'}.
+LbCContractor new
+		   strategy: removePrefixStrategy;
+		   reduce: 'ExampleOfClassName'.
+``` 
 returns 'ClassName'
-``` 
 
 
 

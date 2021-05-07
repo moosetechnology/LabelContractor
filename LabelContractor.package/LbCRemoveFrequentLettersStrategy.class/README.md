@@ -1,11 +1,34 @@
-I'm a remover of frequent letter in a label. I'm used to reduce the long label's name 
+I'm a remover of frequent letters in a label. 
 
-If the string contains an extension, then i will not consider the 'extension part' in the reduction. In addition, the result will contain the extension added at the end.
+If the string contains an extension, then i will not consider the 'extension part' in the reduction(see the 1st example). In addition, the result will contain the 'extension part' added at the end.
 
 By default, i reduce the label's name until it has a size of 8 characters.
->>> (RemoveFrequentLetter new) reduce: 'AnExampleOfAClassName.txt'
-xmpOfClm.txt
+*Example 1:*
+```Smalltalk
+| removeFrequentLettersStrategy |
+removeFrequentLettersStrategy := LbCRemoveFrequentLettersStrategy new .
+LbCContractor new
+		   strategy: removeFrequentLettersStrategy;
+		   reduce: 'HashedCollection.class'.		
+```
+returns 'HhdCocio.class'
 
-You can change the size of the resulting string:
->>> (RemoveFrequentLetter upTo: 10) reduce: 'AnExampleOfAClassName.txt'
-xmplOfClNm.txt
+*Example 2:*
+```Smalltalk
+| removeFrequentLettersStrategy |
+removeFrequentLettersStrategy := LbCRemoveFrequentLettersStrategy new .
+LbCContractor new
+		   strategy: removeFrequentLettersStrategy;
+		   reduce: 'HashedCollection'.		
+```
+returns 'HhdCocio'
+
+*Example 3: You can change the size by using #upTo:anInteger *
+```Smalltalk
+removeFrequentLettersStrategy := LbCRemoveFrequentLettersStrategy new upTo: 12.
+LbCContractor new
+		   strategy: removeFrequentLettersStrategy;
+		   reduce: 'HashedCollection'.		
+```
+returns 'HhdCollction'
+

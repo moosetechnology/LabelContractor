@@ -1,18 +1,22 @@
-I'm a picker of label's name, i take the first letters of a string. 
+I'm a picker of labels , i take the first letters of a string. 
 If the string contains an extension, then we keep it.
 
 By default I take the **first 8 letters**: 
->>> PickFirstLetters new reduce: 'AnExampleOfClass.txt' 
-'AnExampl.txt'
+```Smalltalk
+| pickFirstLetterStrategy |
+pickFirstLetterStrategy := LbCPickFirstLettersStrategy new .
+LbCContractor new
+		   strategy: pickFirstLetterStrategy;
+		   reduce: 'HashedCollection'.		
+```
+returns 'HashedCo..'
 
-And you can **change the default number** as following:
->>> PickFirstLetters new 
-       upTo: 4;
-    		reduce: 'AnExampleOfClass.txt' 
-'AnEx.txt'
-
-An example of string without extension:
->>> PickFirstLetters new 
-       upTo: 4;
-    		reduce: 'AnExampleOfClass'
-'AnEx'		 
+*An example to change the number of letter using #upTo:anInteger :*
+```Smalltalk
+| pickFirstLetterStrategy |
+pickFirstLetterStrategy := LbCPickFirstLettersStrategy new upTo: 5.
+LbCContractor new
+		   strategy: pickFirstLetterStrategy;
+		   reduce: 'HashedCollection'.		
+```
+returns 'Hashe..'

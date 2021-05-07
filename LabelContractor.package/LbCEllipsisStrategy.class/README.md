@@ -5,12 +5,32 @@ The strategy consists in keeping a certain first and last letters of the string 
 
 - If the string contains 
 By default, the size of the ellipsis is defined at 8(that means: 4 first letters + '..' + 4 last letters) 
->>> Ellipsis reduce: 'AnExampleOfClassName.txt'
-'AnEx...Name.txt'
+```Smalltalk
+| ellipsisStrategy |
+ellipsisStrategy := LbCEllipsisStrategy new .
+LbCContractor new
+		   strategy: ellipsisStrategy;
+		   reduce: 'HashedCollection'.		
+```
+returns 'Hash..tion'
 
-You can **change the default size** by another one, use #upTo: class method:
->>> (Ellipsis upTo: 10) reduce: 'AnExampleOfClassName.txt'
-'AnExa...sName.txt'
+*An example to change the size :*
+```Smalltalk
+| ellipsisStrategy |
+ellipsisStrategy := LbCEllipsisStrategy new upTo: 6.
+LbCContractor new
+		   strategy: ellipsisStrategy;
+		   reduce: 'HashedCollection'.		
+```
+returns 'Has..ion'
 
->>> (Ellipsis upTo: 9) reduce: 'AnExampleOfClassName'
-'AnEx..sName'
+*An example using #keepPath option:*
+```Smalltalk
+| ellipsisStrategy |
+ellipsisStrategy := LbCEllipsisStrategy new 
+									keepPath.
+LbCContractor new
+		   strategy: ellipsisStrategy;
+		   reduce: 'A:path/HashedCollection.class'.		
+```
+returns 'A:path/Hash..tion.class'
