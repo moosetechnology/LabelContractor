@@ -9,6 +9,6 @@
 		"upTo",
 		"withPath"
 	],
-	"name" : "ContractorScript",
+	"name" : "LbCContractorScript",
 	"type" : "normal"
 }
