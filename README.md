@@ -32,7 +32,7 @@ There are 9 ways to reduce labels:
 
 1- LbCAbbreviateNamesStrategy: it allows to keep only the initial letter of each name except the last one('ExampleSomething' -> 'ESomething'). By default it takes the 1st letter of the first 3 names.
 <p float="left">
-  <img src="images/roassalExamples/abbreviateNamesStrategy.png" width="700" />
+  <img src="images/roassalExamples/abbreviateNamesStrategy.png" width="800" />
   <img src="images/specListExamples/abbreviateNamesStrategy.png" width="320" /> 
 </p>
 
@@ -69,7 +69,7 @@ There are 9 ways to reduce labels:
 
 -> on the spec list(right picture) we removed the following substrings { 'ast'. 'Test'. 'Abstract' }.
 <p float="left">
-  <img src="images/roassalExamples/removeAnySubstringStrategy.png" width="800" />
+  <img src="images/roassalExamples/removeAnySubstringStrategy.png" width="900" />
   <img src="images/specListExamples/removeAnySubstringStrategy.png" width="320" /> 
 </p>
 
@@ -79,7 +79,7 @@ There are 9 ways to reduce labels:
 
 -> on the spec list(right picture) we removed the following substrings { 'abstract'. 'ast' }.
 <p float="left">
-  <img src="images/roassalExamples/removePrefixStrategy.png" width="850" />
+  <img src="images/roassalExamples/removePrefixStrategy.png" width="900" />
   <img src="images/specListExamples/removePrefixStrategy.png" width="300" /> 
 </p>
 
@@ -90,12 +90,12 @@ There are 9 ways to reduce labels:
 -> on the spec list(right picture) we removed { 'Test' }
 
 <p float="left">
-  <img src="images/roassalExamples/removeSuffixStrategy.png" width="850" />
+  <img src="images/roassalExamples/removeSuffixStrategy.png" width="900" />
   <img src="images/specListExamples/removeSuffixStrategy.png" width="300" /> 
 </p>
 
 9- LbCRemoveVowelsStrategy: consists in removing all the vowels (the letter 'y' is an exception in English, it's removed only when it represents a vowel) from the string.
 <p float="left">
-  <img src="images/roassalExamples/removeVowelsStrategy.png" width="750" />
+  <img src="images/roassalExamples/removeVowelsStrategy.png" width="850" />
   <img src="images/specListExamples/removeVowelsStrategy.png" width="320" /> 
 </p>
