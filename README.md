@@ -6,7 +6,7 @@ In order to install this project, execute the following script in the Playground
 ```Smalltalk
 Metacello new
   baseline: 'LabelContractor';
-  repository: 'github://reda-idtaleb/label_contractor:main';
+  repository: 'github://reda-idtaleb/label_contractor';
   load.
 ```  
 
@@ -71,7 +71,7 @@ In what follows, I will present the strategies that I have implemented.
 
 8- LbCRemoveSuffixStrategy: allows you to remove a substring(s) which is the suffix of the string that you want to reduce.
 
--> on the following visualization(left picture) we removed { 'Storage'. 'Moose'. 'Bag'. 'Array'. 'set' } from labels
+-> on the following visualization we remove { 'Storage'. 'Moose'. 'Bag'. 'Array'. 'set' } from labels
 
 -> on the spec list(right picture) we removed { 'Test' }
 
