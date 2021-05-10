@@ -20,7 +20,7 @@ In what follows, we will present the different strategies implemented and their 
 
 The first image represents an example of visualization which contains boxes with labels above and the second image is a list of all the classes of the system built by spec2.
 <p float="left">
-  <img src="images/roassalExamples/original_visualization.png" width="1200" />
+  <img src="images/roassalExamples/original_visualization.png" width="1300" />
   <img src="images/specListExamples/originalList.png" width="450" /> 
 </p>
 
