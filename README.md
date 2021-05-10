@@ -103,8 +103,10 @@ There are 9 ways to reduce labels:
 ## How to reduce a string using contractor: 
 The API is based on the design strategy, so for example to use a "remove vowels strategy" you can type on the playground:
 
+```Smalltalk
 | removeVowelsStrategy |
 removeVowelsStrategy := LbCRemoveVowelsStrategy new .
 LbCContractor new
     strategy: removeVowelsStrategy;
     reduce: 'HashedCollection'. 
+```    
