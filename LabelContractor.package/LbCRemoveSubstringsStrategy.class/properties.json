@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "idtalebReda 4/27/2021 18:19",
+	"super" : "LbCAbstractStrategy",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"caseSensitive",
+		"collectionOfSubstrings"
+	],
+	"name" : "LbCRemoveSubstringsStrategy",
+	"type" : "normal"
+}

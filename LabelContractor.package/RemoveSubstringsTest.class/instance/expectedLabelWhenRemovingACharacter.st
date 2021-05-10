@@ -1,4 +1,0 @@
-tests
-expectedLabelWhenRemovingACharacter
-	
-	^ self subclassResponsibility 
