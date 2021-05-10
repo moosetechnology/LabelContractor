@@ -1,4 +1,0 @@
-tests
-expectedLabelWhenRemovingACharacter
-	
-	^ 'SomeASomea' 

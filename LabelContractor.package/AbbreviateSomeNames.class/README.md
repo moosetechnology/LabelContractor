@@ -1,1 +1,0 @@
-i am a contractor that abbreviates some words by keeping its initial letters. 

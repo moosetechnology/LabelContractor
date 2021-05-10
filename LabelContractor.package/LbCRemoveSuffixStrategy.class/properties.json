@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "redaidtaleb 5/7/2021 13:21",
+	"super" : "LbCRemoveSubstringsStrategy",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LbCRemoveSuffixStrategy",
+	"type" : "normal"
+}

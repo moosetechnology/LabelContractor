@@ -2,4 +2,4 @@ running
 setUp
 	super setUp.
 	
-	tokenizer := LCTokenizer new.
+	tokenizer := LbCTokenizer new.

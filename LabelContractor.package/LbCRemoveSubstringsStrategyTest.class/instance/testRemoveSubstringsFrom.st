@@ -1,0 +1,3 @@
+tests
+testRemoveSubstringsFrom
+	^ self subclassResponsibility

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "redaidtaleb 5/7/2021 13:39",
+	"super" : "LbCAbstractStrategy",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tokenizer"
+	],
+	"name" : "LbCRemoveVowelsStrategy",
+	"type" : "normal"
+}

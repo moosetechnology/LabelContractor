@@ -1,1 +1,0 @@
-I am a remover of any substring from a string
