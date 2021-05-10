@@ -12,7 +12,7 @@ Metacello new
 
 ## LabelContractor description:
 The LabelContractor is an API will allow reducing labels on visualizations using different strategies.
-In what follows we will present the different strategies implemented and their applications on demonstrative examples.
+In what follows, we will present the different strategies implemented and their applications on demonstration examples.
 
 **Note: at the moment we cannot combine the strategies (that's the next job).**
 
