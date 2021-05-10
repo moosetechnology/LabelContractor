@@ -13,9 +13,7 @@ exampleRoassal
 	   g := RSGroup new.
 	   g addAll: (specificCollection collect: [ :i | 
 			    RSBox new
-				    model: i;
-				    width: 60;
-				    height: 60 ]).
+				    model: i]).
 	   g @ (RSLabeled new text: [ :m | strategy reduce: m ]).
 	   canvas addAll: g.
 	   RSGridLayout new
