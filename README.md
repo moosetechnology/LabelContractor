@@ -37,6 +37,8 @@ There are 9 ways to reduce labels:
 </p>
 
 2- LbCBaseNameStrategy: for strings representing an absolute file paths, only the name of the file is kept by removing the path and its extension. ('A: path/example.txt' or 'example.txt' -> 'example').
+
+*The left image represents an example of visualization before the application of the strategy and the image to the right represents the result of applying this strategy.*
 <p float="left">
   <img src="images/roassalExamples/baseNameOriginal.png" width="300" />
   <img src="images/roassalExamples/baseNameStrategy.png" width="300" /> 
