@@ -1,27 +1,21 @@
-Class: LbCBaseNameStrategy
-                                                                                                    
-
-Class: LbCBaseNameStrategy
-                                                                                                    
-
 I'm the BaseName class. I'm used to reduce labels to keep its base name
 
-Examples:
-
+**Example 1:**
+```Smalltalk
 | baseNameStrategy |
 baseNameStrategy := LbCBaseNameStrategy new .
 LbCContractor new
  strategy: baseNameStrategy;
  reduce: 'A:path/HashedCollection.class'.  
-
+```
 returns 'HashedCollection'
 
-An other example:
-
+**Example 2:**
+```Smalltalk
 | baseNameStrategy |
 baseNameStrategy := LbCBaseNameStrategy new .
 LbCContractor new
  strategy: baseNameStrategy;
  reduce: 'HashedCollection.class'.  
-
+```
 returns 'HashedCollection'
