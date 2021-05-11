@@ -7,10 +7,12 @@ removeVowelsFrom: string
 			
 			self removeVowelsFrom: 'Something' 
 			-> 'smthng'
+			
 			self removeVowelsFrom: 'Other' 
 			-> 'Othr'  
+			
 			self removeVowelsFrom: 'other'
-			-> 'other'
+			-> 'othr'
 		"
 
 	   | stringWithoutFirstLetter |

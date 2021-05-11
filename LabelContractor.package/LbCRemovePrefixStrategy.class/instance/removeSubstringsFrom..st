@@ -1,15 +1,31 @@
 private
 removeSubstringsFrom: aString
 	"
-		return a string without a prefix 
+		remove the prefix(or prefixes) from a string 
+		
 		Examples:
-			(RemovePrefix with: 'some') removeSubstringsFrom: 'something'
-			'thing'
-			(RemovePrefix withAll: {'some'. 'thing'}) removeSubstringsFrom: 'something'
-			'thing'
-			(RemovePrefix withAll: {'something'. 'some'}) removeSubstringsFrom: 'somethingElse'
-			'Else'
-	"
+			
+			```Smalltalk
+			| contractor |
+			contractor := LbCContractor new strategy: (LbCRemovePrefixStrategy new with: 'some'). 
+			contractor reduce: 'something'.
+			```
+			-> 'thing'
+			
+			```Smalltalk
+			contractor strategy: (LbCRemovePrefixStrategy new withAll: {'some'. 'thing'}).
+			contractor reduce: 'something'.
+			```
+			-> 'thing'
+			
+			```Smalltalk
+			contractor strategy: (LbCRemovePrefixStrategy new withAll: {'something'. 'some'}).
+			contractor reduce: 'somethingElse'.
+			```
+			-> 'Else'
+			
+	 "
+	
 	| maxSizePrefix theRightPrefix |
 	maxSizePrefix := 0.
 	theRightPrefix := String new.

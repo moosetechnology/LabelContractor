@@ -2,13 +2,13 @@ computing
 noVowelIn: aString
 
 	   "
-		 	Return true if the string doesn't contain any vowel(except y). Otherwise, return false.
+		 	Return true if the string doesn't contain any vowel('aeiou'). Otherwise, return false.
 			
 			Examples:
-				noVowelIn: 'fry' 
+				LbCRemoveVowelsStrategy noVowelIn: 'fry' 
 			 	-> true
 				
-				noVowelIn: 'play'
+				LbCRemoveVowelsStrategy noVowelIn: 'play'
 				-> false   
 		"
 

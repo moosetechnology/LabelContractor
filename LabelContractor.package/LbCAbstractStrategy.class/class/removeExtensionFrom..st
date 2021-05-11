@@ -5,13 +5,10 @@ removeExtensionFrom: aString
 	  if the string doesn't include an extension, so we return the same string.
 	  Otherwise, the string result will not contain the extension
 	
-		Example:
-			>>> self removeExtensionFrom: 'something.txt'
-			'something'
-			>>> self removeExtensionFrom: 'something.txt.exe'
-			'something'
-			>>> self removeExtensionFrom: 'something'
-			'something'
+		Examples:
+			LbCAbstractStrategy removeExtensionFrom: 'something.txt' >>> 'something'
+			LbCAbstractStrategy removeExtensionFrom: 'something.txt.exe' >>> 'something'
+			LbCAbstractStrategy removeExtensionFrom: 'something' >>> 'something'
 	"
 
 	| extractedExtension string |
@@ -20,7 +17,8 @@ removeExtensionFrom: aString
 	^ extractedExtension isEmpty
 		ifTrue: [ aString ]
 		ifFalse: [ 
-			[ extractedExtension isNotEmpty ] whileTrue: [ 
+			" if the string contains more than one extension " 
+			[ extractedExtension isNotEmpty ] whileTrue: [  
 				string := string withoutSuffix: extractedExtension.
 				extractedExtension := self extractExtensionFrom: string ].
 			string ]

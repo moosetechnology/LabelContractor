@@ -2,7 +2,7 @@ private
 findFirstFrequentLetter: aString
 
 	" return the index of the first frequent letter on the string 
-	  if the string does not contain any frequent letters(or empty), then 0 is returned
+	  if the string does not contain any frequent letters(or if an empty string), then 0 is returned
 	"
 
 	| index indexFreqLetter mostFrequentLetter currentLetter |

@@ -2,4 +2,5 @@ initialization
 initialize
 
 	super initialize.
-	caseSensitive := false
+	caseSensitive := false.
+	collectionOfSubstrings := {}

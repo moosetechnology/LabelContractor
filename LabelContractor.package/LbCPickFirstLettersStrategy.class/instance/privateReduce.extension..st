@@ -6,14 +6,27 @@ privateReduce: aString extension: extensionAsString
 			If the suffix of the string represents an extension ('.txt', '.st', ...), then we keep it
 			
 			Exemples:
-				>>> (PickFirstLetters upTo: 4) reduce: 'AClassName.txt'
-				returns: 'AClass.txt'
-				>>> (PickFirstLetters upTo: 4) reduce: 'AClassName'
-				returns: 'AClass..'
-				>>> (PickFirstLetters upTo: 5) reduce: 'short'
-				returns: 'short'
-				>>> (PickFirstLetters upTo: 6) reduce: 'short'
-				returns: 'short'
+				
+				```Smalltalk
+				LbCContractor new 
+					strategy: (LbCPickFirstLettersStrategy upTo: 4); 
+					reduce: 'AClassName.txt'.
+				```	
+				-> 'ACla.txt'
+				
+				```Smalltalk
+				LbCContractor new 
+					strategy: (LbCPickFirstLettersStrategy upTo: 4); 
+					reduce: 'AClassName' 
+				```	
+				-> 'AClas..'
+				
+				```Smalltalk
+				LbCContractor new 
+					strategy: (LbCPickFirstLettersStrategy upTo: 5); 
+					reduce: 'AClassName' 
+				```	 
+				-> 'short' 
 		"
 
 	   ^ self upTo >= aString size

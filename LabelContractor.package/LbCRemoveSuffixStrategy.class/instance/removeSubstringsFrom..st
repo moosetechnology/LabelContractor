@@ -2,16 +2,28 @@ private
 removeSubstringsFrom: aString
 
 	   "
-	  		Return a string without a suffix
+	  		Remove the suffix(or suffixes) from a string
 			
 			Examples:
-			(LbCRemoveSuffixStrategy with: 'Else') removeSubstringsFrom: 'somethingElse'.
+			```Smalltalk
+			LbCContractor new 
+				strategy: (LbCRemoveSuffixStrategy new with: 'Else');
+				reduce: 'somethingElse'.
+		  ```
 			-> 'something'
-		
-			(LbCRemoveSuffixStrategy withAll: {'some'. 'Else'}) removeSubstringsFrom: 'somethingElse'.
+			
+			```Smalltalk
+			LbCContractor new  
+				strategy: (LbCRemoveSuffixStrategy new withAll: {'some'. 'Else'}).
+				reduce: 'somethingElse'.
+			```	
 			-> 'something'
-		
-			(LbCRemoveSuffixStrategy withAll: {'thingElse'. 'Else'}) removeSubstringsFrom: 'somethingElse'.
+			
+			```Smalltalk
+			LbCContractor new  
+				strategy: (LbCRemoveSuffixStrategy new withAll: {'thingElse'. 'Else'}).
+				reduce: 'somethingElse'.
+			```
 			-> 'some'
 	 "
 
@@ -22,17 +34,12 @@ removeSubstringsFrom: aString
 	   self collectionOfSubstrings do: [ :substring | 
 		   | indexSubstringAsSuffix |
 		   indexSubstringAsSuffix := aString size - substring size.
-		   (aString 
-				findString: substring 
-				startingAt: (indexSubstringAsSuffix + 1) 
-				caseSensitive: self caseSensitive) > 0 ifTrue: [ 
-			     (aString compare: substring caseSensitive: self caseSensitive) = 2
-				     ifTrue: [ ^ String new ] " if a substring is the same as the string so we return an empty string "
-				     ifFalse: [ 
+		   (aString findString: substring  startingAt: (indexSubstringAsSuffix + 1) caseSensitive: self caseSensitive) > 0 
+					ifTrue: [ 
 					     substring size >= maxSizeSuffix ifTrue: [ 
 						     maxSizeSuffix := substring size.
 						     theRightSuffix := substring.
-						     indexOfSuffix := aString size - theRightSuffix size ] ] ] ].
+						     indexOfSuffix := aString size - theRightSuffix size ] ] ] .
 	   ^ indexOfSuffix = 0
 		     ifTrue: [ aString ]
 		     ifFalse: [ 
