@@ -7,9 +7,8 @@ contractWith: aLbCContractor
 		Examples:
 			```Smalltalk
 			| lbContractor |
-			lbContractor := LbCContractor new 
-											strategy: (LbCRemovePrefixStrategy new with: 'exemple').
-			
+			lbContractor := LbCContractor new strategy: (LbCRemovePrefixStrategy new with: 'exemple').
+				
 			'exampleClass' contractWith: lbContractor 
 			```
 			returns 'Class'
