@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "LbCAbbreviateSomeNamesStrategyTest",
+	"name" : "LbCAbbreviateNamesStrategyTest",
 	"type" : "normal"
 }
