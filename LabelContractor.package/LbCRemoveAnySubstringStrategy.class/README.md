@@ -10,29 +10,31 @@ By default, there's no case-sensitive
 removeAnySubstringsStrategy := LbCRemoveAnySubstringStrategy new 
 														with: 'hashed'.
 LbCContractor new
-		   strategy: removeAnySubstringsStrategy;
-		   reduce: 'HashedCollection'.		
+	strategy: removeAnySubstringsStrategy;
+	reduce: 'HashedCollection'.		
 ```
 returns 'Collection'
 
 *Example 2 with a collection of substrings by using #withAll:*
 ```Smalltalk
+| removeAnySubstringsStrategy |
 removeAnySubstringsStrategy := LbCRemoveAnySubstringStrategy new 
 														withAll: {'hashed'. 'Tion'}.
 LbCContractor new
-		   strategy: removeAnySubstringsStrategy;
-		   reduce: 'HashedCollection'.		
+	strategy: removeAnySubstringsStrategy;
+	reduce: 'HashedCollection'.		
 ```
 returns 'Collec'
 
 *Example 3 with case-sensitive option by using #beCaseSensitive *
 ```Smalltalk
+| removeAnySubstringsStrategy |
 removeAnySubstringsStrategy := LbCRemoveAnySubstringStrategy new 
 														with: 'Hashed';
 														beCaseSensitive.
 LbCContractor new
-		   strategy: removeAnySubstringsStrategy;
-		   reduce: 'HashedCollection'.		
+	strategy: removeAnySubstringsStrategy;
+	reduce: 'HashedCollection'.		
 ```
 returns 'Collection'
 
