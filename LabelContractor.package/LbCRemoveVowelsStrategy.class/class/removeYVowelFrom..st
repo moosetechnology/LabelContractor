@@ -1,7 +1,7 @@
 computing
 removeYVowelFrom: aString
-		
-		"
+
+	   "
 			remove all the letter 'y' which represent a vowel from a string
 			
 			Examples: 
@@ -11,15 +11,17 @@ removeYVowelFrom: aString
 				LbCRemoveVowelsStrategy removeYVowelFrom: 'yellow'
 				-> 'yellow'      (because the y is a consonant more than a vowel)
 		"
-		
+
 	   | indexesOfYVowel string |
-		 self halt.
 	   string := aString.
 	   indexesOfYVowel := self theIndexesOfTheLetterYAsAVowelFrom: string.
 	   ^ indexesOfYVowel isEmpty
 		     ifTrue: [ aString ]
 		     ifFalse: [ 
-			     indexesOfYVowel do: [ :index | 
-				     string := aString copyReplaceFrom: index to: index with: '' ].
-						indexesOfYVowel := self theIndexesOfTheLetterYAsAVowelFrom: string.
+			     | index |
+			     index := indexesOfYVowel at: 1.
+			     [ indexesOfYVowel isNotEmpty ] whileTrue: [ 
+				     string := string copyReplaceFrom: index to: index with: ''.
+				     indexesOfYVowel := self theIndexesOfTheLetterYAsAVowelFrom: string.
+				     index := indexesOfYVowel at: 1 ifAbsent: [ index := 0 ] ].
 			     string ]
