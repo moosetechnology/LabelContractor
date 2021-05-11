@@ -1,4 +1,4 @@
-# visu_roassal
+# Label Contractor
 
 ## Installation
 In order to install this project, execute the following script in the Playground of your Moose Image
