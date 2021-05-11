@@ -2,10 +2,10 @@ private
 removeFrequentLetters: aString
 
 	"	
-		Return a string without frequent character. 
+		Return a string without frequent letters. 
 		By default, we reduce the string until it has a size of 8 characters.
 		
-		If the string contains an extension, then we will not consider 'the extension part' in the reduction. In addition, the result will contain the extension added at the end.
+		If the suffix of the string represents an extension ('.txt', '.st', ...), then we keep it
 	
 	"
 	
