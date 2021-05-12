@@ -29,9 +29,11 @@ returns 'Collection'
 **3- With case-sensitive option by using #beCaseSensitive:**
 ```Smalltalk
 | removePrefixStrategy |
-removePrefixStrategy := LbCRemovePrefixStrategy new 
-            with: 'Hashed';
-            beCaseSensitive .
+removePrefixStrategy := LbCRemovePrefixStrategy new .
+removePrefixStrategy
+	with: 'Hashed';
+	beCaseSensitive .
+	
 LbCContractor new
 	strategy: removePrefixStrategy;
 	reduce: 'HashedCollection'.

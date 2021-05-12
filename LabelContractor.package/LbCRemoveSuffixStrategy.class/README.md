@@ -27,9 +27,11 @@ returns 'Hashed'
 3- With case-sensitive option by using #beCaseSensitive:
 ```smalltalk
 | removeSuffixStrategy |
-removeSuffixStrategy := LbCRemoveSuffixStrategy new 
-											with: 'Collection';
-											beCaseSensitive .
+removeSuffixStrategy := LbCRemoveSuffixStrategy new .
+removeSuffixStrategy
+	with: 'Collection';
+	beCaseSensitive .
+	
 LbCContractor new
 	strategy: removeSuffixStrategy;
 	reduce: 'HashedCollection'.

@@ -13,16 +13,18 @@ returns 'Name'
 **Example 2:**
 ```Smalltalk
 | removeAnySubstringStrategy |
-removeAnySubstringStrategy := LbCRemoveAnySubstringStrategy new 
-														with: 'example';
-														keepPath.
+removeAnySubstringStrategy := LbCRemoveAnySubstringStrategy new .
+removeAnySubstringStrategy 
+	with: 'example'; 
+	keepPath.
+	
 LbCContractor new
 	strategy: removeAnySubstringStrategy;
 	reduce: 'A:path/exampleName'.									
 ```
 returns 'A:path/Name'		
 
-**If you want use the strategies with its default parameters, use the class method corresponding to the strategy:**
+**If you want to use the strategies with its default parameters, then use the class method corresponding to the strategy:**
 - For example, to use LbCAbbreviateNamesStrategy:
 ```Smalltalk
 LbCContractor abbreviateNamesStrategy reduce: 'something'
