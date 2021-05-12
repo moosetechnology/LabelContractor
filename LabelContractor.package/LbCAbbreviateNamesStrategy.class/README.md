@@ -1,5 +1,5 @@
 I am the strategy which takes the initial letter of each name except the last one.
-By default i abbreviate only the first 3 names(you can change this value by using #until: anInteger or #upTo: anInteger) .
+By default i abbreviate only the first 3 names(you can change this value by using **#until: anInteger** or **#upTo: anInteger**) .
 
 **Note:** The last word is never abbreviated, even if the 'until or upTo' is too big than the string names(see the first example)
 
