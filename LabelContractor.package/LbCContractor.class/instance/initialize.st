@@ -1,4 +1,4 @@
 initialization
 initialize 
 
-	collectionOfStrategy := {}
+	collectionOfStrategy := OrderedCollection new.
