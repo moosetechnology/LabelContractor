@@ -1,4 +1,4 @@
 accessing
 strategy: aLbCStrategy
 
-	strategy := aLbCStrategy 
+	self collectionOfStrategy add: aLbCStrategy 
