@@ -21,3 +21,14 @@ LbCContractor new
 	reduce: 'A:path/exampleName'.									
 ```
 returns 'A:path/Name'		
+
+**If you want use the strategies with its default parameters, use the class method corresponding to the strategy:**
+- For example, to use LbCAbbreviateNamesStrategy:
+```Smalltalk
+LbCContractor abbreviateNamesStrategy reduce: 'something'
+```
+
+- or, using LbCRemovePrefixStrategy:
+```Smalltalk
+(LbCContractor removePrefixStrategy: 'some') reduce: 'something'
+```
