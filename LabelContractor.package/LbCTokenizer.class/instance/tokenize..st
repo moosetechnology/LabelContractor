@@ -1,5 +1,5 @@
 private-algorithm
-tokenizeWords: aString
+tokenize: aString
 
 	   "
 			tokenizeWords: '23SomethingHer43Like33' 
