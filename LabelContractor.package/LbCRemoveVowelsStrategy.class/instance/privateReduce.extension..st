@@ -8,7 +8,7 @@ privateReduce: aString extension: extensionAsString
 			-> 'SmthngLk.jv'
 	"
 	| toknizeString filteredWords|
-	toknizeString := tokenizer tokenizeWords: aString.
+	toknizeString := tokenizer tokenize: aString.
 	filteredWords := self removeVowelsOnEachStringFrom: toknizeString.
 	^ '' join: filteredWords, extensionAsString  
 	
