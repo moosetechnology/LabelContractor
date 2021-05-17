@@ -1,4 +1,4 @@
 accessing
-collectionOfStrategy: aListOfStrategies
+collectionOfStrategy: aCollectionOfStrategies
 
-	collectionOfStrategy := aListOfStrategies
+	collectionOfStrategy := aCollectionOfStrategies asOrderedCollection
