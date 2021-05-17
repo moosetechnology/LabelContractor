@@ -6,10 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"collectionOfString",
-		"removePrefixStrategy",
-		"tokenizer"
+		"collectionOfString"
 	],
-	"name" : "LbCRemoveCommonPrefix",
+	"name" : "LbCCommonPrefixFinder",
 	"type" : "normal"
 }

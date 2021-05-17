@@ -7,8 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"collectionOfString",
-		"removeCommonPrefix"
+		"commonPrefixFinder"
 	],
-	"name" : "LbCRemoveCommonPrefixTest",
+	"name" : "LbCCommonPrefixFinderTest",
 	"type" : "normal"
 }
