@@ -1,5 +1,5 @@
 tests
-testReduceOtherExamples
+testReduceWhenCombiningStrategies
 
 	| strategy1 strategy2 strategy3 |
 	strategy1 := LbCRemovePrefixStrategy new with: 'something'.
