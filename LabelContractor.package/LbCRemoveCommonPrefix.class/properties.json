@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "redaidtaleb 5/15/2021 16:18",
+	"super" : "Object",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"collectionOfString",
+		"removePrefixStrategy",
+		"tokenizer"
+	],
+	"name" : "LbCRemoveCommonPrefix",
+	"type" : "normal"
+}

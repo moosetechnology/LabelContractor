@@ -1,0 +1,3 @@
+I can remove the common prefix from a group of strings.
+
+To complete ...
