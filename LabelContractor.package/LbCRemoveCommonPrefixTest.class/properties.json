@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "LabelContractor-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"collectionOfString",
+		"removeCommonPrefix"
+	],
+	"name" : "LbCRemoveCommonPrefixTest",
+	"type" : "normal"
+}
