@@ -2,7 +2,7 @@ accessing
 strategy: aLbCStrategy
 
 	"
-		use this method if you want to use only one strategy.
+		use me if you want to use only one strategy.
 		
 		Examples:
 			LbCContractor new strategy: LbCBaseNameStrategy new.
