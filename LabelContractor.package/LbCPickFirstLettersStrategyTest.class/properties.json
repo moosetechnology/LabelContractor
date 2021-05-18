@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "LbCAbstractStrategyTest",
+	"super" : "LbCReduceUpToStrategyTest",
 	"category" : "LabelContractor-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],

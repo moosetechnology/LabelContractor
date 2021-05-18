@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "LbCReduceUpToStrategyTest",
+	"super" : "LbCAbstractStrategyTest",
 	"category" : "LabelContractor-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "LbCRemoveFrequentLettersStrategyTest",
+	"name" : "LbCReduceUpToStrategyTest",
 	"type" : "normal"
 }
