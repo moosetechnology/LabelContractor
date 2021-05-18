@@ -1,5 +1,5 @@
 tests
-testReduce
+testReduceWhenCombiningStrategisOtherExamples
 
 	| strategy1 strategy2 |
 	strategy1 := LbCEllipsisStrategy new.
