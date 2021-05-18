@@ -1,6 +1,14 @@
 splitjoin
 abbreviate: aString until: anInteger
-
+	
+	"
+	 	abbreviate names to their first letters except the last name.
+		
+		Examples:
+			LbCAbbreviateNamesStrategy new abbreviate: 'AnExampleOfString' until: 3 >>> 'AEOString'
+			LbCAbbreviateNamesStrategy new abbreviate: 'ShortExample' until: 3 >>> 'SExample'
+	"
+	
 	| tokens nameParts abbreviations |
 	tokens := tokenizer tokenize: aString.
 	nameParts := tokens size > anInteger 
