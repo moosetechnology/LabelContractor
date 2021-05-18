@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "redaidtaleb 5/11/2021 15:12",
-	"super" : "LbCAbstractStrategy",
+	"super" : "LbCReduceUpToStrategy",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],

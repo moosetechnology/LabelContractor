@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "redaidtaleb 5/17/2021 16:50",
+	"super" : "LbCAbstractStrategy",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"upTo"
+	],
+	"name" : "LbCReduceUpToStrategy",
+	"type" : "normal"
+}
