@@ -1,0 +1,4 @@
+convenience
+removeFrequentLetters
+
+	self addStrategy: LbCRemoveFrequentLettersStrategy new

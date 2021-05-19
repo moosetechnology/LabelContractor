@@ -1,28 +1,13 @@
 reduce-label
 reduce: aString
 
-	"
-		I apply the strategies of the collection one by one on the string passed as an argument.
-		
-		* Example:
-		  ```Smalltalk
-			LbCContractor new 
-				strategy: (LbCRemoveVowelsStrategy new);
-				reduce: 'something'
-			```
-			returns 'smthng'	
-		* Other example:	
-			```Smalltalk
-			LbCContractor new 
-				addStrategy: (LbCRemoveVowelsStrategy new);
-				addStrategy: (LbCPickFirstLettersStrategy new upTo: 3);
-				reduce: 'something'
-			```	
-			returns 'smt..'			
-	"
+	" I apply the strategies of the collection one by one on the string passed as an argument. "
 
-	| string |
-	string := aString.
-	self collectionOfStrategy do: [ :each | 
-		string := each reduce: string ].
-	^ string
+	| stringWithNoPath |
+	stringWithNoPath := self class removePathFrom: aString.
+	collectionOfStrategy do: [ :each | 
+		stringWithNoPath := each reduce: stringWithNoPath ].
+	^ withPath
+		  ifTrue: [ 
+		  (self class extractPathFrom: aString) , stringWithNoPath ]
+		  ifFalse: [ stringWithNoPath ]

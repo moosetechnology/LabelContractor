@@ -1,50 +1,45 @@
 I am a contractor and i can contract strings using several strategies
 
-**Example 1:**
+If the string represents a fully qualified name, by default I will remove the 'path' part before applying any strategy(if you want to keep it, you can use **#keepPath** method) .
+
+**Example 1: By default i remove 'path' if the string represents a fully qualified name **
 ```Smalltalk
-| removeAnySubstringStrategy |
-removeAnySubstringStrategy := LbCRemoveAnySubstringStrategy new with: 'example'.
 LbCContractor new
-	strategy: removeAnySubstringStrategy;
+	removeAnySubstring: 'example';
 	reduce: 'A:path/exampleName'.
 ```
 returns 'Name'
 
-**Example 2:**
+**Example 2: keep path if a fully qualified name by using #keepPath**
 ```Smalltalk
-| removeAnySubstringStrategy |
-removeAnySubstringStrategy := LbCRemoveAnySubstringStrategy new .
-removeAnySubstringStrategy 
-	with: 'example'; 
-	keepPath.
-	
 LbCContractor new
-	strategy: removeAnySubstringStrategy;
+	removeAnySubstring: 'example';
+	keepPath;
 	reduce: 'A:path/exampleName'.									
 ```
 returns 'A:path/Name'		
 
-**If you want to use the strategies with its default parameters, then use the class method corresponding to the strategy:**
+**If you want to use the strategies with its default parameters, then use the instance method corresponding to the strategy:**
 - For example, to use LbCAbbreviateNamesStrategy:
 ```Smalltalk
-LbCContractor abbreviateNamesStrategy reduce: 'something'
+LbCContractor new
+	abbreviateNames;
+	reduce: 'something'
 ```
 
 - or, using LbCRemovePrefixStrategy:
 ```Smalltalk
-(LbCContractor removePrefixStrategy: 'some') reduce: 'something'
+LbCContractor new
+	removePrefix: 'some';
+	reduce: 'something'
 ```
 
 **Example with the sequential combination of strategies:**
 ```Smalltalk
-| strategy1 strategy2 strategy3 |
-strategy1 := LbCRemovePrefixStrategy new with: 'Hashed'.
-strategy2 := LbCRemoveFrequentLettersStrategy new.
-strategy3 := LbCRemoveVowelsStrategy new.
 LbCContractor new
-	addStrategy: strategy1;
-	addStrategy: strategy2;
-	addStrategy: strategy3;
+	removePrefix: 'Hashed';
+	removeFrequentLetters;
+	removeVowels;
 	reduce: 'HashedCollection'	
 ```
 returns 'Cllcn'
