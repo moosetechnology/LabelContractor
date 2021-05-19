@@ -5,10 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"upTo",
-		"withPath"
-	],
+	"instvars" : [ ],
 	"name" : "LbCContractorScript",
 	"type" : "normal"
 }

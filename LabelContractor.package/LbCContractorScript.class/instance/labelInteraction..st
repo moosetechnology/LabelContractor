@@ -1,7 +1,7 @@
 examples
-labelInteraction: aContractorClass
+labelInteraction: aContractor
 
 	| labeled |
 	labeled := RSLabeled new 
-		           text: [ :model | aContractorClass reduce: model name ].
+		           text: [ :model | aContractor reduce: model name ].
 	^ labeled 
