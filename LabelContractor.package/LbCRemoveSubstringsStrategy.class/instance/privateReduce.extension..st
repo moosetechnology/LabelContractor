@@ -1,6 +1,8 @@
 reduce-label
 privateReduce: aString extension: extensionAsString
-
+	
+	"I am a template method and I remove the substrings of a string according to the strategy chosen in my family of strategies. "
+	
 	^ self collectionOfSubstrings isEmpty
 		  ifTrue: [ aString , extensionAsString ]
 		  ifFalse: [ 

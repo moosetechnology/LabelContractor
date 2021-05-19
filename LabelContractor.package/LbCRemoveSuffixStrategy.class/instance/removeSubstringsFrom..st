@@ -1,31 +1,7 @@
 private
 removeSubstringsFrom: aString
 
-	   "
-	  		Remove the suffix(or suffixes) from a string
-			
-			Examples:
-			```Smalltalk
-			LbCContractor new 
-				strategy: (LbCRemoveSuffixStrategy new with: 'Else');
-				reduce: 'somethingElse'.
-		  ```
-			-> 'something'
-			
-			```Smalltalk
-			LbCContractor new  
-				strategy: (LbCRemoveSuffixStrategy new withAll: {'some'. 'Else'}).
-				reduce: 'somethingElse'.
-			```	
-			-> 'something'
-			
-			```Smalltalk
-			LbCContractor new  
-				strategy: (LbCRemoveSuffixStrategy new withAll: {'thingElse'. 'Else'}).
-				reduce: 'somethingElse'.
-			```
-			-> 'some'
-	 "
+	   " Remove the suffix(or suffixes) from a string "
 
 	   | maxSizeSuffix theRightSuffix indexOfSuffix |
 	   maxSizeSuffix := 0.

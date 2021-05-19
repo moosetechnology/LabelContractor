@@ -1,9 +1,9 @@
 private-algorithm
 tokenize: aString
 
-	" LbCTokenizer new tokenize: '23SomethingHer43Like33' >>> {'23'. 'Something'. 'Her43'. 'Like33'}
-		LbCTokenizer new tokenize: '23SomethingHer43Like33Other' >>> {'23'. 'Something'. 'Her43'. 'Like33'. 'Other'}
-		LbCTokenizer new tokenize: 'DFSSomething' >>> { 'DFS'. 'Something' } "
+	" LbCTokenizer new tokenize: '23SomethingHer43Like33' >>> {'23'. 'Something'. 'Her43'. 'Like33'}"
+	" LbCTokenizer new tokenize: '23SomethingHer43Like33Other' >>> {'23'. 'Something'. 'Her43'. 'Like33'. 'Other'}"
+	" LbCTokenizer new tokenize: 'DFSSomething' >>> { 'DFS'. 'Something' } "
 
 	| tokenizedString consecutiveUpperCase indexCapitalLetter beginWord |
 	tokenizedString := OrderedCollection new.

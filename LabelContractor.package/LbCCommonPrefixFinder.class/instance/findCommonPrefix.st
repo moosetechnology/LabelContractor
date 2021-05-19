@@ -1,10 +1,11 @@
 finding/searching
 findCommonPrefix
 
-	" find the common prefix between all the strings 
-		- Limit of the algo: if one of the strings is totally different from the others, the algorithm returns an empty string(see the second example below)"	
-	" LbCCommonPrefixFinder new collectionOfString: { 'SWFirstExample'. 'SWSecondExample'. 'SWThird' } >>> 'SW'	.
-		LbCCommonPrefixFinder new collectionOfString: { 'SWFirstExample'. 'SWSecondExample'. 'somethingDifferent'} >>> '' "
+	" find the common prefix between all the strings .
+		Limit of the algo: cannot find the common prefix if only a majority of the strings contain the same prefix(see second example)."	
+			
+	" LbCCommonPrefixFinder new collectionOfString: { 'SWFirstExample'. 'SWSecondExample'. 'SWThird' } >>> 'SW'	."
+	"	LbCCommonPrefixFinder new collectionOfString: { 'SWFirstExample'. 'SWSecondExample'. 'somethingDifferent'} >>> '' "
 
 	| minSize result current |
 	result := String new.

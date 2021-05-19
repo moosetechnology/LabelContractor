@@ -1,17 +1,9 @@
 *LabelContractor
 contractWith: aLbCContractor
 
-	" 
-		reduce a string using a contractor 
+	" reduce a string using a contractor "
 		
-		Examples:
-			```Smalltalk
-			| lbContractor |
-			lbContractor := LbCContractor new strategy: (LbCRemovePrefixStrategy new with: 'exemple').
-				
-			'exampleClass' contractWith: lbContractor 
-			```
-			returns 'Class'
-	"
+	" 'exampleClass' contractWith: (LbCContractor new removePrefix: 'example') >>> 'Class' " 
+	" 'exampleClass' contractWith: (LbCContractor new removeVowels) >>> 'exmplClss' "
 
 	^ aLbCContractor reduce: self

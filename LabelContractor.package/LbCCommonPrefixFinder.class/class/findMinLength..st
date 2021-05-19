@@ -1,4 +1,4 @@
-accessing
+private
 findMinLength: aCollectionOfString
 
 	" find the string having the minimum length and returns that length "
