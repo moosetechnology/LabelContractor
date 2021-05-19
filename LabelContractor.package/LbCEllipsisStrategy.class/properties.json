@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "redaidtaleb 5/11/2021 15:29",
-	"super" : "LbCReduceUpToStrategy",
+	"commentStamp" : "redaidtaleb 5/19/2021 02:18",
+	"super" : "LbCSizeReductionStrategy",
 	"category" : "LabelContractor-Contractor",
 	"classinstvars" : [ ],
 	"pools" : [ ],

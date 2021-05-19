@@ -5,40 +5,33 @@ The strategy consists in keeping a certain first and last letters of the string 
 
 **By default, the size of the ellipsis is defined at 8**(that means: 4 first letters + '..' + 4 last letters): 
 ```Smalltalk
-| ellipsisStrategy |
-ellipsisStrategy := LbCEllipsisStrategy new .
 LbCContractor new
-	strategy: ellipsisStrategy;
+	ellipsis;
 	reduce: 'HashedCollection'.		
 ```
 returns 'Hash..tion'
 
 **An example to change the size :**
 ```Smalltalk
-| ellipsisStrategy |
-ellipsisStrategy := LbCEllipsisStrategy new upTo: 6.
 LbCContractor new
-	strategy: ellipsisStrategy;
+	ellipsisUpTo: 6;
 	reduce: 'HashedCollection'.		
 ```
 returns 'Has..ion'
 
 **Example 3: if the string represents a file name**
 ```Smalltalk
-| ellipsisStrategy |
-ellipsisStrategy := LbCEllipsisStrategy new.
 LbCContractor new
-	strategy: ellipsisStrategy;
+	ellipsis;
 	reduce: 'HashedCollection.class'.		
 ```
 returns 'Hash..tion.class'
 
 **An example to keep path if the string represents a fully qualified name:**
 ```Smalltalk
-| ellipsisStrategy |
-ellipsisStrategy := LbCEllipsisStrategy new keepPath.
 LbCContractor new
-	strategy: ellipsisStrategy;
+	ellipsis;
+	keepPath;
 	reduce: 'A:path/HashedCollection.class'.		
 ```
 returns 'A:path/Hash..tion.class'

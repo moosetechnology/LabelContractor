@@ -4,20 +4,16 @@ I am a remover of vowels from a string, and i remove all the vowels from a strin
 
 **Example 1:**
 ```Smalltalk
-| removeVowelsStrategy |
-removeVowelsStrategy := LbCRemoveVowelsStrategy new .
 LbCContractor new
-	strategy: removeVowelsStrategy;
+	removeVowels;
 	reduce: 'HashedCollection'.		
 ```
 returns 'HshdCllctn'
 
 **Example 2:**
 ```Smalltalk
-| removeVowelsStrategy |
-removeVowelsStrategy := LbCRemoveVowelsStrategy new .
 LbCContractor new
-	strategy: removeVowelsStrategy;
+	removeVowels;
 	reduce: 'OrderedCollection'.		
 ```
 returns 'OrdrdCllctn'

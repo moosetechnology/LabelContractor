@@ -4,22 +4,18 @@ By default, the case sensitive is not respected(you can activate it by invoking 
 
 **Examples:**
 
-1 - With a substring by using #with:
+1 - with only one suffix to remove:
 ```Smalltalk
-| removeSuffixStrategy |
-removeSuffixStrategy := LbCRemoveSuffixStrategy new with: 'Collection'.
 LbCContractor new
-	strategy: removeSuffixStrategy;
+	removeSuffix: 'collection';
 	reduce: 'HashedCollection'.		
 ```
 returns 'Hashed'
 
-2 - With a collection of substrings by using #withAll: 
+2 - With a collection of suffixes: 
 ```smalltalk
-| removeSuffixStrategy |
-removeSuffixStrategy := LbCRemoveSuffixStrategy new withAll: {'hashed'. 'Collection'} .
 LbCContractor new
-	strategy: removeSuffixStrategy;
+	removeSuffixes: {'hashed'. 'Collection'};
 	reduce: 'HashedCollection'.	
 ``` 
 returns 'Hashed'
@@ -40,10 +36,8 @@ returns 'Hashed'
 
 4- if a Suffix is included in another substring in the collection, so we remove the longest Suffix 
 ```smalltalk
-| removeSuffixStrategy |
-removeSuffixStrategy := LbCRemoveSuffixStrategy new withAll: {'class'. 'classname'}.
 LbCContractor new
-	strategy: removeSuffixStrategy;
+	removeSuffixes: {'class'. 'classname'};
 	reduce: 'ExampleOfClassName'.
 ``` 
 returns 'ExampleOf'

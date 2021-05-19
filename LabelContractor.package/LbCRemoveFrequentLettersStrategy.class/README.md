@@ -6,30 +6,24 @@ By default, i reduce the label's name until it has a size of 8 characters.
 
 **Example 1:**
 ```Smalltalk
-| removeFrequentLettersStrategy |
-removeFrequentLettersStrategy := LbCRemoveFrequentLettersStrategy new .
 LbCContractor new
-	strategy: removeFrequentLettersStrategy;
+	removeFrequentLetters;
 	reduce: 'HashedCollection.class'.		
 ```
 returns 'HhdCocio.class'
 
 **Example 2:**
 ```Smalltalk
-| removeFrequentLettersStrategy |
-removeFrequentLettersStrategy := LbCRemoveFrequentLettersStrategy new .
 LbCContractor new
-	strategy: removeFrequentLettersStrategy;
+	removeFrequentLetters;
 	reduce: 'HashedCollection'.		
 ```
 returns 'HhdCocio'
 
-**Example 3: You can change the size by using #upTo:anInteger**
+**Example 3: You can change the size**
 ```Smalltalk
-| removeFrequentLettersStrategy |
-removeFrequentLettersStrategy := LbCRemoveFrequentLettersStrategy new upTo: 12.
 LbCContractor new
-	strategy: removeFrequentLettersStrategy;
+	removeFrequentLettersUpTo: 12;
 	reduce: 'HashedCollection'.		
 ```
 returns 'HhdCollction'

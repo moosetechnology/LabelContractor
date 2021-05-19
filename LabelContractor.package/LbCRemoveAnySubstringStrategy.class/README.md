@@ -4,22 +4,18 @@ I remove all the substrings from the string; by default there's no case sensitiv
 
 By default, there's no case-sensitive
 
-**Example 1 with a substring by using #with:**
+**Example 1 with only one substring to remove:**
 ```Smalltalk
-| removeAnySubstringsStrategy |
-removeAnySubstringsStrategy := LbCRemoveAnySubstringStrategy new with: 'hashed'.
 LbCContractor new
-	strategy: removeAnySubstringsStrategy;
+	removeAnySubstring: 'hashed';
 	reduce: 'HashedCollection'.		
 ```
 returns 'Collection'
 
-**Example 2 with a collection of substrings by using #withAll:**
+**Example 2 with a collection of substrings**
 ```Smalltalk
-| removeAnySubstringsStrategy |
-removeAnySubstringsStrategy := LbCRemoveAnySubstringStrategy new withAll: {'hashed'. 'Tion'}.
 LbCContractor new
-	strategy: removeAnySubstringsStrategy;
+	removeAnySubstring: {'hashed'. 'Tion'};
 	reduce: 'HashedCollection'.		
 ```
 returns 'Collec'
