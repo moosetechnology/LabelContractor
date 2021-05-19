@@ -34,7 +34,7 @@ LbCContractor new
 	reduce: 'something'
 ```
 
-**Example with the sequential combination of strategies:**
+**Example with the sequential combination of strategies: it applies the strategies one by one in the order chosen .**
 ```Smalltalk
 LbCContractor new
 	removePrefix: 'Hashed';
@@ -43,3 +43,14 @@ LbCContractor new
 	reduce: 'HashedCollection'	
 ```
 returns 'Cllcn'
+
+**if you don't know how to order the strategies(which you have chosen) to combine them, use #usingPriorities to let the program order the strategies and apply them according to their priority** 
+```Smalltalk
+LbCContractor new
+	usingPriorities;
+	removeVowels;
+	removePrefix: 'Hashed';
+	removeFrequentLetters;
+	reduce: 'HashedCollection'	
+``` 
+'Cllcn'
