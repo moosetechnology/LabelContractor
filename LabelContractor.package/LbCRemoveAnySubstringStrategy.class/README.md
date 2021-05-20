@@ -7,7 +7,7 @@ By default, there's no case-sensitive
 **Example 1 with only one substring to remove:**
 ```Smalltalk
 LbCContractor new
-	removeAnySubstring: 'hashed';
+	removeSubstring: 'hashed';
 	reduce: 'HashedCollection'.		
 ```
 returns 'Collection'
@@ -15,7 +15,7 @@ returns 'Collection'
 **Example 2 with a collection of substrings**
 ```Smalltalk
 LbCContractor new
-	removeAnySubstring: {'hashed'. 'Tion'};
+	removeSubstrings: {'hashed'. 'Tion'};
 	reduce: 'HashedCollection'.		
 ```
 returns 'Collec'
