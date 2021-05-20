@@ -8,5 +8,4 @@ extractPathFrom: aString
 
 	| delimiter |
 	delimiter := $/.
-	OSPlatform current isWindows ifTrue: [ delimiter := $\ ].
 	^ aString copyFrom: 1 to: (aString lastIndexOf: delimiter)
