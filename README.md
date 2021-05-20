@@ -6,7 +6,7 @@ In order to install this project, execute the following script in the Playground
 ```Smalltalk
 Metacello new
   baseline: 'LabelContractor';
-  repository: 'github://reda-idtaleb/label_contractor:main';
+  repository: 'github://reda-idtaleb/LabelContractor:main';
   load.
 ```  
 
