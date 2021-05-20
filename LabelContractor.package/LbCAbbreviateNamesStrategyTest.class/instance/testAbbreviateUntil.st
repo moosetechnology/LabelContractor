@@ -4,5 +4,5 @@ testAbbreviateUntil
 	   self
 		   assert: (aContractor
 				    abbreviate: 'DMClassNamesBlueprintTestAbbreviateUntil'
-				    until: 3)
-		   equals: 'DCNBlueprintTestAbbreviateUntil'
+				    until: 5)
+		   equals: 'DCNBTAbbreviateUntil'

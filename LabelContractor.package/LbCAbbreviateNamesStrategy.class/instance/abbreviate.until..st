@@ -13,5 +13,5 @@ abbreviate: aString until: anInteger
 		             ifFalse: [ self devide: tokens until: tokens size - 1 ].
 	abbreviations := nameParts first collect: [ :aCaracter | 
 		                 aCaracter first asUppercase ].
-	^ abbreviations concatenatesStrings
-	  , nameParts second concatenatesStrings
+	^ '' join: abbreviations 
+	  , ('' join: nameParts second) 
