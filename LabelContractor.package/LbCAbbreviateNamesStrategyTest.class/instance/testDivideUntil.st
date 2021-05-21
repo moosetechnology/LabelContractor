@@ -1,9 +1,9 @@
 creation
-testDevideUntil
+testDivideUntil
 	self
 		assert:
 			(aContractor
-				devide: {'DM' . 'Class' . 'Names' . 'Blueprint' . 'Test' . 'Devide' . 'Until'}
+				divide: {'DM' . 'Class' . 'Names' . 'Blueprint' . 'Test' . 'Devide' . 'Until'}
 				until: 4)
 		equals:
 			(Array
