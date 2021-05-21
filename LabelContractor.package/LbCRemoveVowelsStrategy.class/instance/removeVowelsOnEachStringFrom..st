@@ -6,7 +6,7 @@ removeVowelsOnEachStringFrom: aCollectionOfWords
 			LbCRemoveVowelsStrategy new removeVowelsOnEachStringFrom: ({'Of' . 'Some' . 'In'} asOrderedCollection) .
 			returns: {'Of'. Sm'. 'In'} asOrderedCollection 	"
 
-	| collectionOfStringsWithoutVowels stringWithoutVowels |
+	| collectionOfStringsWithoutVowels stringWithoutVowels |	
 	collectionOfStringsWithoutVowels := OrderedCollection new.
 	aCollectionOfWords do: [ :each | 
 		stringWithoutVowels := self removeVowelsFrom: each.
