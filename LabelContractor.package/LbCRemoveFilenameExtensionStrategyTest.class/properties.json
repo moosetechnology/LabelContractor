@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "LbCBaseNameStrategyTest",
+	"name" : "LbCRemoveFilenameExtensionStrategyTest",
 	"type" : "normal"
 }
