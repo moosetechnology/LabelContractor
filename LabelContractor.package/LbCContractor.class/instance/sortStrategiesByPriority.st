@@ -5,4 +5,4 @@ sortStrategiesByPriority
 	
 	self collectionOfStrategy:
 		(collectionOfStrategy asSortedCollection: [ :firstStrategy :secondStrategy | 
-			 firstStrategy class priority > secondStrategy class priority ])
+			 firstStrategy class priority < secondStrategy class priority ])

@@ -10,9 +10,7 @@ removeSubstring: aSubstring from: aString caseSensitive: bool
 			  string := aString.
 			  indexSubstring := string findString: aSubstring startingAt: 1 caseSensitive: false.
 			  [ indexSubstring > 0 ] whileTrue: [ 
-				  substringToRemove := string
-					                       copyFrom: indexSubstring
-					                       to: indexSubstring + aSubstring size - 1.
+				  substringToRemove := string copyFrom: indexSubstring to: (indexSubstring + aSubstring size - 1).
 				  string := string copyReplaceAll: substringToRemove with: ''.
 				  indexSubstring := string findString: aSubstring startingAt: 1 caseSensitive: false ].
 			  string ]
