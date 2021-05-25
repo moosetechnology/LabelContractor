@@ -1,4 +1,4 @@
 tests
-testPickFirstLettersShortString
+testPickFirstCharactersShortString
 
 	self assert: (aContractor reduce: 'Short') equals: 'Short'

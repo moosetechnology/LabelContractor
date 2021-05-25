@@ -1,5 +1,5 @@
 tests
-testPickFirstLetters
+testPickFirstCharacters
 	"By default, the number of letters taken is 8"
 
 	| stringExample |

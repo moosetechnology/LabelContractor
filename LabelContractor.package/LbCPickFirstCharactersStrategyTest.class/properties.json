@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "LbCPickFirstLettersStrategyTest",
+	"name" : "LbCPickFirstCharactersStrategyTest",
 	"type" : "normal"
 }
