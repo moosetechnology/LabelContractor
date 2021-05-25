@@ -1,5 +1,5 @@
 splitjoin
-devide: aCollection until: aNumber
+divide: aCollection until: aNumber
 	
 	"divide the collection into two parts at the index entered as the second argument.
 	 Returns an array containing two sub-arrays representing the two divided parts.
