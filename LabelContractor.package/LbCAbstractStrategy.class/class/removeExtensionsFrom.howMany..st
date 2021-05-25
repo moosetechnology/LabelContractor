@@ -1,8 +1,8 @@
 private
 removeExtensionsFrom: aString howMany: aPositiveInteger
 
-	" LbCAbstractStrategy removeExtensionsFrom: 'something.tar.gz' howMany: 1  >>> 'something.tar'"
-	" LbCAbstractStrategy removeExtensionsFrom: 'something.txt.gz' howMany: 2 >>> 'something'"
+	"LbCAbstractStrategy removeExtensionsFrom: 'something.tar.gz' howMany: 1  >>> 'something.tar'"
+	"LbCAbstractStrategy removeExtensionsFrom: 'something.txt.gz' howMany: 2 >>> 'something'"
 
 	| string extractExtensions |
 	string := aString.

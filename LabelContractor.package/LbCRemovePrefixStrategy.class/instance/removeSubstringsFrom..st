@@ -1,7 +1,7 @@
 private
 removeSubstringsFrom: aString
 
-	" remove the prefix(or prefixes) from a string "
+	"I remove the prefix(or prefixes) from a string"
 	
 	| maxSizePrefix theRightPrefix |
 	maxSizePrefix := 0.
@@ -12,5 +12,4 @@ removeSubstringsFrom: aString
 				substring size >= maxSizePrefix ifTrue: [ 
 					maxSizePrefix := substring size.
 					theRightPrefix := substring ] ] ].
-	^ aString withoutPrefix:
-		  (aString copyFrom: 1 to: theRightPrefix size)
+	^ aString withoutPrefix: (aString copyFrom: 1 to: theRightPrefix size)

@@ -1,6 +1,6 @@
 private
 removeOneFrequentLetter: aString
-	"Return a reduced string after removing one frequent letter "
+	"Return a reduced string after removing one frequent letter"
 
 	| indexFirstFreqLetter |
 	indexFirstFreqLetter := self findFirstFrequentLetter: aString.

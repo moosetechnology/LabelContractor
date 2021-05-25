@@ -1,7 +1,7 @@
 private
 removeSubstring: aSubstring from: aString caseSensitive: bool
 
-	" remove all occurrences of substring from the string, respecting the case sensitive "
+	"I remove all occurrences of substring from the string, respecting the case sensitive"
 
 	^ bool
 		  ifTrue: [ aString copyReplaceAll: aSubstring asString with: '' ]

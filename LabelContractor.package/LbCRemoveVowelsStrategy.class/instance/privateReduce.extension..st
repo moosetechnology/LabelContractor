@@ -1,7 +1,7 @@
 reduce-label
 privateReduce: aString extension: extensionAsString
 
-	" remove vowels from a string after tokenized it "
+	"i remove vowels from a string after having tokenized it"
 	
 	| toknizeString filteredWords|
 	toknizeString := tokenizer tokenize: aString.

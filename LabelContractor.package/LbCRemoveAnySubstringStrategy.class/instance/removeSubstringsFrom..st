@@ -1,7 +1,7 @@
 private
 removeSubstringsFrom: aString
 
-	" remove all the substrings from the string "
+	"remove all the substrings from the string"
 
 	"(LbCRemoveAnySubstringStrategy with: 'some') removeSubstringsFrom: 'somethingOrsomeThingElse' >>> 'thingOrThingElse'"
 	"(LbCRemoveAnySubstringStrategy withAll: {'some'. 'thing'}) removeSubstringsFrom: 'somethingOrSomeTHINGElse' >>> 'OrElse'"
@@ -10,8 +10,5 @@ removeSubstringsFrom: aString
 	| string |
 	string := aString.
 	self collectionOfSubstrings do: [ :substring | 
-		string := self
-			          removeSubstring: substring
-			          from: string
-			          caseSensitive: self caseSensitive ].
+		string := self removeSubstring: substring from: string caseSensitive: self caseSensitive ].
 	^ string
