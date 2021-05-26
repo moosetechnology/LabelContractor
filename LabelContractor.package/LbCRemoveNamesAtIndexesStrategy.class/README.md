@@ -1,0 +1,3 @@
+I can remove a name at an index 
+
+More details and examples are comming ...

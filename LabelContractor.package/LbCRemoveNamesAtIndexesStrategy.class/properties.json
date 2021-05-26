@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "redaidtaleb 5/26/2021 23:43",
+	"super" : "LbCAbstractStrategy",
+	"category" : "LabelContractor-Contractor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tokenizer",
+		"indexes"
+	],
+	"name" : "LbCRemoveNamesAtIndexesStrategy",
+	"type" : "normal"
+}
