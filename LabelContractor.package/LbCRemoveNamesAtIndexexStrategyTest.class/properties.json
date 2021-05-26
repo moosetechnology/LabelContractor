@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "LbCAbstractStrategyTest",
+	"category" : "LabelContractor-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LbCRemoveNamesAtIndexexStrategyTest",
+	"type" : "normal"
+}
