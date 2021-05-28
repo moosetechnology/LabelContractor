@@ -16,6 +16,7 @@ testRemoveExtensionFrom
 	self
 		assert: (LbCAbstractStrategy removeExtension: 'gz' from: 'something.tar.gz')
 		equals: 'something.tar'.
+		
 	self
 		assert: (LbCAbstractStrategy removeExtension: 'tar' from: 'something.tar.gz')
 		equals: 'something.tar.gz'
