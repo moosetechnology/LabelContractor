@@ -1,6 +1,6 @@
 tests
-testReduceWhenRemovingOneName
+testReduceWhenRemovingOneWord
 
 	| strategy |
-	strategy := self classToTest new namesAt: 5.
+	strategy := self classToTest new wordAt: 5.
 	self assert: (strategy reduce: 'LbCRemovePrefixStrategyTest') equals: 'LbCRemovePrefixTest' 

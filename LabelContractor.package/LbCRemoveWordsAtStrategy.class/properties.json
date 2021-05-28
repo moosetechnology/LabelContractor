@@ -9,6 +9,6 @@
 		"tokenizer",
 		"indexes"
 	],
-	"name" : "LbCRemoveNamesAtIndexesStrategy",
+	"name" : "LbCRemoveWordsAtStrategy",
 	"type" : "normal"
 }

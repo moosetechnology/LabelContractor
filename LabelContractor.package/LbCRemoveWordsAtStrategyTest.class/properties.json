@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "LbCRemoveNamesAtIndexexStrategyTest",
+	"name" : "LbCRemoveWordsAtStrategyTest",
 	"type" : "normal"
 }
