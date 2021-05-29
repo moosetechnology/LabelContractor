@@ -1,4 +1,4 @@
 reduce-label
-privateReduce: aString extension: anotherString
+privateReduce: aString extension: anExtension
 	
 	 ^ self subclassResponsibility 

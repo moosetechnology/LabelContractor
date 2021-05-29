@@ -1,10 +1,9 @@
 reduce-label
 reduce: aString
 
-	"Reduce a string by removing path if it's a fully qualified name(by default), then apply a contraction strategy. Returns the reduced string."
+	"I am a template method, and i can reduce a string. If the string aString represents a filename, then i will isolate the file extension and the reduction is applied only on the basename."
 	
-	| extension stringWithNoExtension |
+	| getExtension |
 	aString isEmpty ifTrue: [ ^ aString ]. 
-	extension := self class joinExtractedExtensions: (self class extractExtensionsFrom: aString).
-	stringWithNoExtension := self class removeExtensionsFrom: aString.
-	^ self privateReduce: stringWithNoExtension extension: extension.
+	getExtension := self class joinExtractedExtensions: (self class extractExtensionsFrom: aString).
+	^ self reduce: aString extension: getExtension 
