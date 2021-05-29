@@ -3,5 +3,5 @@ setUp
 
 	super setUp.
 	collectionOfSubstrings := #('An' 'Of' 'Class').
-	aContractor collectionOfSubstrings: collectionOfSubstrings 
+	aContractor withAll: collectionOfSubstrings 
 	
