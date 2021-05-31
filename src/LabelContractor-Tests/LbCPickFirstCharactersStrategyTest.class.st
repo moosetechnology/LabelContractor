@@ -1,7 +1,7 @@
 Class {
 	#name : #LbCPickFirstCharactersStrategyTest,
 	#superclass : #LbCReduceUpToStrategyTest,
-	#category : 'LabelContractor-Tests'
+	#category : #'LabelContractor-Tests'
 }
 
 { #category : #creation }
@@ -18,7 +18,7 @@ LbCPickFirstCharactersStrategyTest >> testPickFirstCharacters [
 	self assert: (aContractor reduce: '') equals: ''.
 
 	stringExample := 'AnExampleOfClass'.
-	self assert: (aContractor reduce: stringExample) equals: 'AnExampl..'
+	self assert: (aContractor reduce: stringExample) equals: 'AnExampl'
 ]
 
 { #category : #tests }
