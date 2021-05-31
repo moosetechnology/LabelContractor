@@ -8,7 +8,7 @@ LbCContractor new
 	pickFirstLetters;
 	reduce: 'HashedCollection'.		
 ```
-returns 'HashedCo..'
+returns 'HashedCo'
 
 **An example to change the number of letter:**
 ```Smalltalk
@@ -16,7 +16,7 @@ LbCContractor new
 	pickFirstLettersUpTo: 5;
 	reduce: 'HashedCollection'.		
 ```
-returns 'Hashe..'
+returns 'Hashe'
 
 **Example 3: reducing a string representing a file**
 ```Smalltalk
@@ -38,7 +38,7 @@ returns 'fully/qualified/name/HashedCo.class'
 Class {
 	#name : #LbCPickFirstCharactersStrategy,
 	#superclass : #LbCSizeReductionStrategy,
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #accessing }
@@ -58,6 +58,6 @@ LbCPickFirstCharactersStrategy >> privateReduce: aString extension: extensionAsS
 			  | pickFirstLetters |
 			  pickFirstLetters := aString copyFrom: 1 to: self upTo.
 			  extensionAsString isEmpty
-				  ifTrue: [ pickFirstLetters , '..' ]
+				  ifTrue: [ pickFirstLetters                                                ]
 				  ifFalse: [ pickFirstLetters , extensionAsString ] ]
 ]
