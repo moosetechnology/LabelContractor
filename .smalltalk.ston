@@ -1,0 +1,13 @@
+
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'LabelContractor',
+      #directory : 'src',
+      #load : [ 'default' ],
+      #platforms : [ #pharo ],
+      #onConflict : #useIncoming,
+      #onUpgrade : #useIncoming
+    }
+  ]
+}
