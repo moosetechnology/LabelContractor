@@ -1,4 +1,0 @@
-expected-result
-expectedReducedLabelCaseUnsensitive
-
-	^ 'ExampleA'

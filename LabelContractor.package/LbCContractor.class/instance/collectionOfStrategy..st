@@ -1,4 +1,0 @@
-accessing
-collectionOfStrategy: aOrderedCollectionOfStrategies
-
-	collectionOfStrategy := aOrderedCollectionOfStrategies 

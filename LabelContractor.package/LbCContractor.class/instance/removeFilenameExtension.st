@@ -1,4 +1,0 @@
-convenience
-removeFilenameExtension
-
-	self addStrategy: LbCRemoveFilenameExtensionStrategy new 

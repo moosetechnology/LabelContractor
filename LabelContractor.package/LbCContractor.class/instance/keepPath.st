@@ -1,4 +1,0 @@
-accessing
-keepPath
-
-	withPath := true

@@ -1,3 +1,0 @@
-I can remove a word or words specified by its indexes 
-
-More details and examples are comming ...

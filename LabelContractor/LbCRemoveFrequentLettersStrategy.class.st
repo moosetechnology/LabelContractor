@@ -1,0 +1,245 @@
+"
+I'm a remover of frequent letters in a label. 
+
+If the string contains an extension, then i will not consider the 'extension part' in the reduction(see the **Example 1**). In addition, the result will contain the 'extension part' added at the end.
+
+By default, i reduce the label's name until it has a size of 8 characters.
+
+**Example 1:**
+```Smalltalk
+LbCContractor new
+	removeFrequentLetters;
+	reduce: 'HashedCollection.class'.		
+```
+returns 'HhdCocio.class'
+
+**Example 2:**
+```Smalltalk
+LbCContractor new
+	removeFrequentLetters;
+	reduce: 'HashedCollection'.		
+```
+returns 'HhdCocio'
+
+**Example 3: You can change the size**
+```Smalltalk
+LbCContractor new
+	removeFrequentLettersUpTo: 12;
+	reduce: 'HashedCollection'.		
+```
+returns 'HhdCollction'
+
+
+"
+Class {
+	#name : #LbCRemoveFrequentLettersStrategy,
+	#superclass : #LbCSizeReductionStrategy,
+	#classVars : [
+		'FrequentLetters'
+	],
+	#category : 'LabelContractor-Contractor'
+}
+
+{ #category : #'letter-frequency' }
+LbCRemoveFrequentLettersStrategy class >> createFrequentLettersDictionary [
+
+  FrequentLetters :=  Dictionary new.
+	#(	
+		#('e' 14.715)
+		#('s' 7.948)
+		#('a' 7.636)
+		#('i' 7.529)
+		#('t' 7.244)
+		#('n' 7.095)
+	#('r' 6.553)
+	#('u' 6.311)
+	#('l' 5.456)
+	#('o' 5.378)
+	#('d' 3.669)
+	#('c' 3.260)
+	#('p' 3.021)
+	#('m' 2.968)
+	#('é' 1.904)
+	#('v' 1.628)
+	#('q' 1.362)
+	#('f' 1.066)
+	#('b' 0.901)
+	#('g' 0.866)
+			#('j' 0.866)
+	#('h' 0.737)
+	#('i' 0.545)
+	#('à' 0.486)
+	#('x' 0.387)
+	#('y' 0.308)
+	#('è' 0.271)
+	#('ê' 0.225)
+	#('z' 0.136)
+	#('w' 0.114)
+	#('ç' 0.085)
+	#('ù' 0.058)
+	#('k' 0.049)
+	#('î' 0.045)
+	#('ï' 0.005)
+	#('ë' 0.000)
+	
+	#('E' 7.948*0.01)
+	#('S' 7.948*0.01)
+	#('A' 7.636*0.01)
+	#('I' 7.529*0.01)
+	#('T' 7.244*0.01)
+	#('N' 7.095*0.01)
+	#('R' 6.553*0.01)
+	#('U' 6.311*0.01)
+	#('L' 5.456*0.01)
+	#('O' 5.378*0.01)
+	#('D' 3.669*0.01)
+	#('C' 3.260*0.01)
+	#('P' 3.021*0.01)
+	#('M' 2.968*0.01)
+	#('V' 1.628*0.01)
+	#('Q' 1.362*0.01)
+	#('F' 1.066*0.01)
+	#('B' 0.901*0.01)
+	#('G' 0.866*0.01)
+	#('H' 0.737*0.01)
+	#('I' 0.545*0.01)
+	#('X' 0.387*0.01)
+	#('Y' 0.308*0.01)
+	#('Z' 0.136*0.01)
+	#('W' 0.114*0.01)
+	#('K' 0.049*0.01)
+	
+	#('1' 8.9)
+	#('2' 8.8)
+	#('3' 8.7)
+	#('4' 8.6)
+	#('5' 8.5)
+	#('6' 8.4)
+	#('7' 8.3)
+	#('8' 8.2)
+	#('9' 8.1)
+	#('0' 8)
+	#('_' 10)
+	#('-' 9)
+	#( ' ' 16)
+	#('!' 11)
+	#('@' 11)
+	#('#' 11)
+	#('$' 11)
+	#('%' 11)
+	#('^' 11)
+	#('&' 11)
+	#('*' 11)
+	#('(' 11)
+	#(')' 11)
+	#('+' 11)
+	#('=' 11)
+	#('{' 11)
+	#('}' 11)
+	#('[' 11)
+	#(']' 11)
+	#('|' 11)
+	#('\' 11)
+	#(';' 11)
+	#(':' 11)
+	#('"' 11)
+	#(',' 11)
+	#('<' 11)
+	#('>' 11)
+	#('.' 11)
+	#('?' 11)
+	#('/' 11)	) do: [:each | FrequentLetters at: (each first) put: each second].
+	^ FrequentLetters 	
+	
+]
+
+{ #category : #scripts }
+LbCRemoveFrequentLettersStrategy class >> exampleRoassal [
+	<example>
+	| contractor |
+	contractor := LbCContractor new strategy: self new.
+	LbCContractorScript new exampleRoassal: contractor
+]
+
+{ #category : #scripts }
+LbCRemoveFrequentLettersStrategy class >> exampleSpec [
+	
+	<example>
+	| contractor |
+	contractor := LbCContractor new strategy: self new.
+	LbCContractorScript new exampleSpec: contractor
+]
+
+{ #category : #'letter-frequency' }
+LbCRemoveFrequentLettersStrategy class >> frequentLetters [
+
+	^ FrequentLetters ifNil: [ self createFrequentLettersDictionary ]
+]
+
+{ #category : #accessing }
+LbCRemoveFrequentLettersStrategy class >> priority [ 
+
+	^ 15
+]
+
+{ #category : #private }
+LbCRemoveFrequentLettersStrategy >> findFirstFrequentLetter: aString [
+
+	"return the index of the first frequent letter on the string. If the string does not contain any frequent letters(or if an empty string), then 0 is returned"
+
+	| startingIndex indexFreqLetter mostFrequentLetter currentLetter |
+	startingIndex := self keepFirstLetterAndStartAtSecondOne.
+	mostFrequentLetter := 0.
+	indexFreqLetter := 0.
+	startingIndex to: aString size do: [ :i |
+		currentLetter := self letterFrequency: (aString copyFrom: i to: i).
+		currentLetter > mostFrequentLetter ifTrue: [ 
+			mostFrequentLetter := currentLetter.
+			indexFreqLetter := i ]].
+	^ indexFreqLetter
+]
+
+{ #category : #private }
+LbCRemoveFrequentLettersStrategy >> keepFirstLetterAndStartAtSecondOne [
+	"To make the reduction more understandable, we keep the first letter of a string, and we apply the algorithm to the rest of the string starting from the second position."
+
+	^ 2
+]
+
+{ #category : #accessing }
+LbCRemoveFrequentLettersStrategy >> letterFrequency: aString [
+	"The argument 'aString' represents a Character in a string format. I return the frequency of the character"	
+	
+	"LbCRemoveFrequentLettersStrategy new letterFrequency: 'h' >>> 0.737 "
+
+	^ self class frequentLetters at: aString ifAbsent: [ 12 ]
+]
+
+{ #category : #'reduce-label' }
+LbCRemoveFrequentLettersStrategy >> privateReduce: aString extension: extensionAsString [
+	
+	 ^ (self removeFrequentLetters: aString), extensionAsString
+]
+
+{ #category : #private }
+LbCRemoveFrequentLettersStrategy >> removeFrequentLetters: aString [
+	"Return a string without frequent letters. By default, i reduce the string until it has a size of 8 characters."
+	
+	| str |
+	str := aString.
+	[ str size > self upTo ] whileTrue: [ 
+		str := self removeOneFrequentLetter: str ].
+	^ str
+]
+
+{ #category : #private }
+LbCRemoveFrequentLettersStrategy >> removeOneFrequentLetter: aString [
+	"Return a reduced string after removing one frequent letter"
+
+	| indexFirstFreqLetter |
+	indexFirstFreqLetter := self findFirstFrequentLetter: aString.
+	"checking if a frequent letter is present"
+	^ indexFirstFreqLetter < 1
+		  ifTrue: [ aString ]
+		  ifFalse: [ aString copyWithoutIndex: indexFirstFreqLetter ]
+]

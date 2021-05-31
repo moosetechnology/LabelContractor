@@ -1,4 +1,0 @@
-expected-result
-expectedReducedLabelCaseSensitive
-
-	^ 'anExampleOfAClAss'

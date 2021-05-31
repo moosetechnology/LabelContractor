@@ -1,1 +1,0 @@
-I am a family of strategy which reduces labels to a certain size and my subclasses should use the **#upto:** method which designates how long we want to reduce a label (or generally a string). 
