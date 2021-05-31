@@ -153,23 +153,6 @@ LbCRemoveFrequentLettersStrategy class >> createFrequentLettersDictionary [
 	
 ]
 
-{ #category : #scripts }
-LbCRemoveFrequentLettersStrategy class >> exampleRoassal [
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleRoassal: contractor
-]
-
-{ #category : #scripts }
-LbCRemoveFrequentLettersStrategy class >> exampleSpec [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleSpec: contractor
-]
-
 { #category : #'letter-frequency' }
 LbCRemoveFrequentLettersStrategy class >> frequentLetters [
 

@@ -52,24 +52,6 @@ Class {
 	#category : 'LabelContractor-Contractor'
 }
 
-{ #category : #scripts }
-LbCRemovePrefixStrategy class >> exampleRoassal [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: (self new withAll: { 'Hashed'. 'Moose'. 'Wide'. 'small'. 'Identity' }).
-	LbCContractorScript new exampleRoassal: contractor
-]
-
-{ #category : #scripts }
-LbCRemovePrefixStrategy class >> exampleSpec [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: (self new withAll: { 'Hashed'. 'Moose'. 'small'. 'Identity' }).
-	LbCContractorScript new exampleSpec: contractor
-]
-
 { #category : #private }
 LbCRemovePrefixStrategy >> removeSubstringsFrom: aString [
 

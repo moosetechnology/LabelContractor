@@ -43,24 +43,6 @@ Class {
 	#category : 'LabelContractor-Contractor'
 }
 
-{ #category : #scripts }
-LbCRemoveAnySubstringStrategy class >> exampleRoassal [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: (self new withAll: { 'Hashed'. 'Moose'. 'value'. 'Identity' }) .
-	LbCContractorScript new exampleRoassal: contractor
-]
-
-{ #category : #scripts }
-LbCRemoveAnySubstringStrategy class >> exampleSpec [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: (self new withAll: { 'Hashed'. 'Moose'. 'value'. 'Identity' }).
-	LbCContractorScript new exampleSpec: contractor
-]
-
 { #category : #private }
 LbCRemoveAnySubstringStrategy >> removeSubstring: aSubstring from: aString caseSensitive: bool [
 

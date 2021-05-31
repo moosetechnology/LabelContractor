@@ -44,24 +44,6 @@ Class {
 	#category : 'LabelContractor-Contractor'
 }
 
-{ #category : #scripts }
-LbCEllipsisStrategy class >> exampleRoassal [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleRoassal: contractor
-]
-
-{ #category : #scripts }
-LbCEllipsisStrategy class >> exampleSpec [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleSpec: contractor
-]
-
 { #category : #accessing }
 LbCEllipsisStrategy class >> priority [
 	

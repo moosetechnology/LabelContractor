@@ -43,24 +43,6 @@ LbCRemoveVowelsStrategy class >> addIndexes: listOfIndexes WhenAStringContainsVo
 				  listOfIndexes add: index ] ]
 ]
 
-{ #category : #scripts }
-LbCRemoveVowelsStrategy class >> exampleRoassal [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleRoassal: contractor
-]
-
-{ #category : #scripts }
-LbCRemoveVowelsStrategy class >> exampleSpec [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleSpec: contractor
-]
-
 { #category : #private }
 LbCRemoveVowelsStrategy class >> getIndexesOfTheLetterYAsAVowelFrom: aString [
 

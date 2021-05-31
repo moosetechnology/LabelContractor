@@ -41,24 +41,6 @@ Class {
 	#category : 'LabelContractor-Contractor'
 }
 
-{ #category : #scripts }
-LbCPickFirstCharactersStrategy class >> exampleRoassal [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleRoassal: contractor
-]
-
-{ #category : #scripts }
-LbCPickFirstCharactersStrategy class >> exampleSpec [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleSpec: contractor
-]
-
 { #category : #accessing }
 LbCPickFirstCharactersStrategy class >> priority [
 	

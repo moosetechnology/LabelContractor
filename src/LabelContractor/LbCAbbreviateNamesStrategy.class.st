@@ -43,24 +43,6 @@ LbCAbbreviateNamesStrategy class >> defaultNbWordsToAbbreviate [
 	^ 3
 ]
 
-{ #category : #scripts }
-LbCAbbreviateNamesStrategy class >> exampleRoassal [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleRoassal: contractor
-]
-
-{ #category : #scripts }
-LbCAbbreviateNamesStrategy class >> exampleSpec [
-	
-	<example>
-	| contractor |
-	contractor := LbCContractor new strategy: self new.
-	LbCContractorScript new exampleSpec: contractor
-]
-
 { #category : #accessing }
 LbCAbbreviateNamesStrategy class >> priority [
 	
