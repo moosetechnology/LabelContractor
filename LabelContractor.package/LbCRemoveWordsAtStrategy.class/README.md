@@ -1,3 +1,3 @@
-I can remove a name at an index 
+I can remove a word or words specified by its indexes 
 
 More details and examples are comming ...

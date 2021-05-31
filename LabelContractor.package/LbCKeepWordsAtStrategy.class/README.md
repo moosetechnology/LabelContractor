@@ -1,0 +1,1 @@
+I can keep a word or words specified by its indexes 
