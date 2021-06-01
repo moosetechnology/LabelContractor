@@ -1,7 +1,6 @@
 "
-I can remove a word or words specified by its indexes 
-
-More details and examples are comming ...
+I am a family of strategy which allows removing one or a group of words by specifying their indexes. 
+My subclasses define how they remove the words.
 "
 Class {
 	#name : #LbCRemoveWordsAtStrategy,
@@ -10,8 +9,14 @@ Class {
 		'tokenizer',
 		'indexes'
 	],
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
+
+{ #category : #testing }
+LbCRemoveWordsAtStrategy class >> isAbstract [ 
+
+	^ self == LbCRemoveWordsAtStrategy 
+]
 
 { #category : #accessing }
 LbCRemoveWordsAtStrategy class >> priority [
@@ -27,37 +32,23 @@ LbCRemoveWordsAtStrategy >> initialize [
 	indexes := SortedCollection new.
 ]
 
-{ #category : #private }
-LbCRemoveWordsAtStrategy >> keepIndexesThatAreInTheBoundOf: arraySize [
-	
-	"remove indexes that exceed the array size provided for the tokenizer"
-	
-	| filteredIndexes |
-	filteredIndexes := indexes deepCopy.
-	(filteredIndexes anySatisfy: [ :e | e > arraySize ] )
-		ifTrue: [ filteredIndexes removeAllSuchThat: [:e | e > arraySize ]].
-	^ filteredIndexes 	
-]
-
 { #category : #'reduce-label' }
 LbCRemoveWordsAtStrategy >> privateReduce: aString extension: anExtension [
 
-	| tokenizedString wordsToRemove withoutWords filteredIndexes |
+	"i use the tokenizer to split the string into several words, and then i remove the words specified by its indexes. If I have only one name to reduce after tokenization, the name is not removed, and I return it."
+
+	| tokenizedString removedWords |
 	tokenizedString := tokenizer tokenize: aString.
-	filteredIndexes := self keepIndexesThatAreInTheBoundOf: tokenizedString size.
-	wordsToRemove := filteredIndexes collect: [ :e | tokenizedString at: e ].
-	withoutWords := tokenizedString copyWithoutAll: wordsToRemove.
-	^ ('' join: withoutWords), anExtension  
+	removedWords := tokenizedString size <= 1 
+		                ifTrue: [ tokenizedString ] 
+		                ifFalse: [ self removeWordsFrom: tokenizedString ].
+	^ ('' join: removedWords) , anExtension
 ]
 
-{ #category : #accessing }
-LbCRemoveWordsAtStrategy >> wordAt: anInteger [
+{ #category : #removing }
+LbCRemoveWordsAtStrategy >> removeWordsFrom: arrayOfSusbtrings [
 	
-	indexes add: anInteger.
-]
-
-{ #category : #accessing }
-LbCRemoveWordsAtStrategy >> wordsAt: aCollectionOfIntegers [
-
-	indexes := aCollectionOfIntegers asSortedCollection
+	"remove words from the array of tokenized words 'arraOfSubstring'"
+	
+	^ self subclassResponsibility 
 ]

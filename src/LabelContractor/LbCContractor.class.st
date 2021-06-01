@@ -6,7 +6,7 @@ If the string represents a fully qualified name, by default I will remove the 'p
 **Example 1: By default i remove 'path' if the string represents a fully qualified name **
 ```Smalltalk
 LbCContractor new
-	removeAnySubstring: 'example';
+	removeSubstring: 'example';
 	reduce: 'A:path/exampleName'.
 ```
 returns 'Name'
@@ -14,7 +14,7 @@ returns 'Name'
 **Example 2: keep path if a fully qualified name by using #keepPath**
 ```Smalltalk
 LbCContractor new
-	removeAnySubstring: 'example';
+	removeSubstring: 'example';
 	keepPath;
 	reduce: 'A:path/exampleName'.									
 ```
@@ -64,7 +64,7 @@ Class {
 		'withPriorities',
 		'withPath'
 	],
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #removing }
@@ -236,9 +236,15 @@ LbCContractor >> removeVowels [
 ]
 
 { #category : #convenience }
+LbCContractor >> removeWordAt:  anIndex [
+
+	self addStrategy: (LbCRemoveWordsAtStrategy new wordAt: anIndex)
+]
+
+{ #category : #convenience }
 LbCContractor >> removeWordsAt:  aCollection [
 
-	self addStrategy: (LbCRemoveWordsAtStrategy new wordsAt: aCollection)
+	self addStrategy: (LbCRemoveAnyWordsStrategy new wordsAt: aCollection)
 ]
 
 { #category : #sorting }

@@ -1,8 +1,14 @@
 Class {
 	#name : #LbCRemoveWordsAtStrategyTest,
 	#superclass : #LbCAbstractStrategyTest,
-	#category : 'LabelContractor-Tests'
+	#category : #'LabelContractor-Tests'
 }
+
+{ #category : #testing }
+LbCRemoveWordsAtStrategyTest class >> isAbstract [ 
+
+	^ self == LbCRemoveWordsAtStrategyTest 
+]
 
 { #category : #creation }
 LbCRemoveWordsAtStrategyTest >> classToTest [
@@ -10,32 +16,16 @@ LbCRemoveWordsAtStrategyTest >> classToTest [
 	^ LbCRemoveWordsAtStrategy 
 ]
 
-{ #category : #tests }
-LbCRemoveWordsAtStrategyTest >> testReduceWhenRemovingOneWord [
+{ #category : #'expected-result' }
+LbCRemoveWordsAtStrategyTest >> expectedResultWhenRemoveWordsFrom [
 
-	| strategy |
-	strategy := self classToTest new wordAt: 5.
-	self assert: (strategy reduce: 'LbCRemovePrefixStrategyTest') equals: 'LbCRemovePrefixTest' 
+	^ self subclassResponsibility 
 ]
 
 { #category : #tests }
-LbCRemoveWordsAtStrategyTest >> testReduceWhenRemovingWords [
+LbCRemoveWordsAtStrategyTest >> testRemoveWordsFrom [ 
 
-	| strategy |
-	strategy := self classToTest new wordsAt: #(1 2 5) .
-	self assert: (strategy reduce: 'LbCRemovePrefixStrategyTest') equals: 'RemovePrefixTest' 
-]
-
-{ #category : #tests }
-LbCRemoveWordsAtStrategyTest >> testkeepIndexesThatAreInTheBoundOf [
-
-	| strategy |
-	strategy := self classToTest new wordsAt: #() .
-	self assert: (strategy keepIndexesThatAreInTheBoundOf: 5) equals: #() asSortedCollection .
-	
-	strategy := self classToTest new wordsAt: #(1 2 10) .
-	self assert: (strategy keepIndexesThatAreInTheBoundOf: 5) equals: #(1 2) asSortedCollection.
-	
-	strategy := self classToTest new wordsAt: #(10 20) .
-	self assert: (strategy keepIndexesThatAreInTheBoundOf: 5) equals: #() asSortedCollection 
+	| arrayOfSubstrings |
+	arrayOfSubstrings := { 'A' . 'Very' . 'Simple' . 'Example' }.
+	self assert: (aContractor removeWordsFrom: arrayOfSubstrings) equals: self expectedResultWhenRemoveWordsFrom
 ]

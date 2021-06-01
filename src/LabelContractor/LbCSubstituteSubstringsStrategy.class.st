@@ -18,8 +18,14 @@ Class {
 		'oldSubstring',
 		'newSubstring'
 	],
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
+
+{ #category : #accessing }
+LbCSubstituteSubstringsStrategy class >> priority [ 
+
+	^ 5
+]
 
 { #category : #initialization }
 LbCSubstituteSubstringsStrategy >> initialize [ 
@@ -49,9 +55,9 @@ LbCSubstituteSubstringsStrategy >> oldSubstring: anOldSubstring newSubstring: aN
 ]
 
 { #category : #'reduce-label' }
-LbCSubstituteSubstringsStrategy >> privateReduce: aString extension: anotherString [
+LbCSubstituteSubstringsStrategy >> privateReduce: aString extension: anExtension [
 	
-	 ^ self substituteFrom: aString, anotherString  
+	 ^ (self substituteFrom: aString), anExtension  
 ]
 
 { #category : #'reduce-label' }

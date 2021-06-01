@@ -5,7 +5,7 @@ If the string contains an extension, then we keep it(see the **Example 3**).
 **By default I take the first 8 letters:** 
 ```Smalltalk
 LbCContractor new
-	pickFirstLetters;
+	pickFirstCharacters;
 	reduce: 'HashedCollection'.		
 ```
 returns 'HashedCo'
@@ -13,7 +13,7 @@ returns 'HashedCo'
 **An example to change the number of letter:**
 ```Smalltalk
 LbCContractor new
-	pickFirstLettersUpTo: 5;
+	pickFirstCharactersUpTo: 5;
 	reduce: 'HashedCollection'.		
 ```
 returns 'Hashe'
@@ -21,7 +21,7 @@ returns 'Hashe'
 **Example 3: reducing a string representing a file**
 ```Smalltalk
 LbCContractor new
-	pickFirstLetters;
+	pickFirstCharacters;
 	reduce: 'HashedCollection.class'.		
 ```
 returns 'HashedCo.class'
@@ -29,7 +29,7 @@ returns 'HashedCo.class'
 **An other example to keep path if a fully qualified name: **
 ```Smalltalk
 LbCContractor new
-	pickFirstLetters;
+	pickFirstCharacters;
 	keepPath;
 	reduce: 'fully/qualified/name/HashedCollection.class'.		
 ```
