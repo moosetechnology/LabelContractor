@@ -4,6 +4,12 @@ Class {
 	#category : #'LabelContractor-Tests'
 }
 
+{ #category : #testing }
+LbCRemoveWordsAtStrategyTest class >> isAbstract [ 
+
+	^ self == LbCRemoveWordsAtStrategyTest 
+]
+
 { #category : #creation }
 LbCRemoveWordsAtStrategyTest >> classToTest [
 	
