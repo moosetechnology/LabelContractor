@@ -36,33 +36,33 @@ The first image represents an example of visualization which contains boxes with
 **Note:** By default we remove 'path' if the string to be reduced represents a fully qualifed file name(but theres an option to keep it).  
 There are 13 ways to reduce labels:
 
-1- LbCAbbreviateNamesStrategy: it allows to keep only the initial letter of each name except the last one('ExampleSomething' -> 'ESomething'). By default it takes the 1st letter of the first 3 names.
+**1- LbCAbbreviateNamesStrategy:** it allows to keep only the initial letter of each name except the last one('ExampleSomething' -> 'ESomething'). By default it takes the 1st letter of the first 3 names.
 <p float="left">
   <img src="images/roassalExamples/abbreviateNamesStrategy.png" width="800" />
   <img src="images/specListExamples/abbreviateNamesStrategy.png" width="320" /> 
 </p>
 
-2- LbCRemoveFilenameExentsionStrategy: for strings representing a fully qualified filename, only the name of the file is kept by removing its extension. (eg: 'example.txt' -> 'example').
+**2- LbCRemoveFilenameExentsionStrategy:** for strings representing a fully qualified filename, only the name of the file is kept by removing its extension. (eg: 'example.txt' -> 'example').
 
-3- LbCEllipsisStrategy: consists in keeping a certain first and last letter of the string separated by 2 dots ('..'). By default we reduce up to 8 characters (without counting '..'). ('anExample' -> 'anEx..mple').
+**3- LbCEllipsisStrategy:** consists in keeping a certain first and last letter of the string separated by 2 dots ('..'). By default we reduce up to 8 characters (without counting '..'). ('anExample' -> 'anEx..mple').
 <p float="left">
   <img src="images/roassalExamples/ellipsisStrategy.png" width="800" />
   <img src="images/specListExamples/ellipsisStrategy.png" width="320" /> 
 </p>
 
-4- LbCPickFirstCharactersStrategy: allows to keep some first letters of the string. By default, we keep the 8 first letters.
+**4- LbCPickFirstCharactersStrategy:** allows to keep some first letters of the string. By default, we keep the 8 first letters.
 <p float="left">
   <img src="images/roassalExamples/pickFirstLettersStrategy.png" width="800" />
   <img src="images/specListExamples/pickFirstLettersStrategy.png" width="300" /> 
 </p>
 
-5- LbCRemoveFrequentLettersStrategy: allows you to remove frequent letters from a string until having the choosen size. By default we reduce until having a string of length 8.
+**5- LbCRemoveFrequentLettersStrategy:** allows you to remove frequent letters from a string until having the choosen size. By default we reduce until having a string of length 8.
 <p float="left">
   <img src="images/roassalExamples/removeFrequentLettersStrategy.png" width="800" />
   <img src="images/specListExamples/removeFrequentLettersStrategy.png" width="300" /> 
 </p>
 
-6- LbCRemoveAnySubstringStrategy: allows you to remove all the occurrences of each substring from the string you want to reduce.
+**6- LbCRemoveAnySubstringStrategy:** allows you to remove all the occurrences of each substring from the string you want to reduce.
 
 -> on the following visualization(left picture) we have removed { 'Hashed'. 'Moose'. 'value'. 'Identity' } from labels.
 
@@ -72,7 +72,7 @@ There are 13 ways to reduce labels:
   <img src="images/specListExamples/removeAnySubstringStrategy.png" width="320" /> 
 </p>
 
-7- LbCRemovePrefixStrategy: allows you to remove a substring(s) which is the prefix of the string you want to reduce.
+**7- LbCRemovePrefixStrategy:** allows you to remove a substring(s) which is the prefix of the string you want to reduce.
 
 -> on the following visualization(left picture) we have removed { 'Hashed'. 'Moose'. 'Wide'. 'small'. 'Identity' } from labels.
 
@@ -82,7 +82,7 @@ There are 13 ways to reduce labels:
   <img src="images/specListExamples/removePrefixStrategy.png" width="300" /> 
 </p>
 
-8- LbCRemoveSuffixStrategy: allows you to remove a substring(s) which is the suffix of the string that you want to reduce.
+**8- LbCRemoveSuffixStrategy:** allows you to remove a substring(s) which is the suffix of the string that you want to reduce.
 
 -> on the following visualization we removed { 'Storage'. 'Moose'. 'Bag'. 'Array'. 'set' } from labels
 
@@ -93,13 +93,13 @@ There are 13 ways to reduce labels:
   <img src="images/specListExamples/removeSuffixStrategy.png" width="300" /> 
 </p>
 
-9- LbCRemoveVowelsStrategy: consists in removing all the vowels (the letter 'y' is an exception in English, it's removed only when it represents a vowel) from the string.
+**9- LbCRemoveVowelsStrategy:** consists in removing all the vowels (the letter 'y' is an exception in English, it's removed only when it represents a vowel) from the string.
 <p float="left">
   <img src="images/roassalExamples/removeVowelsStrategy.png" width="850" />
   <img src="images/specListExamples/removeVowelsStrategy.png" width="320" /> 
 </p>
 
-10- LbCRemoveAnyWordsAtStrategy: allows you to remove some words(one or a group) specified by its indexes. In this strategy, we also avoid having an empty string after the reduction. That is to say that the strings composed of only one word are never reduced (otherwise, we completely lose the information).
+**10- LbCRemoveAnyWordsAtStrategy:** allows you to remove some words(one or a group) specified by its indexes. In this strategy, we also avoid having an empty string after the reduction. That is to say that the strings composed of only one word are never reduced (otherwise, we completely lose the information).
 
 **Example: remove the 4th word(wich is 'Filename')**
 LbCRemoveFilenameExtensionStrategy --> LbCRemoveExtensionStrategy
@@ -108,11 +108,11 @@ LbCRemoveFilenameExtensionStrategy --> LbCRemoveExtensionStrategy
 splitted string: Lb|C|Remove|Filename|Extension|Strategy
 index of words : 1 |2|   3  |   4    |  5      |   6
 
-11- LbCRemoveFirstWordStrategy: this is a specific case of the last strategy, it allows you to remove only the first word(word at index 1).
+**11- LbCRemoveFirstWordStrategy:** this is a specific case of the last strategy, it allows you to remove only the first word(word at index 1).
 
-12- LbCRemoveLastWordStrategy: the same logic, it allows you to remove only the last word.
+**12- LbCRemoveLastWordStrategy:** the same logic, it allows you to remove only the last word.
 
-13- LbCSubstituteSubstringsStrategy: It is a strategy that makes it possible to replace an old substring with a new one.
+**13- LbCSubstituteSubstringsStrategy:** It is a strategy that makes it possible to replace an old substring with a new one.
 
 # How to combine strategies:
 ## The user provides an order of strategies:
@@ -143,7 +143,7 @@ LbCContractor new
 LbCContractor new
   keepPath;
   removeVowels;
-  reduce: 'Calypso-SystemPlugins-Traits-Queries-Tests/ClyMergedSuperclassesAndInheritedTraitsHierarchyTest.st'. 
+  reduce: 'Calypso-SystemPlugins-Traits-Queries-Tests/ClyMergedSuperclassesAndInheritedTraitsHierarchyTest.st'
 ``` 
 
 **Combining strategies:**
