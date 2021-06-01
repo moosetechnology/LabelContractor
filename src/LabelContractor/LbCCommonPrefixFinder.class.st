@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'collectionOfString'
 	],
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Helper'
 }
 
 { #category : #private }
