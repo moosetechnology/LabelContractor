@@ -35,7 +35,7 @@ LbCContractor new
 	reduce: 'something'
 ```
 
-**Example with the sequential combination of strategies: it applies the strategies one by one in the order chosen .**
+**Example with the sequential combination of strategies: it applies the strategies one by one in the order chosen.**
 ```Smalltalk
 LbCContractor new
 	removePrefix: 'Hashed';
