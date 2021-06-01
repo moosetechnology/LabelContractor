@@ -21,6 +21,12 @@ Class {
 	#category : 'LabelContractor-Contractor'
 }
 
+{ #category : #accessing }
+LbCSubstituteSubstringsStrategy class >> priority [ 
+
+	^ 5
+]
+
 { #category : #initialization }
 LbCSubstituteSubstringsStrategy >> initialize [ 
 
