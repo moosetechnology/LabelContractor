@@ -12,6 +12,12 @@ Class {
 	#category : #'LabelContractor-Contractor'
 }
 
+{ #category : #testing }
+LbCRemoveWordsAtStrategy class >> isAbstract [ 
+
+	^ self == LbCRemoveWordsAtStrategy 
+]
+
 { #category : #accessing }
 LbCRemoveWordsAtStrategy class >> priority [
 	
