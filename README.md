@@ -146,7 +146,7 @@ LbCContractor new
   reduce: 'Calypso-SystemPlugins-Traits-Queries-Tests/ClyMergedSuperclassesAndInheritedTraitsHierarchyTest.st'
 ``` 
 
-**Combining strategies:**
+**Combining strategies following user-defined order**
 ```Smalltalk
 LbCContractor new
   removeVowels;
@@ -155,7 +155,8 @@ LbCContractor new
   reduce: 'HashedCollection'
 ``` 
 
-**Combining strategies to activiate priorties:**
+**Combining strategies following predefined
+priorities**
 ```Smalltalk
 LbCContractor new
   usingPriorities;
