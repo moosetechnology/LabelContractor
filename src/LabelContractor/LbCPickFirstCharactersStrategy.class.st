@@ -18,22 +18,14 @@ LbCContractor new
 ```
 returns 'Hashe'
 
-**Example 3: reducing a string representing a file**
+**Example 3: reducing a string representing a filename**
 ```Smalltalk
 LbCContractor new
 	pickFirstCharacters;
-	reduce: 'HashedCollection.class'.		
+	reduce: 'HashedCollection.st'.		
 ```
-returns 'HashedCo.class'
+returns 'HashedCo.st'
 
-**An other example to keep path if a fully qualified name: **
-```Smalltalk
-LbCContractor new
-	pickFirstCharacters;
-	keepPath;
-	reduce: 'fully/qualified/name/HashedCollection.class'.		
-```
-returns 'fully/qualified/name/HashedCo.class'
 "
 Class {
 	#name : #LbCPickFirstCharactersStrategy,

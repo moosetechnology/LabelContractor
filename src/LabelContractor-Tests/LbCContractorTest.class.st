@@ -5,7 +5,7 @@ Class {
 		'contractor',
 		'stringExample'
 	],
-	#category : 'LabelContractor-Tests'
+	#category : #'LabelContractor-Tests'
 }
 
 { #category : #running }
@@ -13,7 +13,7 @@ LbCContractorTest >> setUp [
 	super setUp.
 	
 	contractor := LbCContractor new.
-	stringExample := 'somethingVeryLong'
+	stringExample := 'SomethingVeryLong'
 ]
 
 { #category : #tests }
@@ -55,15 +55,6 @@ LbCContractorTest >> testReduceWhenCombiningStrategies [
 ]
 
 { #category : #tests }
-LbCContractorTest >> testReduceWhenCombiningStrategisOtherExamples [
-
-	contractor
-		ellipsis;
-		pickFirstCharacters.
-	self assert: (contractor reduce: stringExample) equals: 'some.'
-]
-
-{ #category : #tests }
 LbCContractorTest >> testReduceWhenCombiningUsingPriorities [
 
 	| reducedString |
@@ -85,7 +76,7 @@ LbCContractorTest >> testReduceWithKeepingPath [
 								  ellipsis;
 		                keepPath;
 		                reduce: 'A:user/exam/path/', stringExample .
-	self assert: reducedString equals: 'A:user/exam/path/some..Long'
+	self assert: reducedString equals: 'A:user/exam/path/Some~Long'
 ]
 
 { #category : #tests }
@@ -95,24 +86,13 @@ LbCContractorTest >> testReduceWithoutCombiningStrategies [
 	contractWithRemoveVowels := contractor strategy: LbCRemoveVowelsStrategy new.
 	self
 		assert: (contractWithRemoveVowels reduce: stringExample)
-		equals: 'smthngVrLng'.
+		equals: 'SmthngVrLng'.
 
 	contractWithRemovePrefix := contractor strategy:
 		                            (LbCRemovePrefixStrategy new with: 'something').
 	self
 		assert: (contractWithRemovePrefix reduce: stringExample)
 		equals: 'VeryLong'
-]
-
-{ #category : #tests }
-LbCContractorTest >> testReduceWithoutKeepingPath [
-
-	| reducedString |
-	 
-	reducedString := contractor 
-								  ellipsis;
-		                reduce: stringExample .
-	self assert: reducedString equals: 'some..Long'.
 ]
 
 { #category : #tests }
