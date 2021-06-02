@@ -1,60 +1,55 @@
 "
 I am a contractor and i can contract strings using several strategies
 
-If the string represents a fully qualified name, by default I will remove the 'path' part before applying any strategy(if you want to keep it, you can use **#keepPath** method) .
+If the string represents a fully qualified filename, by default I will remove the 'path' part before applying any strategy(if you want to keep it, you can use **#keepPath** (see Example 2) .
 
-**Example 1: By default i remove 'path' if the string represents a fully qualified name **
+**Example 1: By default I remove 'path' if the string represents a fully qualified filename **
 ```Smalltalk
 LbCContractor new
-	removeSubstring: 'example';
-	reduce: 'A:path/exampleName'.
+	removeSubstring: { 'Cly' . 'And' . 'Test' . 'ed' };
+	reduce: 'Calypso-SystemPlugins-Traits-Queries-Tests/ClyMergedSuperclassesAndInheritedTraitsHierarchyTest'.
 ```
-returns 'Name'
+returns 'MergSuperclassesInheritTraitsHierarchy'
 
 **Example 2: keep path if a fully qualified name by using #keepPath**
 ```Smalltalk
 LbCContractor new
-	removeSubstring: 'example';
 	keepPath;
-	reduce: 'A:path/exampleName'.									
+	removeSubstrings: { 'Cly' . 'And' . 'Test' . 'ed' };	
+	reduce: 'Calypso-SystemPlugins-Traits-Queries-Tests/ClyMergedSuperclassesAndInheritedTraitsHierarchyTest'.									
 ```
-returns 'A:path/Name'		
+returns 'Calypso-SystemPlugins-Traits-Queries-Tests/MergSuperclassesInheritTraitsHierarchy'	
 
-**If you want to use the strategies with its default parameters, then use the instance method corresponding to the strategy:**
-- For example, to use LbCAbbreviateNamesStrategy:
+#Combining strategies 
+##1. Combining following user-defined order
+It applies the strategies one by one
+
+**Example:**
 ```Smalltalk
 LbCContractor new
-	abbreviateNames;
-	reduce: 'something'
-```
-
-- or, using LbCRemovePrefixStrategy:
-```Smalltalk
-LbCContractor new
-	removePrefix: 'some';
-	reduce: 'something'
-```
-
-**Example with the sequential combination of strategies: it applies the strategies one by one in the order chosen.**
-```Smalltalk
-LbCContractor new
-	removePrefix: 'Hashed';
-	removeFrequentLetters;
+	removePrefix: 'Cly';
+	removeSuffix: 'Test';
 	removeVowels;
-	reduce: 'HashedCollection'	
+	abbreviateNames; 
+	reduce: 'ClyMergedSuperclassesAndInheritedTraitsHierarchyTest'
 ```
-returns 'Cllcn'
+returns 'MSAInhrtdTrtsHrrch'
 
-**if you don't know how to order the strategies(which you have chosen) to combine them, use #usingPriorities to let the program order the strategies and apply them according to their priority** 
+
+##2. Combining following predefined priorities
+if you don't know how to order the strategies(which you have chosen) to combine them, use **#usingPriorities** to let the program order the strategies and apply them according to their priority
+
+**Example:**
 ```Smalltalk
 LbCContractor new
 	usingPriorities;
+	removePrefix: 'Cly';
+	removeSuffix: 'Test';
 	removeVowels;
-	removePrefix: 'Hashed';
-	removeFrequentLetters;
-	reduce: 'HashedCollection'	
+	abbreviateNames; 
+	reduce: 'ClyMergedSuperclassesAndInheritedTraitsHierarchyTest'
 ``` 
-'Cllcn'
+returns 'MSInhrtdTrtsHrrch'
 "
 Class {
 	#name : #LbCContractor,

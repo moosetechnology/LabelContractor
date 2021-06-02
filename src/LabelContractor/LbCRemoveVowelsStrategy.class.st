@@ -29,7 +29,7 @@ Class {
 	#instVars : [
 		'tokenizer'
 	],
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #private }
@@ -144,7 +144,6 @@ LbCRemoveVowelsStrategy >> removeVowelsFrom: string [
 	"LbCRemoveVowelsStrategy new removeVowelsFrom: 'other' >>> 'othr'"
 
 	| stringWithoutFirstLetter |
-	(string size = 1 and: (string at: 1) isVowel) ifTrue: [ ^ string reject: #isVowel ].
 	stringWithoutFirstLetter := self keepFirstLetter: (self class removeYVowelFrom: string).
 	^ (string at: 1) asString, (stringWithoutFirstLetter reject: #isVowel)
 ]
