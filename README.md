@@ -113,11 +113,14 @@ Consists in removing all the vowels (the letter 'y' is an exception in English, 
 Allows you to remove some words(one or a group) specified by its indexes. In this strategy, we also avoid having an empty string after the reduction. That is to say that the strings composed of only one word are never reduced (otherwise, we completely lose the information).
 
 **Example: remove the 4th word(wich is 'Filename')**
-LbCRemoveFilenameExtensionStrategy --> LbCRemoveExtensionStrategy
+
+LbCRemoveFilenameExtensionStrategy </br>
+--> LbCRemoveExtensionStrategy
 
 **Explication:**
-splitted string: Lb|C|Remove|Filename|Extension|Strategy
-index of words : 1 |2|   3  |   4    |  5      |   6
+
+    splitted string: Lb|C|Remove|Filename|Extension|Strategy 
+    index of words : 1 |2|   3  |    4   |    5    |    6
 
 ### **11. LbCRemoveFirstWordStrategy** 
 This is a specific case of the last strategy, it allows you to remove only the first word(word at index 1).
