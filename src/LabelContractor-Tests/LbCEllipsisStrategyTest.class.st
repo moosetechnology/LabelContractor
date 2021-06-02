@@ -1,7 +1,7 @@
 Class {
 	#name : #LbCEllipsisStrategyTest,
 	#superclass : #LbCReduceUpToStrategyTest,
-	#category : 'LabelContractor-Tests'
+	#category : #'LabelContractor-Tests'
 }
 
 { #category : #creation }
@@ -34,11 +34,11 @@ LbCEllipsisStrategyTest >> testEllipsisWithDefaultSize [
 	| labelBefore labelAfter |
 	labelBefore := 'ALabelWithAnExtension.txt'.
 	labelAfter := aContractor reduce: labelBefore.
-	self assert: labelAfter equals: 'ALab..sion.txt'.
+	self assert: labelAfter equals: 'ALab~sion.txt'.
 
 	labelBefore := 'ALabelWithOutExtension'.
 	labelAfter := aContractor reduce: labelBefore.
-	self assert: labelAfter equals: 'ALab..sion'.
+	self assert: labelAfter equals: 'ALab~sion'.
 ]
 
 { #category : #tests }
@@ -63,12 +63,12 @@ LbCEllipsisStrategyTest >> testEllipsisWithSpecifyingSize [
 	" odd size value "
 	aContractor upTo: 5.
 	labelAfter := aContractor reduce: labelBefore.
-	self assert: labelAfter equals: 'AL..ion'. 
+	self assert: labelAfter equals: 'AL~ion'. 
 	
 	" even size value "
 	aContractor upTo: 10.
 	labelAfter := aContractor reduce: labelBefore.
-	self assert: labelAfter equals: 'ALong..nsion'. 
+	self assert: labelAfter equals: 'ALong~nsion'. 
 	
 	
 ]
