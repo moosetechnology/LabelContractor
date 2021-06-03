@@ -134,7 +134,7 @@ It is a strategy that makes it possible to replace an old substring with a new o
 
 # **How to combine strategies**
 ## **The user provides an order of strategies**
-The user can provide an order of strategeis, and we apply the one by one.
+The user can provide an order of strategeis, and we apply them one by one.
 
 **Example:**
 ClyMergedSuperclassesAndInheritedTraitsHierarchyTest </br></br>
