@@ -133,7 +133,7 @@ The same logic, it allows you to remove only the last word.
 It is a strategy that makes it possible to replace an old substring with a new one.
 
 # **How to combine strategies**
-## **The user provides an order of strategies**
+## The user provides an order of strategies
 The user can provide an order of strategeis, and we apply them one by one.
 
 **Example:**
@@ -144,10 +144,10 @@ RemoveVowelsStrategy </br>
 AbbreviateNamesStrategy (4) </br>
 ---> MSAITrtsHrrch 
 
-## **Combining following predefined priorities**
+## Combining following predefined priorities
 Sometimes, it is difficult to order the strategies by yourself, that's why we provide an "automatic" version which will allow you to order the strategies according to their priority. Therefore, you only have to specify the strategies, regardless of their orders.
 
-## **How to reduce a string using contractor**
+# **How to reduce a string using contractor**
 The API is based on the design strategy, so for example to use a "remove vowels strategy" you can type on the playground:
 
 ```Smalltalk
