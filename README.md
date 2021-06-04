@@ -49,7 +49,7 @@ It allows to keep only the initial letter of each name except the last one('Exam
 For strings representing a fully qualified filename, only the name of the file is kept by removing its extension. (eg: 'example.txt' -> 'example').
 
 ### **3. LbCEllipsisStrategy** 
-Consists in keeping a certain first and last letter of the string separated by 2 dots ('..'). By default we reduce up to 8 characters (without counting '..'). ('anExample' -> 'anEx..mple').
+Consists in keeping a certain first and last letter of the string separated by a tiled ('~'). By default we reduce up to 8 characters (without counting '~'). ('anExample' -> 'anEx~mple').
 <p float="left">
   <img src="images/roassalExamples/ellipsisStrategy.png" width="800" />
   <img src="images/specListExamples/ellipsisStrategy.png" width="320" /> 
