@@ -7,7 +7,7 @@ Class {
 { #category : #creation }
 LbCRemoveAnyWordsStrategyTest >> classToTest [
 	
-	^ LbCRemoveAnyWordsStrategy  
+	^ LbCRemoveAnyWordsAtStrategy  
 ]
 
 { #category : #'expected-result' }

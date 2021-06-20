@@ -1,7 +1,7 @@
-Extension { #name : #LbCRemoveAnyWordsStrategy }
+Extension { #name : #LbCRemoveAnyWordsAtStrategy }
 
 { #category : #'*LabelContractor-Scripts' }
-LbCRemoveAnyWordsStrategy class >> exampleRoassal [
+LbCRemoveAnyWordsAtStrategy class >> exampleRoassal [
 
 	<example>
 	| contractor |
@@ -10,7 +10,7 @@ LbCRemoveAnyWordsStrategy class >> exampleRoassal [
 ]
 
 { #category : #'*LabelContractor-Scripts' }
-LbCRemoveAnyWordsStrategy class >> exampleSpec [
+LbCRemoveAnyWordsAtStrategy class >> exampleSpec [
 
 	<example>
 	| contractor |
