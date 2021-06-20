@@ -1,5 +1,5 @@
 "
-I can substitute a substring or a collection of substrings with another ones.
+I can replace a substring with new one.
 
 
 Examples:
