@@ -22,7 +22,7 @@ The LabelContractor is a "tool" will allow reducing labels on visualizations usi
 ## **Contents:**
 - [Description of each strategy](#strategies-description)
 - [How to combine strategies](#how-to-combine-strategies)
-- [How to use the Contractor](#how-to-reduce-a-string-using-contractor)
+- [How to use the Contractor](#how-to-reduce-a-label-using-contractor)
 
 ## The original images of the examples on which the different strategies are applied:
 The first image represents an example of visualization which contains boxes with labels above and the second image is a list of all the classes of the system built by spec2.
@@ -145,9 +145,9 @@ AbbreviateNamesStrategy (4) </br>
 ---> MSAITrtsHrrch 
 
 ## Combining following predefined priorities
-Sometimes, it is difficult to order the strategies by yourself, that's why we provide an "automatic" version which will allow you to order the strategies according to their priority. Therefore, you only have to specify the strategies, regardless of their orders.
+Sometimes it is difficult to order the strategies on your own. This is why we are offering an “automatic” version that will apply the strategies according to their order of priority. Therefore, you only have to specify the strategies, regardless of the order.
 
-# **How to reduce a string using contractor**
+# **How to reduce a label using contractor**
 The API is based on the design strategy, so for example to use a "remove vowels strategy" you can type on the playground:
 
 ```Smalltalk
@@ -173,8 +173,7 @@ LbCContractor new
   reduce: 'HashedCollection'
 ``` 
 
-**Combining strategies following predefined
-priorities**
+**Combining strategies following predefined priorities**
 ```Smalltalk
 LbCContractor new
   usingPriorities;
