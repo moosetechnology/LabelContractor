@@ -26,13 +26,13 @@ LbCContractor new
 returns 'RemoveExtensionStrategy'
 "
 Class {
-	#name : #LbCRemoveAnyWordsStrategy,
+	#name : #LbCRemoveAnyWordsAtStrategy,
 	#superclass : #LbCRemoveWordsAtStrategy,
 	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #private }
-LbCRemoveAnyWordsStrategy >> keepIndexesThatAreInTheBoundOf: arraySize [
+LbCRemoveAnyWordsAtStrategy >> keepIndexesThatAreInTheBoundOf: arraySize [
 	
 	"remove indexes that exceed the array size provided for the tokenizer. All the integers bigger than the array size will not be considered, and I will remove only those representing the existing indexes of the words."
 	
@@ -44,7 +44,7 @@ LbCRemoveAnyWordsStrategy >> keepIndexesThatAreInTheBoundOf: arraySize [
 ]
 
 { #category : #removing }
-LbCRemoveAnyWordsStrategy >> removeWordsFrom: arrayOfSubstrings [
+LbCRemoveAnyWordsAtStrategy >> removeWordsFrom: arrayOfSubstrings [
 
 	| filteredIndexes wordsToRemove removedWords |
 	filteredIndexes := self keepIndexesThatAreInTheBoundOf: arrayOfSubstrings size.
@@ -56,13 +56,13 @@ LbCRemoveAnyWordsStrategy >> removeWordsFrom: arrayOfSubstrings [
 ]
 
 { #category : #accessing }
-LbCRemoveAnyWordsStrategy >> wordAt: anInteger [
+LbCRemoveAnyWordsAtStrategy >> wordAt: anInteger [
 	
 	indexes add: anInteger.
 ]
 
 { #category : #accessing }
-LbCRemoveAnyWordsStrategy >> wordsAt: aCollectionOfIntegers [
+LbCRemoveAnyWordsAtStrategy >> wordsAt: aCollectionOfIntegers [
 
 	indexes := aCollectionOfIntegers asSortedCollection
 ]
