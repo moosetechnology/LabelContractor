@@ -175,6 +175,12 @@ LbCContractor >> removeFilenameExtension [
 ]
 
 { #category : #convenience }
+LbCContractor >> removeFirstWord [
+
+	self addStrategy: (LbCRemoveFirstWordStrategy new )
+]
+
+{ #category : #convenience }
 LbCContractor >> removeFrequentLetters [
 
 	self addStrategy: LbCRemoveFrequentLettersStrategy new
@@ -184,6 +190,12 @@ LbCContractor >> removeFrequentLetters [
 LbCContractor >> removeFrequentLettersUpTo: anInteger [
 
 	self addStrategy: (LbCRemoveFrequentLettersStrategy new upTo: anInteger) 
+]
+
+{ #category : #convenience }
+LbCContractor >> removeLastWord [
+
+	self addStrategy: (LbCRemoveLastWordStrategy new)
 ]
 
 { #category : #convenience }
@@ -233,13 +245,13 @@ LbCContractor >> removeVowels [
 { #category : #convenience }
 LbCContractor >> removeWordAt:  anIndex [
 
-	self addStrategy: (LbCRemoveWordsAtStrategy new wordAt: anIndex)
+	self addStrategy: (LbCRemoveAnyWordsAtStrategy new wordAt: anIndex)
 ]
 
 { #category : #convenience }
 LbCContractor >> removeWordsAt:  aCollection [
 
-	self addStrategy: (LbCRemoveAnyWordsStrategy new wordsAt: aCollection)
+	self addStrategy: (LbCRemoveAnyWordsAtStrategy new wordsAt: aCollection)
 ]
 
 { #category : #sorting }
