@@ -148,29 +148,31 @@ AbbreviateNamesStrategy (4) </br>
 Sometimes it is difficult to order the strategies on your own. This is why we are offering an “automatic” version that will apply the strategies according to their order of priority. Therefore, you only have to specify the strategies, regardless of the order.
 
 # **How to reduce a label using contractor**
-The API is based on the design strategy, so for example to use a "remove vowels strategy" you can type on the playground:
+Example to use a "remove vowels strategy", you can type on the playground:
 
 ```Smalltalk
 LbCContractor new
   removeVowels;
-  reduce: 'HashedCollection'. 
+  reduce: 'LabelContractor/src/LbCContractor.st'. 
 ```    
+--> LbCCntrctr.st
 
 **To keep path:**
 ```Smalltalk
 LbCContractor new
   keepPath;
   removeVowels;
-  reduce: 'Calypso-SystemPlugins-Traits-Queries-Tests/ClyMergedSuperclassesAndInheritedTraitsHierarchyTest.st'
+  reduce: 'LabelContractor/src/LbCContractor.st'
 ``` 
+--> LabelContractor/src/LbCCntrctr.st
 
 **Combining strategies following user-defined order**
 ```Smalltalk
 LbCContractor new
   removeVowels;
-  removePrefix: 'Hashed';
-  removeFrequentLetters;
-  reduce: 'HashedCollection'
+  removePrefix: 'cly';
+  removeSuffix: 'test';
+  reduce: 'ClyMergedSuperclassesAndInheritedTraitsHierarchyTest'
 ``` 
 
 **Combining strategies following predefined priorities**
@@ -178,7 +180,7 @@ LbCContractor new
 LbCContractor new
   usingPriorities;
   removeVowels;
-  removePrefix: 'Hashed';
-  removeFrequentLetters;
-  reduce: 'HashedCollection'
+  removePrefix: 'cly';
+  removeSuffix: 'test';
+  reduce: 'ClyMergedSuperclassesAndInheritedTraitsHierarchyTest'
 ``` 
