@@ -165,6 +165,7 @@ LbCContractor new
   reduce: 'LabelContractor/src/LbCContractor.st'
 ``` 
 --> LabelContractor/src/LbCCntrctr.st
+
 **Combining strategies following user-defined order**
 ```Smalltalk
 LbCContractor new
