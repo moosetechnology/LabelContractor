@@ -33,33 +33,21 @@ Class {
 }
 
 { #category : #private }
-LbCRemoveVowelsStrategy class >> addIndexes: listOfIndexes WhenAStringContainsVowels: aString startingAt: index [
+LbCRemoveVowelsStrategy class >> findYAsAVowelFrom: aString [
 
-	^ index = aString size
-		  ifTrue: [ listOfIndexes add: index ]
-		  ifFalse: [ 
-			  ((self isConsonant: (aString at: index - 1)) and:
-				   (self isConsonant: (aString at: index + 1))) ifTrue: [ 
-				  listOfIndexes add: index ] ]
-]
+	"returns a list of indexes of the 'y' which are vowels in the string. The grammary rules are taken from https://www.woodwardenglish.com/letter-y-vowel-or-consonant/"
+	
+	"LbCRemoveVowelsStrategy findYAsAVowelFrom: 'mystery' >>> #(2 7) asOrderedCollection"
+	"LbCRemoveVowelsStrategy findYAsAVowelFrom: 'layer' >>> OrderedCollection empty" 
+	"LbCRemoveVowelsStrategy findYAsAVowelFrom: 'year' >>> OrderedCollection empty"
 
-{ #category : #private }
-LbCRemoveVowelsStrategy class >> getIndexesOfTheLetterYAsAVowelFrom: aString [
-
-	"returns a list of indexes of the 'y' which are vowels in the string.
-	 Examples:	
-		getIndexesOfTheLetterYAsAVowelFrom: 'mystery' (it returns #(2 7) asOrderedCollection ).
-		getIndexesOfTheLetterYAsAVowelFrom: 'year' (it returns OrderedCollection empty (in this case, 'y' is a consonant and not a vowel ))"
-
-	| vowel listOfIndexes |
-	vowel := $y.
+	| listOfIndexes |
 	listOfIndexes := OrderedCollection new.
-	1 to: aString size do: [ :index | 
-		((aString at: index) asLowercase = vowel and: index > 1) ifTrue: [ 
-			(self noVowelIn: aString)
-				ifTrue: [ listOfIndexes add: index ]
-				ifFalse: [ self addIndexes: listOfIndexes WhenAStringContainsVowels: aString startingAt: index ] ] ].
-	^ listOfIndexes
+	listOfIndexes 
+		addAll: (self whenThereIsNoOtherVowelFrom: aString);
+		addAll: (self whenYIsAtTheEndOf: aString);
+		addAll: (self whenYIsBetweenTwoConsonant: aString).
+	^ listOfIndexes sort
 ]
 
 { #category : #private }
@@ -103,6 +91,52 @@ LbCRemoveVowelsStrategy class >> removeYVowelFrom: aString [
 				  indexesOfYVowel := self getIndexesOfTheLetterYAsAVowelFrom: string.
 				  index := indexesOfYVowel at: 1 ifAbsent: [ index := 0 ] ].
 			  string ]
+]
+
+{ #category : #private }
+LbCRemoveVowelsStrategy class >> whenThereIsNoOtherVowelFrom: aString [
+	
+	"The grammary rules are taken from https://www.woodwardenglish.com/letter-y-vowel-or-consonant/"
+	
+	| listOfIndexes vowel |
+	listOfIndexes := OrderedCollection new.
+	vowel := $y.
+	(self noVowelIn: aString) ifTrue: [ 
+		2 to: aString size do: [ :i | 
+		(aString at: i) = vowel ifTrue: [ listOfIndexes add: i ] ] ].
+	^ listOfIndexes
+]
+
+{ #category : #private }
+LbCRemoveVowelsStrategy class >> whenYIsAtTheEndOf: aString [
+	
+	"The grammary rules are taken from https://www.woodwardenglish.com/letter-y-vowel-or-consonant/"
+	
+	| listOfIndexes vowel |
+	listOfIndexes := OrderedCollection new.
+	vowel := $y.
+	(aString last) asLowercase = vowel ifTrue: [ 
+			listOfIndexes add: aString size ] .
+	^ listOfIndexes
+]
+
+{ #category : #private }
+LbCRemoveVowelsStrategy class >> whenYIsBetweenTwoConsonant: aString [
+
+	"The grammary rules are taken from https://www.woodwardenglish.com/letter-y-vowel-or-consonant/"
+	
+	| vowel listOfIndexes |
+	vowel := $y.
+	listOfIndexes := OrderedCollection new.
+	2 to: aString size - 1 do: [ :i | 
+		| previousCharacter nextCharacter |
+		previousCharacter := aString at: i - 1.
+		nextCharacter := aString at: i + 1.
+		(aString at: i) asLowercase = vowel ifTrue: [ 
+			((self isConsonant: previousCharacter) and:
+				 (self isConsonant: nextCharacter)) ifTrue: [ 
+				listOfIndexes add: i ] ] ].
+	^ listOfIndexes
 ]
 
 { #category : #initialization }
