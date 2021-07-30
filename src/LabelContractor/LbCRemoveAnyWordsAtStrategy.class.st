@@ -7,7 +7,7 @@ LbCContractor new
  removeWordAt: 4;
  reduce: 'LbCRemoveFilenameExtensionStrategy'
 ```
-returns 'AnExampleOfVeryLongToRead'
+returns 'LbCRemoveExtensionStrategy'
 
 **Example: remove words specified by an interval of indexes**
 ```Smalltalk
