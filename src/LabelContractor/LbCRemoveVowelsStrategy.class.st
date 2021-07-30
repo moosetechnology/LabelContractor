@@ -73,14 +73,14 @@ LbCRemoveVowelsStrategy class >> priority [
 { #category : #private }
 LbCRemoveVowelsStrategy class >> removeYVowelFrom: aString [
 
-	"remove all the letter 'y' which represent a vowel from a string"
+	"remove all the letter 'y' which represent a vowel from a string. The grammary rules are taken from https://www.woodwardenglish.com/letter-y-vowel-or-consonant/"
 
 	"LbCRemoveVowelsStrategy removeYVowelFrom: 'mystery' >>> 'mster'"
-	"LbCRemoveVowelsStrategy removeYVowelFrom: 'yellow' >>> 'yellow'" "(because the 'y' is a consonant more than a vowel)"
+	"LbCRemoveVowelsStrategy removeYVowelFrom: 'yellow' >>> 'yellow'" "(because the 'y' is a consonant)"
 
 	| indexesOfYVowel string |
 	string := aString.
-	indexesOfYVowel := self getIndexesOfTheLetterYAsAVowelFrom: string.
+	indexesOfYVowel := self findYAsAVowelFrom: string.
 	^ indexesOfYVowel isEmpty
 		  ifTrue: [ aString ]
 		  ifFalse: [ 
@@ -88,7 +88,7 @@ LbCRemoveVowelsStrategy class >> removeYVowelFrom: aString [
 			  index := indexesOfYVowel at: 1.
 			  [ indexesOfYVowel isNotEmpty ] whileTrue: [ 
 				  string := string copyReplaceFrom: index to: index with: ''.
-				  indexesOfYVowel := self getIndexesOfTheLetterYAsAVowelFrom: string.
+				  indexesOfYVowel := self findYAsAVowelFrom: string.
 				  index := indexesOfYVowel at: 1 ifAbsent: [ index := 0 ] ].
 			  string ]
 ]
