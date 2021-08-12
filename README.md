@@ -16,7 +16,7 @@ Metacello new
   load: 'full'
 ``` 
 ## **LabelContractor description**
-The LabelContractor is a "tool" will allow reducing labels on visualizations using different strategies. Currently, the Contractor provides 13 different contraction strategies and 2 ways to combine them.
+The LabelContractor is a tool will allow reducing labels on visualizations using different strategies. Currently, the Contractor provides 13 different contraction strategies and 2 ways to combine them.
 
 ## **Contents:**
 - [Description of each strategy](#strategies-description)
