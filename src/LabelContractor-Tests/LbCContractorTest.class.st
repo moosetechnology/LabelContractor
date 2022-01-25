@@ -33,6 +33,19 @@ LbCContractorTest >> testAddStrategy [
 ]
 
 { #category : #tests }
+LbCContractorTest >> testEllipsisSeparator [
+
+	| reducedString |
+	reducedString := contractor
+							addStrategy: (LbCEllipsisStrategy new
+								separator: '...';
+								yourself);
+		                keepPath;
+		                reduce: 'A:user/exam/path/', stringExample .
+	self assert: reducedString equals: 'A:user/exam/path/Some...Long'
+]
+
+{ #category : #tests }
 LbCContractorTest >> testExtractPathFrom [
 	
 	self assert: (contractor class extractPathFrom: '' ) equals: String empty.

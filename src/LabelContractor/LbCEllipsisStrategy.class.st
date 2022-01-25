@@ -32,6 +32,9 @@ returns 'Hash~tion.st'
 Class {
 	#name : #LbCEllipsisStrategy,
 	#superclass : #LbCSizeReductionStrategy,
+	#instVars : [
+		'separator'
+	],
 	#category : #'LabelContractor-Contractor'
 }
 
@@ -56,7 +59,13 @@ LbCEllipsisStrategy >> ellipsis: aString [
 		              ifFalse: [ aString size - partsSize - 1 ].
 	part1 := aString copyFrom: 1 to: partsSize.
 	part2 := aString copyFrom: indexPart2 + 1 to: aString size.
-	^ part1 , '~' , part2
+	^ part1 , self separator , part2
+]
+
+{ #category : #initialization }
+LbCEllipsisStrategy >> initialize [
+	super initialize.
+	separator := '~'
 ]
 
 { #category : #'reduce-label' }
@@ -71,4 +80,14 @@ LbCEllipsisStrategy >> privateReduce: aString extension: extensionAsString [
 			                 ifTrue: [ aString ]  "short enough" 
 			                 ifFalse: [ self ellipsis: aString ] ].
 	^ string , extensionAsString
+]
+
+{ #category : #accessing }
+LbCEllipsisStrategy >> separator [
+	^ separator
+]
+
+{ #category : #accessing }
+LbCEllipsisStrategy >> separator: aString [ 
+	separator := aString
 ]
