@@ -6,7 +6,7 @@ Whatever the strategy, the common method used to reduce a label(or generally a s
 Class {
 	#name : #LbCAbstractStrategy,
 	#superclass : #Object,
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #public }
@@ -20,8 +20,8 @@ LbCAbstractStrategy class >> extractExtensionsFrom: aString [
 
 	"if the string represents a filename so we return its extension."
 		
-	"LbCAbstractStrategy extractExtensionsFrom: 'file.tar' >>> #('tar')"	
-	"LbCAbstractStrategy extractExtensionsFrom: 'file.tar.gz' >>> #('tar' 'gz')"	
+	"(LbCAbstractStrategy extractExtensionsFrom: 'file.tar') >>> #('tar') asOrderedCollection"	
+	"(LbCAbstractStrategy extractExtensionsFrom: 'file.tar.gz') >>> #('tar' 'gz') asOrderedCollection"	
 		
 	| extractedExtensions |
 	extractedExtensions := (self extensionDelimiter split: aString) allButFirst.
@@ -37,8 +37,8 @@ LbCAbstractStrategy class >> isAbstract [
 { #category : #private }
 LbCAbstractStrategy class >> joinExtractedExtensions: anOrderedCollectionOfExtensions [
 	
-	"LbCAbstractStrategy joinExtractedExtensions: #('tar' 'gz') asOrderedCollection >>> '.tar.gz'"
-	"LbCAbstractStrategy joinExtractedExtensions: #('tar') asOrderedCollection >>> '.tar'"
+	"(LbCAbstractStrategy joinExtractedExtensions: #('tar' 'gz') asOrderedCollection) >>> '.tar.gz'"
+	"(LbCAbstractStrategy joinExtractedExtensions: #('tar') asOrderedCollection) >>> '.tar'"
 	
 	^ anOrderedCollectionOfExtensions isEmpty
 		  ifTrue: [ String new ]
@@ -52,7 +52,7 @@ LbCAbstractStrategy class >> removeExtension: anExtension from: aString [
 
 	"Remove an extension from a string. If the string doesn't include anExtension, so we return the same string."
 	
-	"LbCAbstractStrategy removeExtension: 'txt' from: 'something.txt' >>> 'something'"
+	"(LbCAbstractStrategy removeExtension: 'txt' from: 'something.txt') >>> 'something'"
 	
 	| extensionWithDelimiter |
 	extensionWithDelimiter := anExtension copyWithFirst: self extensionDelimiter.
@@ -64,9 +64,9 @@ LbCAbstractStrategy class >> removeExtensionsFrom: aString [
 
 	"Remove all the extensions from a string."
 	
-	"LbCAbstractStrategy removeExtensionsFrom: 'something.txt' >>> 'something'"
-	"LbCAbstractStrategy removeExtensionsFrom: 'something.tar.gz' >>> 'something'"
-	"LbCAbstractStrategy removeExtensionsFrom: 'something' >>> 'something' "
+	"(LbCAbstractStrategy removeExtensionsFrom: 'something.txt') >>> 'something'"
+	"(LbCAbstractStrategy removeExtensionsFrom: 'something.tar.gz') >>> 'something'"
+	"(LbCAbstractStrategy removeExtensionsFrom: 'something') >>> 'something' "
 
 	| string extractExtensions  |
 	string := aString.
@@ -78,8 +78,8 @@ LbCAbstractStrategy class >> removeExtensionsFrom: aString [
 { #category : #private }
 LbCAbstractStrategy class >> removeExtensionsFrom: aString howMany: aPositiveInteger [
 
-	"LbCAbstractStrategy removeExtensionsFrom: 'something.tar.gz' howMany: 1  >>> 'something.tar'"
-	"LbCAbstractStrategy removeExtensionsFrom: 'something.txt.gz' howMany: 2 >>> 'something'"
+	"(LbCAbstractStrategy removeExtensionsFrom: 'something.tar.gz' howMany: 1)  >>> 'something.tar'"
+	"(LbCAbstractStrategy removeExtensionsFrom: 'something.txt.gz' howMany: 2) >>> 'something'"
 
 	| string extractExtensions |
 	string := aString.
