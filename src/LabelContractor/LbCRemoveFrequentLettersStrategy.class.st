@@ -37,7 +37,7 @@ Class {
 	#classVars : [
 		'FrequentLetters'
 	],
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #'letter-frequency' }
@@ -193,7 +193,7 @@ LbCRemoveFrequentLettersStrategy >> keepFirstLetterAndStartAtSecondOne [
 LbCRemoveFrequentLettersStrategy >> letterFrequency: aString [
 	"The argument 'aString' represents a Character in a string format. I return the frequency of the character"	
 	
-	"LbCRemoveFrequentLettersStrategy new letterFrequency: 'h' >>> 0.737 "
+	"(LbCRemoveFrequentLettersStrategy new letterFrequency: 'h') >>> 0.737 "
 
 	^ self class frequentLetters at: aString ifAbsent: [ 12 ]
 ]

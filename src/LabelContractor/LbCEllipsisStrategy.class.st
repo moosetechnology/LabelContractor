@@ -49,8 +49,8 @@ LbCEllipsisStrategy >> ellipsis: aString [
 
 	"i return a reduced string by taking the first and last letters of the string seperated by a tilde ('~'). Use me only if 'upTo' is > 1"
 
-	"LbCEllipsisStrategy new upTo: 2; ellipsis: 'Example' >>> 'E~e'"
-	"LbCEllipsisStrategy new upTo: 3; ellipsis: 'Example' >>> 'E~le'"
+	"(LbCEllipsisStrategy new upTo: 2; ellipsis: 'Example') >>> 'E~e'"
+	"(LbCEllipsisStrategy new upTo: 3; ellipsis: 'Example') >>> 'E~le'"
 
 	| indexPart2 partsSize part1 part2 |
 	partsSize := self upTo // 2.

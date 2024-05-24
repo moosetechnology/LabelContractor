@@ -67,8 +67,8 @@ LbCContractor class >> extractPathFrom: aString [
 
 	"for the strings representing a fully qualified name, return the 'path' part of the string"
 	
-	"LbCContractor extractPathFrom: 'A:example/path/file.ext' >>> 'A:example/path/'"
-	"LbCContractor extractPathFrom: 'file.ext' >>> ''"
+	"(LbCContractor extractPathFrom: 'A:example/path/file.ext') >>> 'A:example/path/'"
+	"(LbCContractor extractPathFrom: 'file.ext') >>> ''"
 
 	| pathSeparetor |
 	pathSeparetor := $/.
@@ -80,8 +80,8 @@ LbCContractor class >> removePathFrom: aString [
 
 	"Remove the 'path' part of the string. If the string doesn't contain the 'path' side so i return the same string"	  
 	
-	"LbCContractor removePathFrom: 'A:example/path/file.ext' >>> 'file.ext'"
-	"LbCContractor removePathFrom: 'file.ext' >>> 'file.ext'"
+	"(LbCContractor removePathFrom: 'A:example/path/file.ext') >>> 'file.ext'"
+	"(LbCContractor removePathFrom: 'file.ext') >>> 'file.ext'"
 	
 	^ aString copyReplaceAll: (self extractPathFrom: aString) with: '' 
 ]

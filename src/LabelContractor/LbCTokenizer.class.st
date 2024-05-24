@@ -22,17 +22,17 @@ returns #( 'DFL'. 'Something' ) asOrderedCollection
 Class {
 	#name : #LbCTokenizer,
 	#superclass : #Object,
-	#category : 'LabelContractor-Tokenizer'
+	#category : #'LabelContractor-Tokenizer'
 }
 
 { #category : #'private-algorithm' }
 LbCTokenizer >> tokenize: aString [
 
-	" LbCTokenizer new tokenize: '23SomethingHer43Like33' >>> {'23'. 'Something'. 'Her43'. 'Like33'}"
+	"(LbCTokenizer new tokenize: '23SomethingHer43Like33') >>> {'23'. 'Something'. 'Her43'. 'Like33'} asOrderedCollection"
 
-	" LbCTokenizer new tokenize: '23SomethingHer43Like33Other' >>> {'23'. 'Something'. 'Her43'. 'Like33'. 'Other'}"
+	"(LbCTokenizer new tokenize: '23SomethingHer43Like33Other') >>> {'23'. 'Something'. 'Her43'. 'Like33'. 'Other'} asOrderedCollection"
 
-	" LbCTokenizer new tokenize: 'DFSSomething' >>> { 'DFS'. 'Something' } "
+	"(LbCTokenizer new tokenize: 'DFSSomething') >>> { 'DFS'. 'Something' } asOrderedCollection"
 
 	| tokenizedString consecutiveUpperCase indexCapitalLetter beginWord |
 	tokenizedString := OrderedCollection new.

@@ -37,9 +37,9 @@ LbCRemoveVowelsStrategy class >> findYAsAVowelFrom: aString [
 
 	"returns a list of indexes of the 'y' which are vowels in the string. The grammary rules are taken from https://www.woodwardenglish.com/letter-y-vowel-or-consonant/"
 	
-	"LbCRemoveVowelsStrategy findYAsAVowelFrom: 'mystery' >>> #(2 7) asOrderedCollection"
-	"LbCRemoveVowelsStrategy findYAsAVowelFrom: 'layer' >>> OrderedCollection empty" 
-	"LbCRemoveVowelsStrategy findYAsAVowelFrom: 'year' >>> OrderedCollection empty"
+	"(LbCRemoveVowelsStrategy findYAsAVowelFrom: 'mystery') >>> #(2 7) asOrderedCollection"
+	"(LbCRemoveVowelsStrategy findYAsAVowelFrom: 'layer') >>> OrderedCollection empty" 
+	"(LbCRemoveVowelsStrategy findYAsAVowelFrom: 'year') >>> OrderedCollection empty"
 
 	| listOfIndexes |
 	listOfIndexes := OrderedCollection new.
@@ -75,8 +75,8 @@ LbCRemoveVowelsStrategy class >> removeYVowelFrom: aString [
 
 	"remove all the letter 'y' which represent a vowel from a string. The grammary rules are taken from https://www.woodwardenglish.com/letter-y-vowel-or-consonant/"
 
-	"LbCRemoveVowelsStrategy removeYVowelFrom: 'mystery' >>> 'mster'"
-	"LbCRemoveVowelsStrategy removeYVowelFrom: 'yellow' >>> 'yellow'" "(because the 'y' is a consonant)"
+	"(LbCRemoveVowelsStrategy removeYVowelFrom: 'mystery') >>> 'mster'"
+	"(LbCRemoveVowelsStrategy removeYVowelFrom: 'yellow') >>> 'yellow'" "(because the 'y' is a consonant)"
 
 	| indexesOfYVowel string |
 	string := aString.
@@ -174,8 +174,8 @@ LbCRemoveVowelsStrategy >> removeVowelsFrom: string [
 
 	"Remove vowels from a string. The first letter is always kept whether it is a vowel or a consonant"
 
-	"LbCRemoveVowelsStrategy new removeVowelsFrom: 'Something' >>> 'smthng'"
-	"LbCRemoveVowelsStrategy new removeVowelsFrom: 'other' >>> 'othr'"
+	"(LbCRemoveVowelsStrategy new removeVowelsFrom: 'Something') >>> 'Smthng'"
+	"(LbCRemoveVowelsStrategy new removeVowelsFrom: 'other') >>> 'othr'"
 
 	| stringWithoutFirstLetter |
 	stringWithoutFirstLetter := self keepFirstLetter: (self class removeYVowelFrom: string).

@@ -40,7 +40,7 @@ returns 'Collection'
 Class {
 	#name : #LbCRemoveAnySubstringStrategy,
 	#superclass : #LbCRemoveSubstringsStrategy,
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #private }
@@ -66,9 +66,9 @@ LbCRemoveAnySubstringStrategy >> removeSubstringsFrom: aString [
 
 	"remove all the substrings from the string"
 
-	"(LbCRemoveAnySubstringStrategy with: 'some') removeSubstringsFrom: 'somethingOrsomeThingElse' >>> 'thingOrThingElse'"
-	"(LbCRemoveAnySubstringStrategy withAll: {'some'. 'thing'}) removeSubstringsFrom: 'somethingOrSomeTHINGElse' >>> 'OrElse'"
-	"(LbCRemoveAnySubstringStrategy withAll: {'some'. 'thing'}) beCaseSensitive; removeSubstringsFrom: 'someThing' >>> 'Thing'"
+	"((LbCRemoveAnySubstringStrategy new with: 'some') removeSubstringsFrom: 'somethingOrsomeThingElse') >>> 'thingOrThingElse'"
+	"((LbCRemoveAnySubstringStrategy new withAll: {'some'. 'thing'}) removeSubstringsFrom: 'somethingOrSomeTHINGElse') >>> 'OrElse'"
+	"((LbCRemoveAnySubstringStrategy new withAll: {'some'. 'thing'}) beCaseSensitive; removeSubstringsFrom: 'someThing') >>> 'Thing'"
 
 	| string |
 	string := aString.

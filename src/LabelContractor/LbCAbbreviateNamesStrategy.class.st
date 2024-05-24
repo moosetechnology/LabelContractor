@@ -34,7 +34,7 @@ Class {
 		'tokenizer',
 		'until'
 	],
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #'default values' }
@@ -61,8 +61,8 @@ LbCAbbreviateNamesStrategy >> abbreviate: aString until: anInteger [
 	
 	"abbreviate names to their first letters except the last name."
 		
-	"LbCAbbreviateNamesStrategy new abbreviate: 'AnExampleOfString' until: 3 >>> 'AEOString'"
-	"LbCAbbreviateNamesStrategy new abbreviate: 'ShortExample' until: 3 >>> 'SExample'"
+	"(LbCAbbreviateNamesStrategy new abbreviate: 'AnExampleOfString' until: 3) >>> 'AEOString'"
+	"(LbCAbbreviateNamesStrategy new abbreviate: 'ShortExample' until: 3) >>> 'SExample'"
 	
 	| tokens nameParts abbreviations |
 	tokens := tokenizer tokenize: aString.
@@ -78,7 +78,7 @@ LbCAbbreviateNamesStrategy >> divide: aCollection until: aNumber [
 	
 	"divide the collection into two parts at the index entered as the second argument. Returns an array containing two sub-arrays representing the two divided parts."
 
- 	"LbCAbbreviateNamesStrategy new divide: {'DM' . 'Class' . 'Names' . 'Blueprint' . 'Test'} until: 2 >>> {{'DM' . 'Class' }. {'Names' . 'Blueprint'. 'Test'}}"
+ 	"(LbCAbbreviateNamesStrategy new divide: {'DM' . 'Class' . 'Names' . 'Blueprint' . 'Test'} until: 2) >>> {{'DM' . 'Class' }. {'Names' . 'Blueprint'. 'Test'}}"
 					
 	| firstPartTokens secondPartTokens |
 	aCollection size > aNumber ifTrue: [ 

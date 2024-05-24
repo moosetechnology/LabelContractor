@@ -46,7 +46,7 @@ returns 'ExampleOf'
 Class {
 	#name : #LbCRemoveSuffixStrategy,
 	#superclass : #LbCRemoveSubstringsStrategy,
-	#category : 'LabelContractor-Contractor'
+	#category : #'LabelContractor-Contractor'
 }
 
 { #category : #private }
@@ -72,8 +72,8 @@ LbCRemoveSuffixStrategy >> removeSubstringsFrom: aString [
 { #category : #private }
 LbCRemoveSuffixStrategy >> removeSuffix: indexOfSuffix from: aString [
 
-	"LbCRemoveSuffixStrategy new removeSuffix: 4 from: 'something' >>> 'some'"
-	"LbCRemoveSuffixStrategy new removeSuffix: 0 from: 'something' >>> 'something'"
+	"(LbCRemoveSuffixStrategy new removeSuffix: 4 from: 'something') >>> 'some'"
+	"(LbCRemoveSuffixStrategy new removeSuffix: 0 from: 'something') >>> 'something'"
 	
 	^ indexOfSuffix = 0
 		  ifTrue: [ aString ]
